@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog · Capital Forte — Aprende a invertir desde cero</title>
+<meta name="description" content="Artículos claros sobre cómo empezar a invertir desde cero en España: pensiones, diversificación, cripto en su justa medida, comisiones y mercados. Sin jerga ni humo." />
+<meta name="keywords" content="invertir desde cero, asesoramiento financiero España, diversificar cartera, invertir en cripto, pensión privada, comisiones asesoramiento" />
+<meta name="author" content="Capital Forte" />
+<link rel="canonical" href="https://capitalforte.es/blog" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Capital Forte" />
+<meta property="og:title" content="Blog de Capital Forte — Aprende a invertir desde cero" />
+<meta property="og:description" content="Artículos claros sobre cómo empezar a invertir desde cero en España. Sin jerga ni humo." />
+<meta property="og:url" content="https://capitalforte.es/blog" />
+<meta property="og:locale" content="es_ES" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog de Capital Forte — Aprende a invertir desde cero" />
+<meta name="twitter:description" content="Artículos claros sobre cómo empezar a invertir desde cero en España." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e5b43'/%3E%3Ccircle cx='26' cy='32' r='13' fill='none' stroke='%23f5f1e8' stroke-width='3'/%3E%3Ccircle cx='40' cy='32' r='13' fill='%23f5f1e8' opacity='.9'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="cf.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+
+<!-- Structured data: Blog + article list (helps search engines & AI crawlers) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog de Capital Forte",
+  "description": "Artículos claros sobre cómo empezar a invertir desde cero en España.",
+  "url": "https://capitalforte.es/blog",
+  "inLanguage": "es-ES",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Capital Forte",
+    "url": "https://capitalforte.es"
+  },
+  "blogPost": [
+    { "@type": "BlogPosting", "headline": "Cómo empezar a invertir desde cero (sin saber nada de bolsa)", "url": "https://capitalforte.es/empezar-a-invertir-desde-cero", "datePublished": "2026-05-28", "author": { "@type": "Organization", "name": "Capital Forte" } },
+    { "@type": "BlogPosting", "headline": "La pensión pública no te va a bastar: qué puedes hacer hoy", "url": "https://capitalforte.es/pension-publica-no-basta", "datePublished": "2026-05-14", "author": { "@type": "Organization", "name": "Capital Forte" } },
+    { "@type": "BlogPosting", "headline": "¿Invertir o comprar piso? Cómo comparar de verdad", "url": "https://capitalforte.es/invertir-o-comprar-piso", "datePublished": "2026-04-30", "author": { "@type": "Organization", "name": "Capital Forte" } },
+    { "@type": "BlogPosting", "headline": "Qué es diversificar y por qué es la clave del largo plazo", "url": "https://capitalforte.es/que-es-diversificar", "datePublished": "2026-04-16", "author": { "@type": "Organization", "name": "Capital Forte" } },
+    { "@type": "BlogPosting", "headline": "Cripto en tu cartera: cuánto peso tiene sentido", "url": "https://capitalforte.es/cripto-en-tu-cartera", "datePublished": "2026-04-02", "author": { "@type": "Organization", "name": "Capital Forte" } },
+    { "@type": "BlogPosting", "headline": "Comisiones en asesoramiento: qué pagas realmente", "url": "https://capitalforte.es/comisiones-asesoramiento", "datePublished": "2026-03-19", "author": { "@type": "Organization", "name": "Capital Forte" } }
+  ]
+}
+</script>
+
+<style>
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Header on forest */
+  header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--forest) 90%, transparent);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(245,241,232,.14); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 4.25rem; }
+  .wordmark { display: flex; align-items: center; gap: .65rem; color: var(--cream); }
+  .mark { position: relative; width: 2rem; height: 22px; flex-shrink: 0; }
+  .mark .c1 { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(245,241,232,.7); }
+  .mark .c2 { position: absolute; right: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--cream); opacity: .85; mix-blend-mode: overlay; }
+  .wordmark .name { font-family: var(--font-display); font-weight: 500; font-size: 1.28rem; letter-spacing: -0.02em; }
+  .nav-links { display: none; align-items: center; gap: 2rem; }
+  .nav-links a { font-size: .92rem; color: var(--cream-dim); transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--cream); }
+  .nav-cta { display: none; }
+  .burger { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: none; border: none; cursor: pointer; color: var(--cream); }
+  @media (min-width: 1000px) { .nav-links { display: flex; } .nav-cta { display: inline-flex; } .burger { display: none; } }
+
+  /* Masthead */
+  .blog-mast { background: var(--forest); color: var(--cream); position: relative; overflow: hidden; }
+  .blog-mast .glow { position: absolute; width: 55rem; height: 55rem; right: -22rem; top: -26rem; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--forest-bright) 50%, transparent), transparent 62%); pointer-events: none; }
+  .blog-mast .inner { position: relative; padding: 3.5rem 0 3.8rem; max-width: 44rem; }
+  .blog-mast .eb { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cream); opacity: .85; }
+  .blog-mast h1 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.025em; line-height: 1.0; font-size: clamp(2.6rem, 6vw, 4.2rem); margin-top: 1.1rem; text-wrap: balance; }
+  .blog-mast p { margin-top: 1.2rem; font-size: 1.12rem; line-height: 1.6; color: var(--cream-dim); text-wrap: pretty; }
+
+  .mast-coin { position: absolute; width: 130px; height: 130px; right: 9%; top: 24%; display: none; filter: drop-shadow(0 18px 18px rgba(8,30,22,.35)); pointer-events: none; }
+  .mast-spark { position: absolute; width: 20px; height: 20px; right: 19%; top: 18%; color: #e6b95c; display: none; pointer-events: none; }
+  @media (min-width: 900px) { .mast-coin, .mast-spark { display: block; } }
+
+  /* Category filter row */
+  .cats { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
+  .cat { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); border: 1px solid var(--line-strong); border-radius: 99px; padding: .4rem .85rem; cursor: pointer; transition: all .2s; background: transparent; }
+  .cat:hover { border-color: var(--ink); color: var(--ink); }
+  .cat[aria-pressed="true"] { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+
+  /* Featured post */
+  .featured { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden; margin: 2.5rem 0; background: var(--paper); transition: box-shadow .35s, transform .35s; }
+  .featured:hover { box-shadow: var(--shadow-lift); }
+  .featured .thumb { position: relative; min-height: 240px; background:
+      linear-gradient(135deg, var(--forest-deep), var(--forest) 55%, var(--forest-bright));
+      display: grid; place-items: center; overflow: hidden; }
+  .featured .thumb .glyph { font-family: var(--font-display); font-style: italic; font-size: 5rem; color: rgba(245,241,232,.92); }
+  .featured .thumb .tex { position: absolute; inset: 0; opacity: .14; background-image: radial-gradient(circle at 20% 30%, #fff 0, transparent 40%), repeating-linear-gradient(45deg, transparent 0 18px, rgba(255,255,255,.08) 18px 19px); pointer-events: none; }
+  .featured .body { padding: 2.2rem 2rem 2.4rem; display: flex; flex-direction: column; justify-content: center; }
+  .post-meta { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .post-meta .pill { color: var(--forest); border: 1px solid var(--forest-line); border-radius: 99px; padding: .2rem .55rem; }
+  .featured h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.7rem, 3.4vw, 2.5rem); letter-spacing: -0.02em; line-height: 1.08; margin-top: 1rem; text-wrap: balance; }
+  .featured h2 a { color: inherit; }
+  .featured .excerpt { margin-top: .9rem; font-size: 1.05rem; line-height: 1.6; color: var(--ink-soft); max-width: 40rem; }
+  .read-more { margin-top: 1.4rem; display: inline-flex; align-items: center; gap: .45rem; font-weight: 500; color: var(--forest); }
+  .read-more svg { width: 1rem; height: 1rem; transition: transform .3s; }
+  .featured:hover .read-more svg, .post:hover .read-more svg { transform: translateX(3px); }
+  @media (min-width: 860px) { .featured { grid-template-columns: 1.05fr 1.2fr; } .featured .thumb { min-height: 100%; } }
+
+  /* Post grid */
+  .grid-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line-strong); }
+  .grid-head h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .grid-head .count { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+  .post-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 0 3.5rem; }
+  @media (min-width: 680px) { .post-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (min-width: 1000px) { .post-grid { grid-template-columns: repeat(3,1fr); } }
+  .post { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--paper); transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; }
+  .post:hover { transform: translateY(-5px); box-shadow: var(--shadow-lift); }
+  .post .thumb { height: 150px; display: grid; place-items: center; position: relative; overflow: hidden; }
+  .post .thumb .glyph { font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: rgba(245,241,232,.92); }
+  .post .thumb .tex { position: absolute; inset: 0; opacity: .13; background-image: repeating-linear-gradient(45deg, transparent 0 16px, rgba(255,255,255,.08) 16px 17px); }
+  .t-a { background: linear-gradient(135deg, var(--forest-deep), var(--forest)); }
+  .t-b { background: linear-gradient(135deg, var(--forest), var(--forest-bright)); }
+  .t-c { background: linear-gradient(135deg, var(--ink), var(--forest-deep)); }
+  .post .body { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+  .post h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.28rem; letter-spacing: -0.01em; line-height: 1.16; margin-top: .8rem; text-wrap: balance; }
+  .post h4 a { color: inherit; }
+  .post .excerpt { margin-top: .6rem; font-size: .96rem; line-height: 1.55; color: var(--ink-soft); flex-grow: 1; }
+  .post .read-more { margin-top: 1.1rem; font-size: .92rem; }
+
+  /* Newsletter CTA */
+  .news { position: relative; overflow: hidden; padding: 3.5rem 0; text-align: center; }
+  .news .glow { position: absolute; width: 44rem; height: 44rem; left: 50%; top: -26rem; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb,var(--forest-bright) 45%,transparent), transparent 60%); pointer-events: none; }
+  .news h2 { position: relative; font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem,4.5vw,3.2rem); letter-spacing: -0.02em; line-height: 1.05; text-wrap: balance; }
+  .news p { position: relative; margin: 1.1rem auto 0; max-width: 32rem; color: var(--cream-dim); font-size: 1.08rem; line-height: 1.6; }
+  .news form { position: relative; margin: 2rem auto 0; max-width: 30rem; display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; }
+  .news input { flex: 1 1 16rem; height: 3.25rem; border-radius: var(--radius-btn); border: 1px solid rgba(245,241,232,.3); background: rgba(245,241,232,.06); color: var(--cream); padding: 0 1.1rem; font-family: var(--font-sans); font-size: 1rem; }
+  .news input::placeholder { color: rgba(245,241,232,.55); }
+  .news input:focus { outline: none; border-color: var(--cream); }
+  .news .legal { position: relative; margin-top: 1rem; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .06em; text-transform: uppercase; color: rgba(245,241,232,.55); }
+
+  /* Footer */
+  footer.site { padding: 3rem 0 2.5rem; }
+  .foot-top { display: grid; grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+  .foot-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .foot-col h4 { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: .8rem; }
+  .foot-col a { display: block; padding: .3rem 0; font-size: .95rem; color: var(--ink-soft); }
+  .foot-col a:hover { color: var(--ink); }
+  .foot-bot { padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; }
+  .foot-bot .mono-label { color: var(--ink-faint); font-size: .6rem; }
+  .disclaimer { margin-top: 1.5rem; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; max-width: 60rem; }
+  @media (min-width: 760px) { .foot-top { grid-template-columns: 1.4fr 2fr; } .foot-cols { grid-template-columns: repeat(3,1fr); } }
+</style>
+</head>
+<body class="surface-cream">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <linearGradient id="gGoldEdge" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c79030"/><stop offset="1" stop-color="#8f6210"/>
+  </linearGradient>
+  <radialGradient id="gGoldFace" cx="36%" cy="28%" r="85%">
+    <stop offset="0" stop-color="#f3cf6e"/><stop offset="1" stop-color="#c0871a"/>
+  </radialGradient>
+  <symbol id="i-coin-eur" viewBox="0 0 120 120">
+    <ellipse cx="60" cy="105" rx="35" ry="6.5" fill="#16160f" opacity=".15"/>
+    <path d="M20 56 a40 30 0 0 0 80 0 v12 a40 30 0 0 1 -80 0 z" fill="url(#gGoldEdge)"/>
+    <ellipse cx="60" cy="56" rx="40" ry="30" fill="url(#gGoldFace)"/>
+    <ellipse cx="60" cy="56" rx="31" ry="22" fill="none" stroke="#8f6210" stroke-opacity=".4" stroke-width="2"/>
+    <g transform="translate(60 56) scale(1 .78)">
+      <text x="0" y="14" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="40" font-weight="700" fill="#7d550c">&#8364;</text>
+    </g>
+    <ellipse cx="44" cy="42" rx="13" ry="7" fill="#fff" opacity=".4" transform="rotate(-18 44 42)"/>
+  </symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24">
+    <path d="M12 1 C13.6 8 16 10.4 23 12 C16 13.6 13.6 16 12 23 C10.4 16 8 13.6 1 12 C8 10.4 10.4 8 12 1 Z" fill="currentColor"/>
+  </symbol>
+</defs>
+</svg>
+
+<!-- MARKET RIBBON -->
+<div class="ticker surface-ink" aria-label="Mercado · cripto en directo, índices ilustrativos">
+  <div class="pin" style="z-index:10;display:flex;align-items:center;gap:.55rem;height:100%;flex-shrink:0;padding:0 1.25rem 0 1rem;border-right:1px solid var(--rule);background:var(--ink);white-space:nowrap">
+    <span class="dot animate-blink"></span>
+    <span class="mono-label" id="ribbonStatus" style="font-size:.66rem;color:rgba(245,241,232,.7)">Datos ilustrativos</span>
+  </div>
+  <div class="ticker-track" id="ribbon"></div>
+  <div style="position:absolute;top:0;right:0;bottom:0;width:5rem;background:linear-gradient(to left,var(--ink),transparent);pointer-events:none"></div>
+</div>
+
+<!-- HEADER -->
+<header class="site">
+  <nav class="nav wrap">
+    <a class="wordmark" href="index.html"><span class="mark"><span class="c1"></span><span class="c2"></span></span><span class="name">Capital&nbsp;Forte</span></a>
+    <div class="nav-links">
+      <a href="index.html#filosofia">Filosofía</a><a href="index.html#cartera">Servicios</a><a href="blog.html" aria-current="page">Blog</a><a href="index.html#seguridad">Seguridad</a><a href="index.html#contacto">Contacto</a>
+    </div>
+    <a class="btn btn-light btn-sm nav-cta" href="index.html#contacto">Reserva tu diagnóstico
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#filosofia">Filosofía</a>
+    <a href="index.html#proceso">Cómo trabajamos</a>
+    <a href="index.html#tarifas">Tarifas</a>
+    <a href="para-empresas.html">Para empresas</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contacto"><strong>Reserva tu diagnóstico →</strong></a>
+  </div>
+</header>
+
+<!-- MASTHEAD -->
+<section class="blog-mast">
+  <div class="glow"></div>
+  <svg class="ico3d floaty mast-coin" aria-hidden="true"><use href="#i-coin-eur"/></svg>
+  <svg class="floaty d2 mast-spark" aria-hidden="true"><use href="#i-spark"/></svg>
+  <div class="wrap inner">
+    <span class="eb"><span class="dot animate-blink"></span>Blog · Capital Forte</span>
+    <h1>Aprende a invertir desde cero, a tu ritmo.</h1>
+    <p>Artículos claros para quien nunca ha invertido. Pensiones, diversificación, cripto en su justa medida y cómo entender de verdad lo que pagas. Sin jerga y sin intentar venderte nada.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="wrap">
+
+  <div class="cats" role="group" aria-label="Filtrar por categoría">
+    <button class="cat" aria-pressed="true" data-cat="todos">Todos</button>
+    <button class="cat" aria-pressed="false" data-cat="basicos">Primeros pasos</button>
+    <button class="cat" aria-pressed="false" data-cat="cartera">Cartera</button>
+    <button class="cat" aria-pressed="false" data-cat="cripto">Cripto</button>
+    <button class="cat" aria-pressed="false" data-cat="dinero">Tu dinero</button>
+  </div>
+
+  <!-- FEATURED -->
+  <article class="featured" data-cat="basicos">
+    <div class="thumb"><span class="tex"></span><span class="glyph">01</span></div>
+    <div class="body">
+      <div class="post-meta">
+        <span class="pill">Primeros pasos</span>
+        <time datetime="2026-05-28">28 May 2026</time>
+        <span>·</span><span>8 min de lectura</span>
+      </div>
+      <h2><a href="empezar-a-invertir-desde-cero.html">Cómo empezar a invertir desde cero (sin saber nada de bolsa)</a></h2>
+      <p class="excerpt">Si nunca has comprado una acción en tu vida, este es tu punto de partida. Te contamos qué necesitas saber de verdad para dar el primer paso, qué no hace falta, y cómo evitar los errores típicos de quien empieza.</p>
+      <a class="read-more" href="empezar-a-invertir-desde-cero.html">Leer artículo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </article>
+
+  <!-- GRID -->
+  <div class="grid-head">
+    <h3>Últimos artículos</h3>
+    <span class="count" id="postCount">5 artículos</span>
+  </div>
+
+  <div class="post-grid" id="postGrid">
+
+    <article class="post" data-cat="dinero">
+      <div class="thumb t-a"><span class="tex"></span><span class="glyph">02</span></div>
+      <div class="body">
+        <div class="post-meta"><span class="pill">Tu dinero</span><time datetime="2026-05-14">14 May 2026</time></div>
+        <h4><a href="empezar-a-invertir-desde-cero.html">La pensión pública no te va a bastar: qué puedes hacer hoy</a></h4>
+        <p class="excerpt">Por qué conviene empezar a construir lo tuyo cuanto antes y cómo hacerlo sin agobios, paso a paso.</p>
+        <a class="read-more" href="empezar-a-invertir-desde-cero.html">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <article class="post" data-cat="dinero">
+      <div class="thumb t-b"><span class="tex"></span><span class="glyph">03</span></div>
+      <div class="body">
+        <div class="post-meta"><span class="pill">Tu dinero</span><time datetime="2026-04-30">30 Abr 2026</time></div>
+        <h4><a href="empezar-a-invertir-desde-cero.html">¿Invertir o comprar piso? Cómo comparar de verdad</a></h4>
+        <p class="excerpt">Dos caminos para hacer crecer tu dinero. Te damos un marco honesto para compararlos según tu situación.</p>
+        <a class="read-more" href="empezar-a-invertir-desde-cero.html">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <article class="post" data-cat="cartera">
+      <div class="thumb t-c"><span class="tex"></span><span class="glyph">04</span></div>
+      <div class="body">
+        <div class="post-meta"><span class="pill">Cartera</span><time datetime="2026-04-16">16 Abr 2026</time></div>
+        <h4><a href="empezar-a-invertir-desde-cero.html">Qué es diversificar y por qué es la clave del largo plazo</a></h4>
+        <p class="excerpt">Diversificar bien es lo que te permite navegar las olas del mercado. Te explicamos cómo y por qué funciona.</p>
+        <a class="read-more" href="empezar-a-invertir-desde-cero.html">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <article class="post" data-cat="cripto">
+      <div class="thumb t-a"><span class="tex"></span><span class="glyph">05</span></div>
+      <div class="body">
+        <div class="post-meta"><span class="pill">Cripto</span><time datetime="2026-04-02">2 Abr 2026</time></div>
+        <h4><a href="empezar-a-invertir-desde-cero.html">Cripto en tu cartera: cuánto peso tiene sentido</a></h4>
+        <p class="excerpt">Ni la salvación ni el demonio: una pieza más. Hablamos de cuánto peso darle según tu perfil.</p>
+        <a class="read-more" href="empezar-a-invertir-desde-cero.html">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <article class="post" data-cat="basicos">
+      <div class="thumb t-b"><span class="tex"></span><span class="glyph">06</span></div>
+      <div class="body">
+        <div class="post-meta"><span class="pill">Primeros pasos</span><time datetime="2026-03-19">19 Mar 2026</time></div>
+        <h4><a href="empezar-a-invertir-desde-cero.html">Comisiones en asesoramiento: qué pagas realmente</a></h4>
+        <p class="excerpt">Lo que de verdad pagas por un asesor, qué incluye y cómo detectar costes escondidos.</p>
+        <a class="read-more" href="empezar-a-invertir-desde-cero.html">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<!-- NEWSLETTER -->
+<section class="news surface-forest">
+  <div class="glow"></div>
+  <div class="wrap">
+    <h2>Recibe cada artículo en tu correo.</h2>
+    <p>Un email cuando publicamos algo que merece la pena. Análisis honesto de mercados, en lenguaje normal. Sin spam.</p>
+    <form onsubmit="event.preventDefault(); this.reset(); this.querySelector('.ok').hidden=false;">
+      <input type="email" required placeholder="tu@email.com" aria-label="Tu correo electrónico" />
+      <button class="btn btn-light btn-lg" type="submit">Suscribirme</button>
+      <span class="ok mono-label" hidden style="flex-basis:100%;color:var(--cream);margin-top:.6rem">¡Gracias! Te has suscrito.</span>
+    </form>
+    <p class="legal">Tus datos solo se usan para enviarte el boletín · Baja cuando quieras</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site surface-paper rule-t">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="wordmark" href="index.html" style="color:var(--ink);margin-bottom:1rem"><span class="mark"><span class="c1" style="border-color:var(--forest)"></span><span class="c2" style="background:var(--forest);mix-blend-mode:multiply"></span></span><span class="name">Capital&nbsp;Forte</span></a>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en España. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h4>Navegación</h4><a href="index.html#filosofia">Filosofía</a><a href="index.html#cartera">Servicios</a><a href="blog.html">Blog</a><a href="index.html#seguridad">Seguridad</a></div>
+        <div class="foot-col"><h4>Legal</h4><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Folleto de tarifas</a></div>
+        <div class="foot-col"><h4>Contacto</h4><a href="index.html#contacto">Reserva diagnóstico</a><a href="#">hola@capitalforte.es</a></div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="mono-label">© 2026 Capital Forte · España</span>
+      <span class="mono-label">Blog</span>
+    </div>
+    <p class="disclaimer">El contenido de este blog es de carácter formativo e informativo y no constituye una recomendación personalizada de inversión. Invertir conlleva riesgos, incluida la posible pérdida del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+  </div>
+</footer>
+
+<script>
+  // Category filter
+  (function () {
+    const cats = document.querySelectorAll('.cat');
+    const featured = document.querySelector('.featured');
+    const posts = [...document.querySelectorAll('.post')];
+    const countEl = document.getElementById('postCount');
+    cats.forEach((btn) => btn.addEventListener('click', () => {
+      cats.forEach((b) => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+      const cat = btn.dataset.cat;
+      let shown = 0;
+      posts.forEach((p) => {
+        const match = cat === 'todos' || p.dataset.cat === cat;
+        p.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      featured.style.display = (cat === 'todos' || featured.dataset.cat === cat) ? '' : 'none';
+      countEl.textContent = shown + (shown === 1 ? ' artículo' : ' artículos');
+    }));
+  })();
+</script>
+<script src="cf.js" defer></script>
+</body>
+</html>
