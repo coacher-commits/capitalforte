@@ -205,7 +205,7 @@
   .fc.feat .price .unit { color: rgba(245,241,232,.7); }
   .fc p { margin-top: 1rem; font-size: .96rem; line-height: 1.55; color: var(--ink-soft); flex-grow: 1; }
   .fc.feat p { color: var(--cream-dim); }
-  .fc .meta { margin-top: 1rem; flex-grow: 0; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .02em; line-height: 1.6; color: var(--ink-faint); }
+  .fc .meta { margin-top: 1rem; flex-grow: 0; font-family: var(--font-sans); font-size: .82rem; letter-spacing: 0; line-height: 1.6; color: var(--ink-soft); }
   .fc.feat .meta { color: rgba(245,241,232,.78); }
   .fc .b { margin-top: 1.4rem; }
   @media (min-width: 900px) { .fee3 { grid-template-columns: repeat(3,1fr); } .fc.feat { transform: translateY(-12px); } .fc.feat:hover { transform: translateY(-17px); } }
@@ -221,7 +221,7 @@
   .fm { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 1.2rem 1.4rem; transition: border-color .25s; }
   .fm:hover { border-color: var(--line-strong); }
   .fm h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.18rem; letter-spacing: -0.01em; }
-  .fm .fm-price { font-family: var(--font-mono); font-size: .9rem; color: var(--forest); margin-left: auto; }
+  .fm .fm-price { font-family: var(--font-sans); font-weight: 600; font-size: .95rem; color: var(--forest); margin-left: auto; }
   .fm p { flex-basis: 100%; margin-top: .35rem; font-size: .95rem; line-height: 1.5; color: var(--ink-soft); }
   @media (min-width: 760px) { .fee-mini { grid-template-columns: 1fr 1fr; } }
 
@@ -529,12 +529,7 @@
       </div>
     </div>
 
-    <!-- Illustrative growth panel + floating 3D coins -->
-    <div class="panel-wrap">
-      <svg class="panel-deco pd-eur floaty" aria-hidden="true"><use href="#i-coin-eur"/></svg>
-      <svg class="panel-deco pd-btc floaty d2" aria-hidden="true"><use href="#i-coin-btc"/></svg>
-      <svg class="panel-deco spark pd-s1 floaty d1" aria-hidden="true"><use href="#i-spark"/></svg>
-      <svg class="panel-deco spark pd-s2 floaty d3" aria-hidden="true"><use href="#i-spark"/></svg>
+    <!-- Illustrative growth panel -->
     <div class="panel">
       <div class="ph">
         <span class="t">Simulador · empezar pronto</span>
@@ -564,7 +559,6 @@
         <p class="disc">Ejemplo ilustrativo con un supuesto de rentabilidad del 6&nbsp;% anual, solo con fines formativos. No es una previsión ni una promesa de rentabilidad. Invertir conlleva riesgo de pérdida.</p>
       </div>
     </div>
-    </div>
   </div>
 </section>
 
@@ -587,21 +581,21 @@
     </div>
     <div class="steps">
       <div class="step reveal">
-        <svg class="ico3d sm floaty" aria-hidden="true"><use href="#i-lens"/></svg>
+        <svg class="ico3d sm" aria-hidden="true"><use href="#i-lens"/></svg>
         <span class="n">PASO 01</span>
         <h3>Diagnóstico</h3>
         <p>60–90 minutos para entender tu punto de partida: qué tienes, qué quieres y cuánto riesgo aguantas de verdad. Sales con una foto clara aunque no contrates nada más.</p>
         <span class="tagp">150 € · gratis si contratas un plan</span>
       </div>
       <div class="step reveal">
-        <svg class="ico3d sm floaty d1" aria-hidden="true"><use href="#i-compass"/></svg>
+        <svg class="ico3d sm" aria-hidden="true"><use href="#i-compass"/></svg>
         <span class="n">PASO 02</span>
         <h3>Tu plan</h3>
         <p>Te proponemos una cartera concreta, explicada en lenguaje normal: qué compraríamos, por qué y qué puede salir mal. Tú decides si seguimos juntos.</p>
         <span class="tagp">Plan financiero suelto: 450 €</span>
       </div>
       <div class="step reveal">
-        <svg class="ico3d sm floaty d2" aria-hidden="true"><use href="#i-clock"/></svg>
+        <svg class="ico3d sm" aria-hidden="true"><use href="#i-clock"/></svg>
         <span class="n">PASO 03</span>
         <h3>Seguimiento</h3>
         <p>Revisiones periódicas, ajustes cuando tocan y alguien a quien preguntar antes de tomar una decisión con tu dinero. Tarifa fija al mes, sin permanencia.</p>
@@ -621,17 +615,17 @@
     </div>
     <div class="cards3">
       <div class="card reveal">
-        <svg class="ico3d floaty" aria-hidden="true"><use href="#i-hourglass"/></svg>
+        <svg class="ico3d" aria-hidden="true"><use href="#i-hourglass"/></svg>
         <h3>La pensión no basta</h3>
         <p>Lo más probable es que la pensión pública no te alcance para vivir como quieres. Cuanto antes empieces a construir lo tuyo, más fácil se vuelve.</p>
       </div>
       <div class="card reveal">
-        <svg class="ico3d floaty d1" aria-hidden="true"><use href="#i-brick"/></svg>
+        <svg class="ico3d" aria-hidden="true"><use href="#i-brick"/></svg>
         <h3>Invertir, no solo ladrillo</h3>
         <p>Comprar piso no es la única manera de hacer crecer tus ahorros. Los mercados, usados con cabeza, pueden llevarte igual de lejos.</p>
       </div>
       <div class="card reveal">
-        <svg class="ico3d floaty d2" aria-hidden="true"><use href="#i-bubble"/></svg>
+        <svg class="ico3d" aria-hidden="true"><use href="#i-bubble"/></svg>
         <h3>Sin jerga ni humo</h3>
         <p>Te explicamos cada paso con palabras normales y vas aprendiendo sobre la marcha. Nada de tecnicismos para impresionarte.</p>
       </div>
@@ -692,10 +686,10 @@
       </div>
     </div>
     <div class="sec3">
-      <div class="sc reveal"><svg class="ico3d sm floaty" aria-hidden="true"><use href="#i-shield"/></svg><h3>Agente vinculado · CNMV</h3><p>Prestamos el servicio en nombre y por cuenta de una entidad inscrita en la CNMV, bajo su responsabilidad y su folleto de tarifas.</p></div>
-      <div class="sc reveal"><svg class="ico3d sm floaty d1" aria-hidden="true"><use href="#i-medal"/></svg><h3>Certificación EFPA</h3><p>Una acreditación de la European Financial Planning Association que puedes comprobar. Formación de verdad, no un título que nos ponemos solos.</p></div>
-      <div class="sc reveal"><svg class="ico3d sm floaty d2" aria-hidden="true"><use href="#i-lock"/></svg><h3>Tú mantienes la custodia</h3><p>Tu dinero se queda en tus cuentas y plataformas. Las decisiones y los activos siguen siendo tuyos, siempre.</p></div>
-      <div class="sc reveal"><svg class="ico3d sm floaty d3" aria-hidden="true"><use href="#i-eye"/></svg><h3>Transparencia total</h3><p>Siempre sabes qué pagas y por qué. Sin comisiones escondidas ni incentivos por colocarte un producto.</p></div>
+      <div class="sc reveal"><svg class="ico3d sm" aria-hidden="true"><use href="#i-shield"/></svg><h3>Agente vinculado · CNMV</h3><p>Prestamos el servicio en nombre y por cuenta de una entidad inscrita en la CNMV, bajo su responsabilidad y su folleto de tarifas.</p></div>
+      <div class="sc reveal"><svg class="ico3d sm" aria-hidden="true"><use href="#i-medal"/></svg><h3>Certificación EFPA</h3><p>Una acreditación de la European Financial Planning Association que puedes comprobar. Formación de verdad, no un título que nos ponemos solos.</p></div>
+      <div class="sc reveal"><svg class="ico3d sm" aria-hidden="true"><use href="#i-lock"/></svg><h3>Tú mantienes la custodia</h3><p>Tu dinero se queda en tus cuentas y plataformas. Las decisiones y los activos siguen siendo tuyos, siempre.</p></div>
+      <div class="sc reveal"><svg class="ico3d sm" aria-hidden="true"><use href="#i-eye"/></svg><h3>Transparencia total</h3><p>Siempre sabes qué pagas y por qué. Sin comisiones escondidas ni incentivos por colocarte un producto.</p></div>
     </div>
   </div>
 </section>
@@ -798,7 +792,7 @@
 <section class="surface-paper">
   <div class="wrap">
     <div class="xsell reveal">
-      <svg class="ico3d floaty" aria-hidden="true"><use href="#i-case"/></svg>
+      <svg class="ico3d" aria-hidden="true"><use href="#i-case"/></svg>
       <div>
         <span class="mono-label" style="color:var(--forest)">¿Llevas una empresa?</span>
         <h3 style="margin-top:.6rem">La caja de tu empresa también puede trabajar.</h3>
@@ -824,7 +818,6 @@
       </div>
     </div>
     <div class="ins-box" id="insights">
-      <svg class="ins-plane floaty d1" aria-hidden="true"><use href="#i-plane"/></svg>
       <h3>Insights+, cada semana</h3>
       <p>Un correo a la semana con análisis honesto de mercados —tradicionales y cripto— en lenguaje normal. Sin spam y sin venderte nada.</p>
       <form onsubmit="event.preventDefault(); this.reset(); this.querySelector('.ok').hidden=false;">
@@ -855,7 +848,7 @@
     </div>
     <div class="foot-bot">
       <span class="mono-label">© 2026 Norte Capital · España</span>
-      <span class="mono-label">Hecho con calma</span>
+      
     </div>
     <p class="disclaimer">Norte Capital presta el servicio de asesoramiento como agente vinculado, en nombre y por cuenta de una entidad inscrita en la CNMV. El contenido de esta web es de carácter formativo e informativo y no constituye una recomendación personalizada de inversión. Invertir conlleva riesgos, incluida la posible pérdida del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Los datos de mercado y los ejemplos de simulación mostrados son ilustrativos.</p>
   </div>
