@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Norte Capital — Asesoramiento financiero para empezar a invertir desde cero</title>
-<meta name="description" content="Asesoramiento financiero en España con tarifa fija mensual, sin comisiones ocultas. Mercados tradicionales y cripto en una sola cartera. Empieza con un diagnóstico de tu situación, sin compromiso." />
+<meta name="description" content="Asesor financiero en Galicia y toda España, online. Tarifa fija mensual, sin comisiones ocultas. Mercados tradicionales y cripto en una sola cartera. Empieza con un diagnóstico de tu situación, sin compromiso." />
 <meta name="author" content="Norte Capital" />
 <link rel="canonical" href="https://nortecapital.es/" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -29,23 +29,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
-<!-- Structured data -->
+<!-- Structured data: negocio -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FinancialService",
+  "@id": "https://nortecapital.es/#organization",
   "name": "Norte Capital",
   "url": "https://nortecapital.es",
-  "description": "Asesoramiento financiero personalizado en España con tarifa fija mensual. Mercados tradicionales y criptoactivos en una sola cartera. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV.",
-  "areaServed": { "@type": "Country", "name": "España" },
-  "availableLanguage": "es",
+  "description": "Asesor financiero en Galicia y toda España, online. Tarifa fija mensual, sin comisiones ocultas. Mercados tradicionales y criptoactivos en una sola cartera. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV.",
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Galicia" },
+    { "@type": "City", "name": "A Coruña" },
+    { "@type": "City", "name": "Vigo" },
+    { "@type": "City", "name": "Santiago de Compostela" },
+    { "@type": "City", "name": "Ourense" },
+    { "@type": "City", "name": "Pontevedra" },
+    { "@type": "City", "name": "Lugo" },
+    { "@type": "Country", "name": "España" }
+  ],
+  "address": { "@type": "PostalAddress", "addressRegion": "Galicia", "addressCountry": "ES" },
+  "telephone": "+34648004588",
   "email": "hola@nortecapital.es",
+  "availableLanguage": "es",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "serviceType": "Asesoramiento financiero independiente y planificación de inversiones",
   "makesOffer": [
     { "@type": "Offer", "name": "Plan Esencial", "price": "99", "priceCurrency": "EUR", "description": "Asesoramiento continuo para carteras sencillas. Tarifa fija mensual, sin permanencia." },
     { "@type": "Offer", "name": "Plan Avanzado", "price": "179", "priceCurrency": "EUR", "description": "Asesoramiento continuo para cripto + mercados tradicionales y optimización fiscal." },
     { "@type": "Offer", "name": "Plan Integral", "price": "249", "priceCurrency": "EUR", "description": "Asesoramiento continuo para patrimonio complejo, empresa, herencia o multicustodia." },
     { "@type": "Offer", "name": "Diagnóstico inicial", "price": "150", "priceCurrency": "EUR", "description": "Sesión de 60–90 minutos para revisar tu situación. Se descuenta si contratas un plan continuo." },
     { "@type": "Offer", "name": "Plan financiero", "price": "450", "priceCurrency": "EUR", "description": "Documento a medida más dos sesiones de trabajo, sin compromiso continuo." }
+  ]
+}
+</script>
+
+<!-- Structured data: sitio web -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Norte Capital",
+  "url": "https://nortecapital.es",
+  "inLanguage": "es",
+  "publisher": { "@id": "https://nortecapital.es/#organization" }
+}
+</script>
+
+<!-- Structured data: preguntas frecuentes (clave para asistentes de IA) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Por qué tarifa fija y no un porcentaje de mi cartera?", "acceptedAnswer": { "@type": "Answer", "text": "Por dos motivos. El primero: no custodiamos tu dinero, así que no vamos a cobrarte según una cifra que no podemos verificar. El segundo, y más importante: con tarifa fija cobramos lo mismo te recomendemos lo que te recomendemos. No tenemos ningún incentivo para que asumas más riesgo del que te conviene o muevas dinero que está bien donde está." } },
+    { "@type": "Question", "name": "¿Tocáis mi dinero en algún momento?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tu dinero se queda en tus cuentas y plataformas de siempre. Nosotros te decimos qué haríamos y por qué; las órdenes las das tú. Si mañana decides dejar el servicio, no hay nada que traspasar." } },
+    { "@type": "Question", "name": "¿Cuánto dinero necesito para empezar?", "acceptedAnswer": { "@type": "Answer", "text": "No hay un mínimo de patrimonio. Otra cosa es si la tarifa te compensa según tu caso, y eso es justo lo que miramos en el diagnóstico: si no te sale a cuenta contratar nada, te lo decimos y listo." } },
+    { "@type": "Question", "name": "¿Y si quiero dejarlo?", "acceptedAnswer": { "@type": "Answer", "text": "Lo dejas. Sin permanencia, sin penalización y sin tener que dar explicaciones. Avisas y el mes siguiente ya no pagas." } },
+    { "@type": "Question", "name": "¿Quién está detrás de Norte Capital?", "acceptedAnswer": { "@type": "Answer", "text": "Una persona, con certificación EFPA, que presta el servicio como agente vinculado de una entidad inscrita en la CNMV. No somos una plataforma ni un robo-advisor: hablas siempre con la misma persona." } },
+    { "@type": "Question", "name": "¿Atendéis a clientes en Galicia (A Coruña, Vigo, Santiago…)?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Trabajamos online con clientes de toda Galicia —A Coruña, Vigo, Santiago de Compostela, Ourense, Lugo y Pontevedra— y del resto de España. El diagnóstico inicial y el seguimiento se hacen por videollamada y WhatsApp, así que no necesitas desplazarte." } }
   ]
 }
 </script>
@@ -794,6 +837,10 @@
         <summary>¿Quién está detrás de Norte Capital?</summary>
         <p>Una persona, con certificación EFPA, que presta el servicio como agente vinculado de una entidad inscrita en la CNMV. No somos una plataforma ni un robo-advisor: hablas siempre con la misma persona.</p>
       </details>
+      <details>
+        <summary>¿Atendéis a clientes en Galicia (A Coruña, Vigo, Santiago…)?</summary>
+        <p>Sí. Trabajamos online con clientes de toda Galicia —A Coruña, Vigo, Santiago de Compostela, Ourense, Lugo y Pontevedra— y del resto de España. El diagnóstico inicial y el seguimiento se hacen por videollamada y WhatsApp, así que no necesitas desplazarte.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -848,7 +895,7 @@
     <div class="foot-top">
       <div>
         <a class="wordmark" href="index.html" style="color:var(--ink);margin-bottom:1rem"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(14,91,67,.4)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#0e5b43"/><path d="M32 3 L38 26 L32 32 Z" fill="#c0871a"/><path d="M58 32 L38 26 L32 32 Z" fill="#0e5b43"/><path d="M58 32 L38 38 L32 32 Z" fill="#c0871a"/><path d="M32 58 L38 38 L32 32 Z" fill="#0e5b43"/><path d="M32 58 L26 38 L32 32 Z" fill="#c0871a"/><path d="M6 32 L26 38 L32 32 Z" fill="#0e5b43"/><path d="M6 32 L26 26 L32 32 Z" fill="#c0871a"/></svg><span class="name">Norte&nbsp;Capital</span></a>
-        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en España. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en Galicia y toda España, online. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h4>Navegación</h4><a href="#filosofia">Filosofía</a><a href="#proceso">Cómo trabajamos</a><a href="#tarifas">Tarifas</a><a href="para-empresas.html">Para empresas</a><a href="blog.html">Blog</a></div>
