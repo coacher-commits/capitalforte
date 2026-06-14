@@ -109,14 +109,14 @@
 
   /* Product panel — illustrative growth simulator */
   .panel { background: var(--paper); color: var(--ink); border-radius: 10px; box-shadow: var(--shadow-lift); overflow: hidden; }
-  .panel .ph { display: flex; align-items: center; justify-content: space-between; padding: .8rem 1.1rem; border-bottom: 1px solid var(--line); }
-  .panel .ph .t { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
-  .panel .ph .live { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-mono); font-size: .62rem; color: var(--forest); }
+  .panel .ph { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .8rem 1.1rem; border-bottom: 1px solid var(--line); }
+  .panel .ph .t { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .panel .ph .live { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-mono); font-size: .62rem; color: var(--forest); white-space: nowrap; flex-shrink: 0; }
   .panel .body { padding: 1.2rem 1.1rem 1.3rem; }
-  .panel .figure { display: flex; align-items: baseline; gap: .6rem; }
+  .panel .figure { display: flex; align-items: baseline; gap: .2rem .6rem; flex-wrap: wrap; }
   .panel .figure .num { font-family: var(--font-display); font-size: clamp(2.4rem,6vw,3.2rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
-  .panel .figure .delta { font-family: var(--font-mono); font-size: .8rem; color: var(--forest); }
-  .panel .cap { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); margin-top: .35rem; }
+  .panel .figure .delta { font-family: var(--font-mono); font-size: .8rem; color: var(--forest); flex-basis: 100%; }
+  .panel .cap { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-top: .4rem; line-height: 1.4; }
   .chart { margin-top: 1rem; width: 100%; height: 150px; display: block; }
   .chart .grid-l { stroke: var(--line); stroke-width: 1; }
   .chart .area { fill: url(#g3area); }
@@ -130,6 +130,16 @@
   .panel .legend .sw { width: 1rem; height: .2rem; border-radius: 2px; }
   .panel .disc { margin-top: .9rem; font-size: .68rem; line-height: 1.4; color: var(--ink-faint); }
   @media (min-width: 980px) { .hero-grid { grid-template-columns: 1.05fr .95fr; gap: 4rem; padding: 5rem 0 5.5rem; } }
+  .panel .ph .t .t-short { display: none; }
+  @media (max-width: 480px) {
+    .panel .ph .t .t-long { display: none; }
+    .panel .ph .t .t-short { display: inline; }
+    .panel .ph .t { font-size: .62rem; letter-spacing: .1em; }
+    .panel .ph .live { font-size: .58rem; }
+    .panel .body { padding: 1.1rem 1rem 1.2rem; }
+    .panel .figure .num { font-size: clamp(2.1rem, 9vw, 2.8rem); }
+    .panel .cap { font-size: .56rem; }
+  }
 
   /* Stat band */
   .stats { display: grid; grid-template-columns: 1fr; }
@@ -532,7 +542,7 @@
     <!-- Illustrative growth panel -->
     <div class="panel">
       <div class="ph">
-        <span class="t">Simulador · empezar pronto</span>
+        <span class="t"><span class="t-long">Simulador · empezar pronto</span><span class="t-short">Simulador</span></span>
         <span class="live"><span class="dot animate-blink"></span>ilustrativo</span>
       </div>
       <div class="body">
