@@ -1,32 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nortecapital.es/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/asesor-financiero-galicia</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/para-empresas</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/blog</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/empezar-a-invertir-desde-cero</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/aviso-legal</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/privacidad</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/folleto-de-tarifas</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/invertir-desde-cero-galicia</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/invertir-desde-cero-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/invertir-desde-cero-galicia-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/invertir-desde-cero-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/comprar-piso-o-invertir-galicia</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/comprar-piso-o-invertir-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/comprar-piso-o-invertir-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/comprar-piso-o-invertir-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/comprar-piso-o-invertir-galicia-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/comprar-piso-o-invertir-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/comprar-piso-o-invertir-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/comprar-piso-o-invertir-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/como-tributan-inversiones-galicia</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-tributan-inversiones-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-tributan-inversiones-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-tributan-inversiones-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/como-tributan-inversiones-galicia-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-tributan-inversiones-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-tributan-inversiones-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-tributan-inversiones-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/banco-o-asesor-financiero-galicia</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/banco-o-asesor-financiero-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/banco-o-asesor-financiero-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/banco-o-asesor-financiero-galicia"/>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/banco-o-asesor-financiero-galicia-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/banco-o-asesor-financiero-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/banco-o-asesor-financiero-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/banco-o-asesor-financiero-galicia"/>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
