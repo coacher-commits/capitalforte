@@ -198,3 +198,6 @@ a { color: inherit; text-decoration: none; }
 .wa-float { position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 60; width: 3.4rem; height: 3.4rem; border-radius: 50%; background: #25D366; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(22,22,15,.3); transition: transform .25s cubic-bezier(.22,1,.36,1); }
 .wa-float:hover { transform: translateY(-3px) scale(1.05); }
 .wa-float svg { width: 1.9rem; height: 1.9rem; fill: #fff; }
+
+/* Marca: titulos sin italica */
+.it{font-style:normal !important}
