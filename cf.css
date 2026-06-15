@@ -201,3 +201,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Marca: titulos sin italica */
 .it{font-style:normal !important}
+
+/* Iconos monolinea: color en superficies oscuras + ocultar adornos */
+.surface-ink .ico3d,.surface-forest .ico3d{color:var(--forest-bright)}
+.panel-deco,.ins-plane,.hp-coin,.hp-spark,.mast-coin,.mast-spark{display:none !important}
