@@ -107,3 +107,24 @@
   els.forEach(function (el) { io.observe(el); });
   setTimeout(function () { els.forEach(function (el) { el.classList.add('in'); }); }, 1600);
 })();
+
+/* Barra CTA fija en móvil: aparece tras pasar el hero, se esconde junto al contacto */
+(function () {
+  var dock = document.getElementById('ctaDock');
+  if (!dock) return;
+  var contact = document.getElementById('contacto');
+  var shown = false;
+  function onScroll() {
+    var past = window.scrollY > window.innerHeight * 0.85;
+    var nearEnd = contact && contact.getBoundingClientRect().top < window.innerHeight;
+    var want = past && !nearEnd;
+    if (want !== shown) {
+      shown = want;
+      dock.classList.toggle('show', want);
+      dock.setAttribute('aria-hidden', want ? 'false' : 'true');
+      document.body.classList.toggle('dock-visible', want);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();

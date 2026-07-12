@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Xestión patrimonial en Galicia con tarifa fixa · Norte Capital</title>
+<meta name="description" content="Asesoramento patrimonial continuo para patrimonios desde 70.000 €. Tarifa fixa mensual, sen porcentaxes sobre a túa carteira nin comisións por produto. En liña, en Galicia e en toda España." />
+<link rel="canonical" href="https://nortecapital.es/gestion-patrimonial-gl" />
+<link rel="alternate" hreflang="es" href="https://nortecapital.es/gestion-patrimonial" />
+<link rel="alternate" hreflang="gl" href="https://nortecapital.es/gestion-patrimonial-gl" />
+<link rel="alternate" hreflang="x-default" href="https://nortecapital.es/gestion-patrimonial" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Norte Capital" />
+<meta property="og:title" content="Xestión patrimonial con tarifa fixa · Norte Capital" />
+<meta property="og:description" content="Para patrimonios desde 70.000 €: asesoramento continuo con tarifa fixa, sen porcentaxes sobre a túa carteira nin comisións por produto." />
+<meta property="og:url" content="https://nortecapital.es/gestion-patrimonial-gl" />
+<meta property="og:image" content="https://nortecapital.es/assets/og-default.png" />
+<meta property="og:locale" content="gl_ES" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230e5b43'/%3E%3Cpath d='M32 6 L27 27 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M32 6 L37 27 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M55 32 L37 27 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M55 32 L37 37 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M32 55 L37 37 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M32 55 L27 37 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M9 32 L27 37 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M9 32 L27 27 L32 32 Z' fill='%23e6b95c'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="cf.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Norte Capital · home ---------- */
+  :root { --font-display: 'Spectral', Georgia, 'Times New Roman', serif; }
+  .hero h1, .sh h2, .cta-band h2, .stat .big, .panel .figure .num,
+  .fc h3, .card h3, .sc h3, .wordmark .name, .fc .price .big { letter-spacing: -0.016em; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .skip { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--cream); color: var(--ink); padding: .6rem 1rem; border-radius: 4px; }
+  .skip:focus { left: .5rem; top: .5rem; }
+
+  /* Header on forest */
+  header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--forest) 90%, transparent);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(245,241,232,.14); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 4.25rem; }
+  .wordmark { display: flex; align-items: center; gap: .65rem; color: var(--cream); }
+  .mark { width: 25px; height: 25px; flex-shrink: 0; }
+  .mark .c1 { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(245,241,232,.7); }
+  .mark .c2 { position: absolute; right: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--cream); opacity: .85; mix-blend-mode: overlay; }
+  .wordmark .name { font-family: var(--font-display); font-weight: 500; font-size: 1.28rem; letter-spacing: -0.02em; }
+  .nav-links { display: none; align-items: center; gap: 2rem; }
+  .nav-links a { font-size: .92rem; color: var(--cream-dim); transition: color .2s; }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-cta { display: none; }
+  .burger { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: none; border: none; cursor: pointer; color: var(--cream); }
+  @media (min-width: 1000px) { .nav-links { display: flex; } .nav-cta { display: inline-flex; } .burger { display: none; } }
+
+  /* HERO — forest, bold, product panel */
+  .hero { position: relative; background: var(--forest); color: var(--cream); overflow: hidden; }
+  .hero .glow { position: absolute; width: 60rem; height: 60rem; right: -20rem; top: -28rem; border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--forest-bright) 55%, transparent), transparent 62%); pointer-events: none; }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 2.5rem; padding: 3.5rem 0 4rem; align-items: center; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: .6rem; padding: .4rem .8rem; border: 1px solid rgba(245,241,232,.28); border-radius: 99px; color: var(--cream); }
+  .hero-eyebrow .mono-label { font-size: .62rem; color: var(--cream); }
+  .hero h1 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.028em; line-height: .98;
+    font-size: clamp(2.8rem, 8vw, 5.2rem); margin-top: 1.4rem; text-wrap: balance; }
+  .hero h1 .it { font-style: italic; }
+  .hero .sub { font-size: 1.15rem; line-height: 1.6; color: var(--cream-dim); max-width: 32rem; margin-top: 1.5rem; text-wrap: pretty; }
+  .hero .ctas { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+  .hero-trust { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.4rem; }
+  .hero-trust .ht { display: flex; flex-direction: column; }
+  .hero-trust .ht .k { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(245,241,232,.6); }
+  .hero-trust .ht .v { font-weight: 500; margin-top: .15rem; }
+
+  /* Product panel — illustrative growth simulator */
+  .panel { background: var(--paper); color: var(--ink); border-radius: 10px; box-shadow: var(--shadow-lift); overflow: hidden; }
+  .panel .ph { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .8rem 1.1rem; border-bottom: 1px solid var(--line); }
+  .panel .ph .t { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .panel .ph .live { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-mono); font-size: .62rem; color: var(--forest); white-space: nowrap; flex-shrink: 0; }
+  .panel .body { padding: 1.2rem 1.1rem 1.3rem; }
+  .panel .figure { display: flex; align-items: baseline; gap: .2rem .6rem; flex-wrap: wrap; }
+  .panel .figure .num { font-family: var(--font-display); font-size: clamp(2.4rem,6vw,3.2rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+  .panel .figure .delta { font-family: var(--font-mono); font-size: .8rem; color: var(--forest); flex-basis: 100%; }
+  .panel .cap { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-top: .4rem; line-height: 1.4; }
+  .chart { margin-top: 1rem; width: 100%; height: 150px; display: block; }
+  .chart .grid-l { stroke: var(--line); stroke-width: 1; }
+  .chart .area { fill: url(#g3area); }
+  .chart .line { fill: none; stroke: var(--forest); stroke-width: 2.5; stroke-linecap: round;
+    stroke-dasharray: 1400; stroke-dashoffset: 1400; }
+  .chart.in .line { animation: draw3 1.6s cubic-bezier(.4,0,.2,1) forwards; }
+  @keyframes draw3 { to { stroke-dashoffset: 0; } }
+  .chart .line2 { fill: none; stroke: var(--line-strong); stroke-width: 2; stroke-dasharray: 4 5; }
+  .panel .legend { display: flex; gap: 1.2rem; margin-top: .9rem; flex-wrap: wrap; }
+  .panel .legend span { display: inline-flex; align-items: center; gap: .4rem; font-size: .75rem; color: var(--ink-soft); }
+  .panel .legend .sw { width: 1rem; height: .2rem; border-radius: 2px; }
+  .panel .disc { margin-top: .9rem; font-size: .68rem; line-height: 1.4; color: var(--ink-faint); }
+  @media (min-width: 980px) { .hero-grid { grid-template-columns: 1.05fr .95fr; gap: 4rem; padding: 5rem 0 5.5rem; } }
+  .panel .ph .t .t-short { display: none; }
+  @media (max-width: 480px) {
+    .panel .ph .t .t-long { display: none; }
+    .panel .ph .t .t-short { display: inline; }
+    .panel .ph .t { font-size: .62rem; letter-spacing: .1em; }
+    .panel .ph .live { font-size: .58rem; }
+    .panel .body { padding: 1.1rem 1rem 1.2rem; }
+    .panel .figure .num { font-size: clamp(2.1rem, 9vw, 2.8rem); }
+    .panel .cap { font-size: .56rem; }
+  }
+
+  /* Stat band */
+  .stats { display: grid; grid-template-columns: 1fr; }
+  .stat { padding: 2.4rem 1.5rem; border-bottom: 1px solid var(--rule); text-align: center; }
+  .stat .big { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.6rem,6vw,3.6rem); letter-spacing: -0.02em; line-height: 1; color: var(--forest); }
+  .stat .lab { margin-top: .7rem; font-size: .98rem; color: var(--ink-soft); line-height: 1.5; max-width: 18rem; margin-left: auto; margin-right: auto; }
+  @media (min-width: 760px) { .stats { grid-template-columns: repeat(3,1fr); } .stat { border-bottom: none; border-right: 1px solid var(--rule); } .stat:last-child { border-right: none; } }
+
+  /* Section heading */
+  .sh { text-align: center; max-width: 42rem; margin: 0 auto; padding: 3.5rem 0 2.5rem; }
+  .sh .eb { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--forest); }
+  .surface-forest .sh .eb, .surface-ink .sh .eb { color: var(--forest-bright); }
+  .sh h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.04; font-size: clamp(2.1rem,5vw,3.2rem); margin-top: 1rem; text-wrap: balance; }
+  .sh h2 .it { font-style: italic; }
+  .sh p { margin-top: 1rem; font-size: 1.08rem; line-height: 1.6; color: var(--ink-soft); text-wrap: pretty; }
+  .surface-forest .sh p, .surface-ink .sh p { color: var(--cream-dim); }
+
+  /* Beginner cards (bold) */
+  .cards3 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; padding-bottom: 4rem; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 1.8rem 1.6rem; transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; }
+  .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lift); }
+  .card .ic { width: 2.8rem; height: 2.8rem; border-radius: 8px; background: var(--forest-tint); color: var(--forest); display: grid; place-items: center; }
+  .card h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.45rem; margin-top: 1.1rem; letter-spacing: -0.01em; }
+  .card p { margin-top: .55rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
+  @media (min-width: 820px) { .cards3 { grid-template-columns: repeat(3,1fr); } }
+
+  /* Allocation — donut */
+  .alloc3 { display: grid; grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 4rem; align-items: center; }
+  .donut-wrap { display: grid; place-items: center; }
+  .donut { transform: rotate(-90deg); }
+  .donut circle { fill: none; stroke-width: 26; transform-origin: center; }
+  .donut .seg { transition: stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1); }
+  .alloc3 .legend2 { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .alloc3 .l2 { background: var(--paper); padding: 1.1rem 1.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .alloc3 .l2 .nm { display: flex; align-items: center; gap: .65rem; font-weight: 500; }
+  .alloc3 .l2 .sw { width: .85rem; height: .85rem; border-radius: 3px; }
+  .alloc3 .l2 .vl { font-family: var(--font-mono); font-size: 1rem; }
+  .alloc3 .note { font-size: .82rem; color: var(--ink-faint); padding: .5rem 0 0; }
+  .alloc3 .note .tag { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--signal); border: 1px dashed color-mix(in srgb,var(--signal) 60%,transparent); padding: .15rem .5rem; border-radius: 3px; white-space: nowrap; }
+  @media (min-width: 860px) { .alloc3 { grid-template-columns: 1fr 1.1fr; gap: 4rem; } }
+
+  /* Security cards on ink */
+  .sec-advisor { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; padding-bottom: 2.5rem; }
+  .sa-portrait { position: relative; border: 1px solid rgba(245,241,232,.18); border-radius: 12px; overflow: hidden; background: rgba(245,241,232,.04); }
+  .sa-portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; display: block; }
+  .sa-badge { position: absolute; left: .9rem; bottom: .9rem; display: inline-flex; align-items: center; gap: .45rem; background: color-mix(in srgb, var(--ink) 78%, transparent); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: .45rem .75rem; border-radius: 99px; border: 1px solid rgba(245,241,232,.16); }
+  .sa-badge .mono-label { font-size: .58rem; color: var(--cream-dim); }
+  .sa-copy .sa-quote { font-family: var(--font-display); font-weight: 400; font-style: italic; font-size: clamp(1.4rem, 2.8vw, 1.95rem); line-height: 1.32; letter-spacing: -0.01em; color: var(--cream); text-wrap: pretty; }
+  .sa-sign { margin-top: 1.5rem; display: flex; flex-direction: column; gap: .2rem; padding-top: 1.2rem; border-top: 1px solid rgba(245,241,232,.14); }
+  .sa-sign .sa-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; }
+  .sa-sign .sa-role { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cream-dim); }
+  @media (min-width: 820px) { .sec-advisor { grid-template-columns: 300px 1fr; gap: 3rem; padding-bottom: 3rem; } }
+  @media (min-width: 1100px) { .sec-advisor { grid-template-columns: 340px 1fr; gap: 4rem; } }
+
+  .sec3 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; padding-bottom: 4rem; }
+  .sc { background: rgba(245,241,232,.04); border: 1px solid rgba(245,241,232,.14); border-radius: 10px; padding: 1.6rem 1.5rem; }
+  .sc .ic { width: 2.6rem; height: 2.6rem; border-radius: 8px; background: rgba(44,141,104,.18); color: var(--forest-bright); display: grid; place-items: center; }
+  .sc h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; margin-top: 1rem; }
+  .sc p { margin-top: .5rem; font-size: .96rem; line-height: 1.55; color: var(--cream-dim); }
+  @media (min-width: 720px) { .sec3 { grid-template-columns: repeat(2,1fr); } }
+  @media (min-width: 1040px) { .sec3 { grid-template-columns: repeat(4,1fr); } }
+
+  /* Fee cards (bold, featured forest) */
+  .fee3 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; padding-bottom: 2rem; align-items: stretch; }
+  .fc { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 1.9rem 1.7rem; display: flex; flex-direction: column; transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; }
+  .fc:hover { transform: translateY(-5px); box-shadow: var(--shadow-lift); }
+  .fc.feat { background: var(--forest); color: var(--cream); border-color: var(--forest); position: relative; }
+  .fc .badge { position: absolute; top: 1.4rem; right: 1.4rem; font-family: var(--font-mono); font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; background: var(--cream); color: var(--forest); border-radius: 99px; padding: .25rem .65rem; }
+  .fc h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; margin-top: .7rem; letter-spacing: -0.01em; }
+  .fc .price { margin-top: 1.1rem; display: flex; align-items: baseline; gap: .4rem; }
+  .fc .price .big { font-family: var(--font-display); font-size: 2.6rem; font-weight: 500; line-height: 1; }
+  .fc .price .unit { font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); }
+  .fc.feat .price .unit { color: rgba(245,241,232,.7); }
+  .fc p { margin-top: 1rem; font-size: .96rem; line-height: 1.55; color: var(--ink-soft); flex-grow: 1; }
+  .fc.feat p { color: var(--cream-dim); }
+  .fc .meta { margin-top: 1rem; flex-grow: 0; font-family: var(--font-sans); font-size: .82rem; letter-spacing: 0; line-height: 1.6; color: var(--ink-soft); }
+  .fc.feat .meta { color: rgba(245,241,232,.78); }
+  .fc .b { margin-top: 1.4rem; }
+  @media (min-width: 900px) { .fee3 { grid-template-columns: repeat(3,1fr); } .fc.feat { transform: translateY(-12px); } .fc.feat:hover { transform: translateY(-17px); } }
+  .fee3-foot { text-align: center; padding-top: 1.5rem; }
+  .fee3-foot .mono-label { color: var(--ink-faint); }
+
+  .fee-blockhead { display: flex; align-items: baseline; gap: .9rem; margin: 2.6rem 0 1.4rem; }
+  .fee-blockhead:first-of-type { margin-top: 1rem; }
+  .fee-blockhead h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; letter-spacing: -0.01em; white-space: nowrap; }
+  .fee-blockhead .ln { flex: 1; height: 1px; background: var(--line-strong); }
+  .fee-blockhead .tag2 { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .fee-mini { display: grid; grid-template-columns: 1fr; gap: 1rem; padding-bottom: 1rem; }
+  .fm { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 1.2rem 1.4rem; transition: border-color .25s; }
+  .fm:hover { border-color: var(--line-strong); }
+  .fm h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.18rem; letter-spacing: -0.01em; }
+  .fm .fm-price { font-family: var(--font-sans); font-weight: 600; font-size: .95rem; color: var(--forest); margin-left: auto; }
+  .fm p { flex-basis: 100%; margin-top: .35rem; font-size: .95rem; line-height: 1.5; color: var(--ink-soft); }
+  @media (min-width: 760px) { .fee-mini { grid-template-columns: 1fr 1fr; } }
+
+  /* Contact + Insights band */
+  .cta-band { position: relative; overflow: hidden; padding: 4.5rem 0 5rem; }
+  .cta-band .glow { position: absolute; width: 50rem; height: 50rem; left: 50%; top: -30rem; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb,var(--forest-bright) 50%,transparent), transparent 60%); pointer-events: none; }
+  .contact-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 3rem; }
+  .contact-grid h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.02; font-size: clamp(2.2rem,5vw,3.6rem); text-wrap: balance; }
+  .contact-grid h2 .it { font-style: italic; }
+  .contact-grid .cp { margin-top: 1.2rem; max-width: 30rem; color: var(--cream-dim); font-size: 1.08rem; line-height: 1.6; }
+  .contact-grid .ctas { margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+  .contact-grid .mail { font-family: var(--font-mono); font-size: .82rem; color: var(--cream-dim); }
+  .contact-grid .mail a { color: var(--cream); border-bottom: 1px solid rgba(245,241,232,.4); }
+  .ins-box { background: rgba(245,241,232,.06); border: 1px solid rgba(245,241,232,.2); border-radius: 12px; padding: 1.8rem 1.6rem; align-self: center; }
+  .ins-box h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .ins-box p { margin-top: .6rem; color: var(--cream-dim); font-size: .98rem; line-height: 1.6; }
+  .ins-box form { margin-top: 1.2rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+  .ins-box input { flex: 1 1 12rem; height: 3rem; border-radius: var(--radius-btn); border: 1px solid rgba(245,241,232,.3); background: rgba(245,241,232,.06); color: var(--cream); padding: 0 1rem; font-family: var(--font-sans); font-size: .98rem; }
+  .ins-box input::placeholder { color: rgba(245,241,232,.55); }
+  .ins-box input:focus { outline: none; border-color: var(--cream); }
+  .ins-box .legal { margin-top: .8rem; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; color: rgba(245,241,232,.55); }
+  @media (min-width: 900px) { .contact-grid { grid-template-columns: 1.1fr .9fr; gap: 4rem; } }
+
+  /* Footer */
+  footer.site { padding: 3rem 0 2.5rem; }
+  .foot-top { display: grid; grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+  .foot-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .foot-col h4 { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: .8rem; }
+  .foot-col a { display: block; padding: .3rem 0; font-size: .95rem; color: var(--ink-soft); }
+  .foot-col a:hover { color: var(--ink); }
+  .foot-bot { padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; }
+  .foot-bot .mono-label { color: var(--ink-faint); font-size: .6rem; }
+  .disclaimer { margin-top: 1.5rem; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; max-width: 60rem; }
+  @media (min-width: 760px) { .foot-top { grid-template-columns: 1.4fr 2fr; } .foot-cols { grid-template-columns: repeat(3,1fr); } }
+
+  /* ---- 3D icons ---- */
+  .ico3d { width: 46px; height: 46px; display: block; color: var(--forest); }
+  .ico3d.sm { width: 40px; height: 40px; }
+  .floaty { animation: floaty 5.6s ease-in-out infinite; }
+  .floaty.d1 { animation-delay: -1.4s; } .floaty.d2 { animation-delay: -2.8s; } .floaty.d3 { animation-delay: -4.2s; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  .card .ico3d, .step .ico3d, .sc .ico3d { margin-bottom: .4rem; }
+  .spark { position: absolute; pointer-events: none; }
+  .panel-wrap { position: relative; }
+  .panel-deco { position: absolute; z-index: 2; filter: drop-shadow(0 16px 16px rgba(8,30,22,.3)); pointer-events: none; }
+  .pd-eur { width: 96px; height: 96px; top: -34px; right: -16px; }
+  .pd-btc { width: 70px; height: 70px; bottom: -22px; left: -18px; }
+  .pd-s1 { width: 18px; height: 18px; top: -46px; right: 92px; color: #e6b95c; opacity: .9; }
+  .pd-s2 { width: 12px; height: 12px; bottom: 30px; left: -34px; color: #f5f1e8; opacity: .8; }
+  @media (max-width: 979px) { .pd-eur { width: 72px; height: 72px; top: -26px; right: -8px; } .pd-btc { display: none; } .pd-s2 { display: none; } }
+  .xsell .ico3d { width: 56px; height: 56px; }
+  .ins-box { position: relative; }
+  .ins-plane { position: absolute; width: 84px; height: 84px; top: -44px; right: 10px; transform: rotate(-6deg); pointer-events: none; filter: drop-shadow(0 10px 10px rgba(8,30,22,.35)); }
+  @media (prefers-reduced-motion: reduce) { .floaty { animation: none; } }
+</style>
+<style>
+  .cmp { display: flex; flex-direction: column; gap: .9rem; margin-top: .4rem; }
+  .cmp .row { border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1rem; background: var(--paper); }
+  .cmp .row.own { border-color: var(--forest-line); background: var(--forest-tint); }
+  .cmp .who { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .cmp .row.own .who { color: var(--forest); }
+  .cmp .amt { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-top: .2rem; }
+  .cmp .why { font-size: .82rem; color: var(--ink-soft); margin-top: .15rem; line-height: 1.45; }
+  .how-ol { counter-reset: n; list-style: none; margin-top: 1rem; }
+  .how-ol li { position: relative; padding-left: 2rem; margin-top: .7rem; font-size: .95rem; line-height: 1.5; }
+  .how-ol li::before { counter-increment: n; content: counter(n, decimal-leading-zero); position: absolute; left: 0; top: .1em; font-family: var(--font-mono); font-size: .68rem; color: var(--cream); opacity: .75; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Xestión patrimonial",
+  "serviceType": "Asesoramento patrimonial continuo con tarifa fixa",
+  "provider": { "@id": "https://nortecapital.es/#organization" },
+  "areaServed": [ { "@type": "AdministrativeArea", "name": "Galicia" }, { "@type": "Country", "name": "España" } ],
+  "url": "https://nortecapital.es/gestion-patrimonial-gl",
+  "offers": [
+    { "@type": "Offer", "name": "Esencial", "price": "99", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Avanzado", "price": "179", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Integral", "price": "249", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Diagnóstico patrimonial", "price": "150", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Plan patrimonial puntual", "price": "450", "priceCurrency": "EUR" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://nortecapital.es/" },
+    { "@type": "ListItem", "position": 2, "name": "Xestión patrimonial", "item": "https://nortecapital.es/gestion-patrimonial-gl" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Por que desde 70.000 €?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque por debaixo desa cifra a subscrición non adoita compensar: a tarifa pesaría demasiado sobre o patrimonio, e preferimos dicircho antes que cobrarche. Se estás empezando, mira o Plan de Inicio: pagamento único, sen cotas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inclúe criptoactivos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se encaixan no teu plan, si. Tratámolos como unha parte máis da carteira, co mesmo criterio de risco e de fiscalidade que o resto das túas posicións."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tocades o meu diñeiro nalgún momento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. O teu diñeiro queda nas túas contas e plataformas de sempre. Nós dicímosche que fariamos e por que; as ordes dálas ti. Se mañá decides deixar o servizo, non hai nada que traspasar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hai permanencia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Avisas e o mes seguinte xa non pagas. E o traballo feito ata entón —diagnóstico, proposta, actas de cada revisión— queda contigo."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar ao contido</a>
+<header class="site">
+  <nav class="nav wrap">
+    <a class="wordmark" href="index.html"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(245,241,232,.45)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#f5f1e8"/><path d="M32 3 L38 26 L32 32 Z" fill="#e6b95c"/><path d="M58 32 L38 26 L32 32 Z" fill="#f5f1e8"/><path d="M58 32 L38 38 L32 32 Z" fill="#e6b95c"/><path d="M32 58 L38 38 L32 32 Z" fill="#f5f1e8"/><path d="M32 58 L26 38 L32 32 Z" fill="#e6b95c"/><path d="M6 32 L26 38 L32 32 Z" fill="#f5f1e8"/><path d="M6 32 L26 26 L32 32 Z" fill="#e6b95c"/></svg><span class="name">Norte&nbsp;Capital</span></a>
+    <div class="nav-links">
+      <a href="index.html#filosofia">Filosofía</a><a href="index.html#cartera">Servicios</a><a href="index.html#sobre-mi">Sobre mí</a><a href="gestion-patrimonial.html" aria-current="page">Patrimonios</a><a href="para-empresas.html">Para empresas</a><a href="blog.html">Blog</a>
+    </div>
+    <a class="btn btn-light btn-sm nav-cta" href="https://wa.me/34648004588?text=Ola%2C%20quero%20informaci%C3%B3n%20sobre%20a%20xesti%C3%B3n%20patrimonial" target="_blank" rel="noopener">Falemos do teu patrimonio
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#filosofia">Filosofía</a>
+    <a href="index.html#proceso">Cómo trabajamos</a>
+    <a href="index.html#tarifas">Tarifas</a>
+    <a href="gestion-patrimonial.html">Patrimonios</a>
+    <a href="para-empresas.html">Para empresas</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://wa.me/34648004588?text=Ola%2C%20quero%20informaci%C3%B3n%20sobre%20a%20xesti%C3%B3n%20patrimonial" target="_blank" rel="noopener"><strong>Falemos do teu patrimonio →</strong></a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="glow"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-eyebrow"><span class="dot animate-blink"></span><span class="mono-label">Xestión patrimonial · Desde 70.000&nbsp;€</span></span>
+      <h1>Criterio independente para o teu <span class="it">patrimonio.</span></h1>
+      <p class="sub">Asesoramento continuo con tarifa fixa mensual. Sen porcentaxes sobre a túa carteira, sen produtos con comisión escondida e coa mesma persoa do outro lado, sempre.</p>
+      <div class="ctas">
+        <a class="btn btn-light btn-lg" href="https://wa.me/34648004588?text=Ola%2C%20quero%20informaci%C3%B3n%20sobre%20a%20xesti%C3%B3n%20patrimonial" target="_blank" rel="noopener">Falemos do teu patrimonio
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-outline-light btn-lg" href="#tarifas">Ver tarifas</a>
+      </div>
+      <div class="hero-trust">
+        <div class="ht"><span class="k">Certificación</span><span class="v">Asesor EFPA</span></div>
+        <div class="ht"><span class="k">Rexistro</span><span class="v">Axente CNMV</span></div>
+        <div class="ht"><span class="k">Cobertura</span><span class="v">TradFi + Cripto</span></div>
+      </div>
+    </div>
+
+    <!-- Panel: comparación de costes -->
+    <div class="panel">
+      <div class="ph">
+        <span class="t"><span class="t-long">Custos anuais · 200.000&nbsp;€</span><span class="t-short">Custos</span></span>
+        <span class="live"><span class="dot animate-blink"></span>exemplo</span>
+      </div>
+      <div class="body">
+        <div class="cmp">
+          <div class="row">
+            <span class="who">Fondo de banca típico · 1,5&nbsp;% de custos internos</span>
+            <div class="amt tnum">3.000&nbsp;€ / ano</div>
+            <p class="why">Págalo dentro do fondo, o vexas ou non, e medra co teu patrimonio.</p>
+          </div>
+          <div class="row own">
+            <span class="who">Norte Capital · plan Avanzado, tarifa fixa</span>
+            <div class="amt tnum">2.148&nbsp;€ / ano</div>
+            <p class="why">Vela en cada recibo e non depende de canto teñas.</p>
+          </div>
+        </div>
+        <p class="disc">Exemplo ilustrativo de custos cun TER do 1,5&nbsp;% anual, habitual en fondos de xestión activa comercializados pola banca. Compara unicamente custos, non rendibilidades. Investir leva risco de perda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EL MODELO -->
+<section class="surface-paper rule-t" id="modelo">
+  <div class="wrap">
+    <div class="sh">
+      <span class="eb"><span class="dot"></span>O modelo</span>
+      <h2>Sen porcentaxes. Sen <span class="it">conflito.</span></h2>
+      <p>A maioría do asesoramento en España cóbrase como porcentaxe do patrimonio ou por comisión de produto. Nós non, e isto é o que cambia.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>A tarifa non medra co teu patrimonio</h3>
+        <p>Un 1&nbsp;% anual parece pouco ata que o multiplicas: sobre 300.000&nbsp;€ son 3.000&nbsp;€ cada ano, vaia ben ou mal a carteira. Aquí pagas o mesmo este ano e o que vén.</p>
+      </div>
+      <div class="step reveal">
+        <h3>Cobramos só de ti</h3>
+        <p>Nin retrocesións, nin comisións por colocarche produtos, nin incentivos de terceiros. Se che propoñemos un fondo é porque encaixa no teu plan, non porque deixe comisión.</p>
+      </div>
+      <div class="step reveal">
+        <h3>O teu diñeiro non se move das túas contas</h3>
+        <p>Non custodiamos nada. Dicímosche que fariamos e por que; as ordes dálas ti desde as túas propias contas e plataformas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="surface-cream rule-t" id="proceso">
+  <div class="wrap">
+    <div class="sh">
+      <span class="eb"><span class="dot"></span>Como traballamos</span>
+      <h2>Primeiro entender. <span class="it">Logo propoñer.</span></h2>
+      <p>Nada de carteiras modelo o primeiro día. A túa situación completa, sobre a mesa, antes de mover un euro.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">PASO 01</span>
+        <h3>Diagnóstico patrimonial</h3>
+        <p>Dúas sesións para entender a túa situación completa: contas, fondos, inmobles, empresa, fiscalidade e o que queres que pase con todo iso.</p>
+        <span class="tagp">150&nbsp;€ · descóntase se contratas</span>
+      </div>
+      <div class="step reveal">
+        <span class="n">PASO 02</span>
+        <h3>Proposta</h3>
+        <p>Unha proposta concreta por escrito: que manter, que cambiar e por que, co impacto fiscal de cada movemento calculado antes de facelo.</p>
+        <span class="tagp">Incluída na subscrición</span>
+      </div>
+      <div class="step reveal">
+        <span class="n">PASO 03</span>
+        <h3>Seguimento continuo</h3>
+        <p>Revisións periódicas, axustes cando tocan e acceso directo para consultar antes de tomar calquera decisión. Sen permanencia.</p>
+        <span class="tagp">Desde 99&nbsp;€/mes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFAS -->
+<section class="surface-cream rule-t" id="tarifas">
+  <div class="wrap">
+    <div class="sh">
+      <span class="eb"><span class="dot"></span>Tarifas</span>
+      <h2>Tres niveis. <span class="it">Un modelo.</span></h2>
+      <p>Tarifa fixa mensual segundo a complexidade do teu patrimonio, non segundo o seu tamaño. Sen permanencia e sen letra pequena.</p>
+    </div>
+    <div class="fee3">
+      <div class="fc o1">
+        <h3>Esencial</h3>
+        <div class="price"><span class="big tnum">99&nbsp;€</span><span class="unit">/ mes</span></div>
+        <p>Para carteiras sinxelas: fondos, renda fixa e variable. O esencial, ben feito.</p>
+        <p class="meta">2 revisións ao ano · soporte por email · sen permanencia.</p>
+        <a class="btn btn-secondary btn-md b" href="https://wa.me/34648004588?text=Ola%2C%20inter%C3%A9same%20a%20xesti%C3%B3n%20patrimonial%20%28plan%20Esencial%29" target="_blank" rel="noopener">Empezar</a>
+      </div>
+      <div class="fc feat o2">
+        <span class="badge">O máis elixido</span>
+        <h3>Avanzado</h3>
+        <div class="price"><span class="big tnum">179&nbsp;€</span><span class="unit">/ mes</span></div>
+        <p>Para carteiras máis completas, con planificación e optimización fiscal. Inclúe criptoactivos se encaixan no teu plan.</p>
+        <p class="meta">4 revisións ao ano · soporte prioritario · sen permanencia.</p>
+        <a class="btn btn-light btn-md b" href="https://wa.me/34648004588?text=Ola%2C%20inter%C3%A9same%20a%20xesti%C3%B3n%20patrimonial%20%28plan%20Avanzado%29" target="_blank" rel="noopener">Falemos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="fc o3">
+        <h3>Integral</h3>
+        <div class="price"><span class="big tnum">249&nbsp;€</span><span class="unit">/ mes</span></div>
+        <p>Para patrimonio complexo, empresa, herdanza ou multicustodia.</p>
+        <p class="meta">Revisións mensuais · acceso directo · sen permanencia.</p>
+        <a class="btn btn-secondary btn-md b" href="https://wa.me/34648004588?text=Ola%2C%20inter%C3%A9same%20a%20xesti%C3%B3n%20patrimonial%20%28plan%20Integral%29" target="_blank" rel="noopener">Falemos</a>
+      </div>
+    </div>
+
+    <div class="fee-mini">
+      <div class="fm">
+        <h4>Diagnóstico patrimonial</h4>
+        <span class="fm-price tnum">150&nbsp;€</span>
+        <p>Dúas sesións para ter a foto completa. Descóntase íntegro se despois contratas unha subscrición.</p>
+      </div>
+      <div class="fm">
+        <h4>Plan patrimonial puntual</h4>
+        <span class="fm-price tnum">450&nbsp;€</span>
+        <p>Documento á medida máis dúas sesións de traballo, sen compromiso continuo.</p>
+      </div>
+    </div>
+
+    <div class="fee3-foot"><span class="mono-label">Sen comisións ocultas · Sen permanencia · Folleto de tarifas → CNMV</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="surface-paper rule-t" id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <span class="eb"><span class="dot"></span>Preguntas frecuentes</span>
+      <h2>Antes de que <span class="it">preguntes.</span></h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Por que desde 70.000 €?</summary>
+        <p>Porque por debaixo desa cifra a subscrición non adoita compensar: a tarifa pesaría demasiado sobre o patrimonio, e preferimos dicircho antes que cobrarche. Se estás empezando, mira o <a href="index.html#tarifas">Plan de Inicio</a>: pagamento único, sen cotas.</p>
+      </details>
+      <details>
+        <summary>Inclúe criptoactivos?</summary>
+        <p>Se encaixan no teu plan, si. Tratámolos como unha parte máis da carteira, co mesmo criterio de risco e de fiscalidade que o resto das túas posicións.</p>
+      </details>
+      <details>
+        <summary>Tocades o meu diñeiro nalgún momento?</summary>
+        <p>Non. O teu diñeiro queda nas túas contas e plataformas de sempre. Nós dicímosche que fariamos e por que; as ordes dálas ti. Se mañá decides deixar o servizo, non hai nada que traspasar.</p>
+      </details>
+      <details>
+        <summary>Hai permanencia?</summary>
+        <p>Non. Avisas e o mes seguinte xa non pagas. E o traballo feito ata entón —diagnóstico, proposta, actas de cada revisión— queda contigo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="surface-forest cta-band" id="contacto">
+  <div class="glow"></div>
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Falemos do teu <span class="it">patrimonio.</span></h2>
+      <p class="cp">Cóntanos por WhatsApp que tes e que che preocupa, en dúas liñas. Respondémosche en menos de 24 horas laborables cos seguintes pasos.</p>
+      <div class="ctas">
+        <a class="btn btn-light btn-lg" href="https://wa.me/34648004588?text=Ola%2C%20quero%20informaci%C3%B3n%20sobre%20a%20xesti%C3%B3n%20patrimonial" target="_blank" rel="noopener">Escríbenos por WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="mail">ou escribe a <a href="mailto:hola@nortecapital.es?subject=Xestión patrimonial">hola@nortecapital.es</a></span>
+      </div>
+    </div>
+    <div class="ins-box">
+      <h3>Que pasa cando escribes</h3>
+      <ol class="how-ol">
+        <li>Respondémosche con dúas ou tres preguntas para entender o teu caso.</li>
+        <li>Se ten sentido, axendamos o diagnóstico patrimonial.</li>
+        <li>Recibes unha proposta por escrito. Ti decides se seguimos.</li>
+      </ol>
+      <p class="legal">Sen compromiso: se cremos que non che compensa contratar, tamén cho diremos.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site surface-paper rule-t">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="wordmark" href="index.html" style="color:var(--ink);margin-bottom:1rem"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(14,91,67,.4)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#0e5b43"/><path d="M32 3 L38 26 L32 32 Z" fill="#c0871a"/><path d="M58 32 L38 26 L32 32 Z" fill="#0e5b43"/><path d="M58 32 L38 38 L32 32 Z" fill="#c0871a"/><path d="M32 58 L38 38 L32 32 Z" fill="#0e5b43"/><path d="M32 58 L26 38 L32 32 Z" fill="#c0871a"/><path d="M6 32 L26 38 L32 32 Z" fill="#0e5b43"/><path d="M6 32 L26 26 L32 32 Z" fill="#c0871a"/></svg><span class="name">Norte&nbsp;Capital</span></a>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en España. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h4>Navegación</h4><a href="index.html#filosofia">Filosofía</a><a href="index.html#cartera">Servicios</a><a href="asesor-financiero-galicia.html">Asesor financiero en Galicia</a><a href="para-empresas.html">Para empresas</a><a href="blog.html">Blog</a></div>
+        <div class="foot-col"><h4>Legal</h4><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="folleto-de-tarifas.html">Folleto de tarifas</a></div>
+        <div class="foot-col"><h4>Contacto</h4><a href="https://wa.me/34648004588?text=Hola%2C%20quiero%20hablar%20sobre%20la%20tesorer%C3%ADa%20de%20mi%20empresa" target="_blank" rel="noopener">WhatsApp directo</a><a href="mailto:hola@nortecapital.es">hola@nortecapital.es</a></div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="mono-label">© 2026 Norte Capital · España</span>
+      <span class="mono-label">Para empresas</span>
+    </div>
+    <p class="disclaimer">Norte Capital presta el servicio de asesoramiento como agente vinculado, en nombre y por cuenta de una entidad inscrita en la CNMV. El contenido de esta web es de carácter formativo e informativo y no constituye una recomendación personalizada de inversión. Invertir conlleva riesgos, incluida la posible pérdida del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Los datos de mercado mostrados son ilustrativos.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34648004588?text=Ola%2C%20quero%20informaci%C3%B3n%20sobre%20a%20xesti%C3%B3n%20patrimonial" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+</a>
+<script src="cf.js" defer></script>
+</body>
+</html>

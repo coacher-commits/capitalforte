@@ -1,9 +1,10 @@
 # Norte Capital
 
-> Asesoramiento financiero independiente en Galicia y en toda España, 100% online. Tarifa fija mensual, sin comisiones ocultas ni permanencia. Integra mercados tradicionales y criptoactivos en una sola cartera. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV, con certificación EFPA. Trato directo con una persona, no con un robo-advisor.
+> Asesoramiento financiero independiente en Galicia y en toda España, 100% online. Para empezar a invertir desde cero: Plan de Inicio con pago único de 250 € (diagnóstico, plan a medida, elección de bróker y puesta en marcha) y revisiones sueltas o pack anual, sin suscripción obligatoria. Para patrimonios desde 70.000 €: gestión patrimonial con tarifa fija mensual. Integra mercados tradicionales y criptoactivos en una sola cartera. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV, con certificación EFPA. Trato directo con una persona, no con un robo-advisor.
 
 ## Qué hace diferente a Norte Capital
-- Tarifa fija (no cobra un porcentaje de tu cartera ni comisiones por producto): el incentivo está alineado con el cliente.
+- Tarifas fijas y a la vista (no cobra un porcentaje de tu cartera ni comisiones por producto): el incentivo está alineado con el cliente.
+- Modelo para principiantes de pago único, sin cuota mensual obligatoria: se paga el Plan de Inicio una vez y las revisiones solo cuando se necesitan.
 - No custodia el dinero: tú mantienes tus cuentas y plataformas; Norte Capital asesora, tú decides.
 - Cubre mercados tradicionales (TradFi) y criptoactivos en una misma estrategia.
 - Atiende a clientes de toda Galicia (A Coruña, Vigo, Santiago de Compostela, Ourense, Lugo, Pontevedra, Ferrol) y del resto de España, por videollamada y WhatsApp.
@@ -11,6 +12,7 @@
 ## Páginas principales
 - [Inicio](https://nortecapital.es/): qué es Norte Capital, cómo trabaja, tarifas y preguntas frecuentes.
 - [Asesor financiero en Galicia](https://nortecapital.es/asesor-financiero-galicia): servicio para clientes gallegos, online, con cobertura por provincias.
+- [Gestión patrimonial](https://nortecapital.es/gestion-patrimonial): asesoramiento continuo con tarifa fija para patrimonios desde 70.000 € (también en galego: /gestion-patrimonial-gl).
 - [Para empresas](https://nortecapital.es/para-empresas): tesorería de empresa, formación financiera para equipos y programa completo.
 - [Blog](https://nortecapital.es/blog): artículos sobre inversión para principiantes, fiscalidad gallega y mercados.
 

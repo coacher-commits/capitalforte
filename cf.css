@@ -205,3 +205,22 @@ a { color: inherit; text-decoration: none; }
 /* Iconos monolinea: color en superficies oscuras + ocultar adornos */
 .surface-ink .ico3d,.surface-forest .ico3d{color:var(--forest-bright)}
 .panel-deco,.ins-plane,.hp-coin,.hp-spark,.mast-coin,.mast-spark{display:none !important}
+
+/* ---- Orden de tarjetas de tarifas (móvil: orden del DOM; escritorio: destacada al centro) ---- */
+@media (min-width: 860px) {
+  .fee3 .o1 { order: 1; } .fee3 .o2 { order: 2; } .fee3 .o3 { order: 3; }
+}
+
+/* ---- Barra CTA fija en móvil ---- */
+.cta-dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; display: none; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1.1rem calc(.8rem + env(safe-area-inset-bottom)); background: var(--forest-deep); color: var(--cream); box-shadow: 0 -6px 24px rgba(22,22,15,.25); transform: translateY(110%); visibility: hidden; transition: transform .35s cubic-bezier(.22,1,.36,1), visibility .35s; }
+.cta-dock.show { transform: translateY(0); visibility: visible; }
+.cta-dock .cd-txt { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.cta-dock .cd-txt strong { font-family: var(--font-display); font-weight: 500; font-size: 1.02rem; letter-spacing: -0.01em; }
+.cta-dock .cd-txt span { font-size: .8rem; color: rgba(245,241,232,.75); }
+.cta-dock .btn { flex-shrink: 0; }
+@media (max-width: 859px) {
+  .cta-dock { display: flex; }
+  body.dock-visible .wa-float { opacity: 0; pointer-events: none; transition: opacity .25s; }
+  body.dock-visible footer.site .wrap { padding-bottom: 5.5rem; }
+}
+@media (prefers-reduced-motion: reduce) { .cta-dock { transition: none; } }
