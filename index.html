@@ -41,7 +41,7 @@
   "@id": "https://nortecapital.es/#organization",
   "name": "Norte Capital",
   "url": "https://nortecapital.es",
-  "description": "Asesor financiero online en Galicia y toda España. Plan de Inicio con pago único para empezar a invertir desde cero, revisiones sin suscripción y gestión patrimonial con tarifa fija. Mercados tradicionales y criptoactivos. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV.",
+  "description": "Asesor financiero online en Galicia y toda España. Plan de Inicio con pago único para empezar a invertir desde cero, revisiones sin suscripción y gestión patrimonial con tarifa fija. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV.",
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Galicia" },
     { "@type": "City", "name": "A Coruña" },
@@ -64,7 +64,7 @@
     { "@type": "Offer", "name": "Revisión de cartera", "price": "80", "priceCurrency": "EUR", "description": "Sesión suelta de 45–60 minutos para revisar tu cartera y resolver dudas, con resumen por escrito." },
     { "@type": "Offer", "name": "Pack anual de revisiones", "price": "260", "priceCurrency": "EUR", "description": "Cuatro revisiones trimestrales y dudas por WhatsApp entre sesiones durante un año." },
     { "@type": "Offer", "name": "Gestión patrimonial Esencial", "price": "99", "priceCurrency": "EUR", "description": "Asesoramiento continuo para carteras sencillas, con tarifa fija mensual y sin permanencia. Para patrimonios a partir de 70.000 €." },
-    { "@type": "Offer", "name": "Gestión patrimonial Avanzado", "price": "179", "priceCurrency": "EUR", "description": "Asesoramiento continuo para carteras completas y optimización fiscal, con criptoactivos si encajan en el plan." },
+    { "@type": "Offer", "name": "Gestión patrimonial Avanzado", "price": "179", "priceCurrency": "EUR", "description": "Asesoramiento continuo para carteras completas y optimización fiscal." },
     { "@type": "Offer", "name": "Gestión patrimonial Integral", "price": "249", "priceCurrency": "EUR", "description": "Asesoramiento continuo para patrimonio complejo, empresa, herencia o multicustodia." },
     { "@type": "Offer", "name": "Plan patrimonial puntual", "price": "450", "priceCurrency": "EUR", "description": "Documento a medida más dos sesiones de trabajo, sin compromiso continuo." }
   ]
@@ -385,10 +385,9 @@
   .panel-wrap { position: relative; }
   .panel-deco { position: absolute; z-index: 2; filter: drop-shadow(0 16px 16px rgba(8,30,22,.3)); pointer-events: none; }
   .pd-eur { width: 96px; height: 96px; top: -34px; right: -16px; }
-  .pd-btc { width: 70px; height: 70px; bottom: -22px; left: -18px; }
   .pd-s1 { width: 18px; height: 18px; top: -46px; right: 92px; color: #e6b95c; opacity: .9; }
   .pd-s2 { width: 12px; height: 12px; bottom: 30px; left: -34px; color: #f5f1e8; opacity: .8; }
-  @media (max-width: 979px) { .pd-eur { width: 72px; height: 72px; top: -26px; right: -8px; } .pd-btc { display: none; } .pd-s2 { display: none; } }
+  @media (max-width: 979px) { .pd-eur { width: 72px; height: 72px; top: -26px; right: -8px; } .pd-s2 { display: none; } }
   .xsell .ico3d { width: 56px; height: 56px; }
   .ins-box { position: relative; }
   .ins-plane { position: absolute; width: 84px; height: 84px; top: -44px; right: 10px; transform: rotate(-6deg); pointer-events: none; filter: drop-shadow(0 10px 10px rgba(8,30,22,.35)); }
@@ -401,7 +400,6 @@
 <!-- 3D icon sprite — hand-built pseudo-3D SVG objects, Robinhood-style -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-coin-eur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h11M5 14h8"/><path d="M18.5 6.2A7.5 7.5 0 0 0 13.5 4 8 8 0 0 0 13.5 20a7.5 7.5 0 0 0 5-2.2"/></symbol>
-<symbol id="i-coin-btc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 8h4a2 2 0 0 1 0 4h-4zM9.5 12h4.5a2 2 0 0 1 0 4h-4.5zM9.5 8v8M11 6v2M11 16v2M13.5 6v2M13.5 16v2"/></symbol>
 <symbol id="i-hourglass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14M5 2h14M17 22v-4.17a2 2 0 0 0-.59-1.41L12 12l-4.41 4.42A2 2 0 0 0 7 17.83V22M7 2v4.17a2 2 0 0 0 .59 1.41L12 12l4.41-4.42A2 2 0 0 0 17 6.17V2"/></symbol>
 <symbol id="i-brick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h1.5M13.5 7h1.5M9 11h1.5M13.5 11h1.5M9 15h1.5M13.5 15h1.5M10.5 21v-3h3v3"/></symbol>
 <symbol id="i-bubble" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/><circle cx="8.5" cy="12" r=".7" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/><circle cx="15.5" cy="12" r=".7" fill="currentColor" stroke="none"/></symbol>
@@ -419,7 +417,7 @@
 
 
 <!-- MARKET RIBBON -->
-<div class="ticker surface-ink" aria-label="Mercado · cripto en directo, índices ilustrativos">
+<div class="ticker surface-ink" aria-label="Mercado · índices ilustrativos">
   <div class="pin" style="z-index:10;display:flex;align-items:center;gap:.55rem;height:100%;flex-shrink:0;padding:0 1.25rem 0 1rem;border-right:1px solid var(--rule);background:var(--ink);white-space:nowrap">
     <span class="dot animate-blink"></span>
     <span class="mono-label" id="ribbonStatus" style="font-size:.66rem;color:rgba(245,241,232,.7)">Datos ilustrativos</span>
@@ -469,7 +467,7 @@
       <div class="hero-trust">
         <div class="ht"><span class="k">Certificación</span><span class="v">Asesor EFPA</span></div>
         <div class="ht"><span class="k">Registro</span><span class="v">Agente CNMV</span></div>
-        <div class="ht"><span class="k">Cobertura</span><span class="v">TradFi + Cripto</span></div>
+        <div class="ht"><span class="k">Cobertura</span><span class="v">Galicia y España</span></div>
       </div>
     </div>
 
@@ -506,11 +504,37 @@
   </div>
 </section>
 
+<!-- SOBRE MÍ · presentación -->
+<section class="surface-ink rule-t grain" id="sobre-mi" style="position:relative">
+  <div class="wrap" style="position:relative">
+    <div class="sh" style="text-align:left;max-width:48rem;margin:0;padding-bottom:2rem">
+      <span class="eb"><span class="dot"></span>Sobre mí</span>
+      <h2>Hola, soy <span class="it">Álvaro.</span></h2>
+    </div>
+    <div class="sec-advisor reveal">
+      <div class="sa-portrait">
+        <img src="assets/founder.jpg" alt="Álvaro González, asesor financiero en Norte Capital" loading="lazy" />
+        <span class="sa-badge"><span class="dot animate-blink"></span><span class="mono-label">Álvaro González · en activo</span></span>
+      </div>
+      <div class="sa-copy">
+        <p style="color:var(--cream);font-size:1.15rem;line-height:1.6;font-family:var(--font-display);font-weight:400">Soy asesor financiero registrado en la CNMV. Antes de montar Norte Capital pasé años dentro de DEGIRO, uno de los mayores brókers online de Europa, así que los mercados los conozco por dentro y no por lo que cuenta un manual.</p>
+        <p style="color:var(--cream-dim);font-size:1.04rem;line-height:1.7;margin-top:1.1rem">Monté esto con una idea que me importa de verdad: que invertir deje de ser cosa solo de gente con mucho dinero. Durante demasiado tiempo el buen asesoramiento ha estado reservado a quien ya era rico, y eso me parece profundamente injusto. Da igual en qué trabajes o con cuánto empieces; tienes el mismo derecho a construir tu patrimonio y a que alguien te lo explique con calma, en tu idioma y sin venderte humo.</p>
+        <p style="color:var(--cream-dim);font-size:1.04rem;line-height:1.7;margin-top:1.1rem">Mi trabajo es acompañarte de tú a tú hasta que las finanzas dejan de darte respeto y pasan a estar de tu lado. Ni call centers ni robots: hablas siempre conmigo, la misma persona en cada sesión.</p>
+        <div class="sa-sign">
+          <span class="sa-name">Álvaro González</span>
+          <span class="sa-role">Asesor financiero · EFPA · ex-DEGIRO</span>
+          <a href="https://www.linkedin.com/in/alvaroglezfdez/" target="_blank" rel="noopener" style="color:var(--cream);border-bottom:1px solid rgba(245,241,232,.4);font-family:var(--font-mono);font-size:.7rem;margin-top:.5rem;display:inline-block">LinkedIn &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- STAT BAND -->
 <section class="surface-paper rule-t">
   <div class="wrap stats">
-    <div class="stat"><div class="big tnum">99&nbsp;€</div><div class="lab">Asesoramiento continuo, desde — tarifa fija mensual, sin permanencia.</div></div>
-    <div class="stat"><div class="big">2</div><div class="lab">Mundos en una sola cartera: mercados tradicionales y criptoactivos.</div></div>
+    <div class="stat"><div class="big tnum">99&nbsp;€</div><div class="lab">Asesoramiento continuo con tarifa fija mensual, sin permanencia.</div></div>
+    <div class="stat"><div class="big">1</div><div class="lab">Detrás no hay una plataforma: siempre hablas con la misma persona.</div></div>
     <div class="stat"><div class="big tnum">0&nbsp;€</div><div class="lab">Comisiones ocultas. Sabes lo que pagas, siempre.</div></div>
   </div>
 </section>
@@ -520,8 +544,8 @@
   <div class="wrap">
     <div class="sh">
       <span class="eb"><span class="dot"></span>Cómo trabajamos</span>
-      <h2>Tres pasos, sin <span class="it">sorpresas.</span></h2>
-      <p>Antes de pagar nada continuo sabes exactamente qué vas a recibir, cuánto cuesta y qué pasa si lo dejas.</p>
+      <h2>Cómo lo hacemos <span class="it">juntos.</span></h2>
+      <p>Antes de que pagues nada continuo, sabes exactamente qué vas a recibir, cuánto cuesta y qué pasa si un día lo dejas. Sin sorpresas ni letra pequeña.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -560,8 +584,8 @@
     <div class="cards3">
       <div class="card reveal">
         <svg class="ico3d" aria-hidden="true"><use href="#i-hourglass"/></svg>
-        <h3>La pensión no basta</h3>
-        <p>Lo más probable es que la pensión pública no te alcance para vivir como quieres. Cuanto antes empieces a construir lo tuyo, más fácil se vuelve.</p>
+        <h3>La vejez que te mereces</h3>
+        <p>Cuando dejes de trabajar, lo suyo es que puedas vivir tranquilo, no haciendo cuentas cada mes. La pensión pública seguramente no llegue a todo, y cuanto antes empieces a construir lo tuyo, menos esfuerzo te costará.</p>
       </div>
       <div class="card reveal">
         <svg class="ico3d" aria-hidden="true"><use href="#i-brick"/></svg>
@@ -582,26 +606,24 @@
   <div class="wrap">
     <div class="sh">
       <span class="eb"><span class="dot"></span>Cartera diversificada</span>
-      <h2>La clave está en el <span class="it">balance.</span></h2>
+      <h2>No lo metemos todo en el <span class="it">mismo sitio.</span></h2>
     </div>
     <div class="alloc3">
       <div class="donut-wrap reveal">
-        <svg class="donut" id="donut" width="240" height="240" viewBox="0 0 120 120" role="img" aria-label="Ejemplo de reparto de cartera: 55 fondos y renta fija, 30 renta variable, 8 liquidez, 7 cripto">
+        <svg class="donut" id="donut" width="240" height="240" viewBox="0 0 120 120" role="img" aria-label="Ejemplo de reparto de cartera: 55 fondos y renta fija, 33 renta variable global, 12 liquidez y reserva">
           <circle cx="60" cy="60" r="46" stroke="var(--sand)" stroke-width="26"></circle>
           <circle class="seg" cx="60" cy="60" r="46" stroke="var(--forest-deep)" stroke-dasharray="289" stroke-dashoffset="289" data-pct="55"></circle>
-          <circle class="seg" cx="60" cy="60" r="46" stroke="var(--forest)" stroke-dasharray="289" stroke-dashoffset="289" data-pct="30" data-start="55"></circle>
-          <circle class="seg" cx="60" cy="60" r="46" stroke="var(--forest-bright)" stroke-dasharray="289" stroke-dashoffset="289" data-pct="8" data-start="85"></circle>
-          <circle class="seg" cx="60" cy="60" r="46" stroke="var(--signal)" stroke-dasharray="289" stroke-dashoffset="289" data-pct="7" data-start="93"></circle>
+          <circle class="seg" cx="60" cy="60" r="46" stroke="var(--forest)" stroke-dasharray="289" stroke-dashoffset="289" data-pct="33" data-start="55"></circle>
+          <circle class="seg" cx="60" cy="60" r="46" stroke="var(--forest-bright)" stroke-dasharray="289" stroke-dashoffset="289" data-pct="12" data-start="88"></circle>
         </svg>
       </div>
       <div>
         <div class="legend2">
           <div class="l2"><span class="nm"><span class="sw" style="background:var(--forest-deep)"></span>Fondos y renta fija</span><span class="vl tnum">55</span></div>
-          <div class="l2"><span class="nm"><span class="sw" style="background:var(--forest)"></span>Renta variable global</span><span class="vl tnum">30</span></div>
-          <div class="l2"><span class="nm"><span class="sw" style="background:var(--forest-bright)"></span>Liquidez y reserva</span><span class="vl tnum">8</span></div>
-          <div class="l2"><span class="nm"><span class="sw" style="background:var(--signal)"></span>Criptoactivos</span><span class="vl tnum">7</span></div>
+          <div class="l2"><span class="nm"><span class="sw" style="background:var(--forest)"></span>Renta variable global</span><span class="vl tnum">33</span></div>
+          <div class="l2"><span class="nm"><span class="sw" style="background:var(--forest-bright)"></span>Liquidez y reserva</span><span class="vl tnum">12</span></div>
         </div>
-        <p class="note" style="margin-top:1.2rem;font-size:1rem;color:var(--ink-soft);line-height:1.6">Diversificar bien es lo que te permite aguantar los baches del mercado sin vender en el peor momento. Cada pieza —incluida la cripto, en su justa medida— tiene un peso pensado para ti, no para una moda.</p>
+        <p class="note" style="margin-top:1.2rem;font-size:1rem;color:var(--ink-soft);line-height:1.6">Repartir bien es lo que te deja dormir tranquilo cuando el mercado se mueve, y créeme que se mueve. Cada pieza lleva un peso pensado para ti y para tu momento vital, no para seguir la última moda.</p>
         <p class="note"><span class="tag">Reparto ilustrativo · partes de 100</span></p>
       </div>
     </div>
@@ -615,22 +637,6 @@
       <span class="eb"><span class="dot"></span>Seguridad y confianza</span>
       <h2>Tu dinero, donde <span class="it">siempre estuvo.</span></h2>
       <p>Trabajamos dentro de un marco regulado y tú mantienes el control en todo momento. Nosotros te orientamos; tu dinero no se mueve de tus cuentas.</p>
-    </div>
-    <div class="sec-advisor reveal" id="sobre-mi">
-      <div class="sa-portrait">
-        <img src="assets/founder.jpg" alt="Álvaro González, asesor financiero en Norte Capital" loading="lazy" />
-        <span class="sa-badge"><span class="dot animate-blink"></span><span class="mono-label">Álvaro González · en activo</span></span>
-      </div>
-      <div class="sa-copy">
-        <span class="mono-label" style="color:var(--forest-bright);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase">Sobre mí</span>
-        <p style="color:var(--cream);font-size:1.15rem;line-height:1.6;margin-top:1rem;font-family:var(--font-display);font-weight:400">Asesor financiero registrado en la CNMV y ex-DEGIRO, uno de los mayores brókers online de Europa. Durante años he trabajado dentro de la maquinaria de las bolsas y los mercados: los conozco desde dentro, no desde un manual.</p>
-        <p style="color:var(--cream-dim);font-size:1.04rem;line-height:1.7;margin-top:1rem">Ahora ayudo a personas y familias a navegar los vaivenes del mercado y a construir un patrimonio sólido, pensando en el largo plazo y en las próximas generaciones. Mi objetivo es que dejes de ver las finanzas como algo ajeno y empieces a tratarlas como lo que son: una herramienta cotidiana. Si partes de cero, te acompaño paso a paso; si ya tienes recorrido, afinamos tu estrategia juntos.</p>
-        <div class="sa-sign">
-          <span class="sa-name">Álvaro González</span>
-          <span class="sa-role">Asesor financiero · EFPA · ex-DEGIRO</span>
-          <a href="https://www.linkedin.com/in/alvaroglezfdez/" target="_blank" rel="noopener" style="color:var(--cream);border-bottom:1px solid rgba(245,241,232,.4);font-family:var(--font-mono);font-size:.7rem;margin-top:.5rem;display:inline-block">LinkedIn &#8599;</a>
-        </div>
-      </div>
     </div>
     <div class="sec3">
       <div class="sc reveal"><svg class="ico3d sm" aria-hidden="true"><use href="#i-shield"/></svg><h3>Agente vinculado · CNMV</h3><p>Prestamos el servicio en nombre y por cuenta de una entidad inscrita en la CNMV, bajo su responsabilidad y su folleto de tarifas.</p></div>
@@ -646,8 +652,8 @@
   <div class="wrap">
     <div class="sh">
       <span class="eb"><span class="dot"></span>Tarifas</span>
-      <h2>Sabes lo que pagas. <span class="it">Siempre.</span></h2>
-      <p>Un pago único para empezar y revisiones cuando las necesites. Sin cuota mensual obligatoria, sin permanencia y sin letra pequeña.</p>
+      <h2>Sabes lo que pagas, sin <span class="it">letra pequeña.</span></h2>
+      <p>Un pago único para empezar y revisiones cuando de verdad las necesites. Sin cuota mensual obligatoria y sin permanencia: pagas por lo que usas y ya está.</p>
     </div>
 
     <div class="fee-blockhead">
@@ -768,8 +774,8 @@
   <div class="glow"></div>
   <div class="wrap contact-grid">
     <div>
-      <h2>Empieza con un <span class="it">plan.</span></h2>
-      <p class="cp">Cuéntanos tu situación en dos líneas y te respondemos en menos de 24 horas laborables. Sin compromiso: si creemos que aún no te compensa invertir, también te lo diremos.</p>
+      <h2>Damos el primer paso <span class="it">juntos.</span></h2>
+      <p class="cp">Cuéntame tu situación en dos líneas y te respondo en menos de 24 horas laborables. Sin compromiso: si creo que todavía no te compensa invertir, también te lo digo tal cual.</p>
       <div class="ctas">
         <a class="btn btn-light btn-lg" href="https://wa.me/34648004588?text=Hola%2C%20quiero%20empezar%20a%20invertir%20y%20me%20interesa%20el%20Plan%20de%20Inicio" target="_blank" rel="noopener">Escríbenos por WhatsApp
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -778,7 +784,7 @@
     </div>
     <div class="ins-box" id="insights">
       <h3>Insights+, cada semana</h3>
-      <p>Un correo a la semana con análisis honesto de mercados —tradicionales y cripto— en lenguaje normal. Sin spam y sin venderte nada.</p>
+      <p>Un correo a la semana con análisis honesto de mercados y finanzas personales, en lenguaje normal. Sin spam y sin venderte nada.</p>
       <form id="insights-form" novalidate>
         <input type="email" name="email" required placeholder="tu@email.com" aria-label="Tu correo electrónico" />
         <button class="btn btn-light btn-md" type="submit">Suscribirme</button>
@@ -798,7 +804,7 @@
     <div class="foot-top">
       <div>
         <a class="wordmark" href="index.html" style="color:var(--ink);margin-bottom:1rem"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(14,91,67,.4)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#0e5b43"/><path d="M32 3 L38 26 L32 32 Z" fill="#c0871a"/><path d="M58 32 L38 26 L32 32 Z" fill="#0e5b43"/><path d="M58 32 L38 38 L32 32 Z" fill="#c0871a"/><path d="M32 58 L38 38 L32 32 Z" fill="#0e5b43"/><path d="M32 58 L26 38 L32 32 Z" fill="#c0871a"/><path d="M6 32 L26 38 L32 32 Z" fill="#0e5b43"/><path d="M6 32 L26 26 L32 32 Z" fill="#c0871a"/></svg><span class="name">Norte&nbsp;Capital</span></a>
-        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en Galicia y toda España, online. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero cercano en Galicia y toda España, online. Para que invertir deje de ser cosa solo de quien ya tiene mucho dinero.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h4>Navegación</h4><a href="#filosofia">Filosofía</a><a href="#proceso">Cómo trabajamos</a><a href="#tarifas">Tarifas</a><a href="gestion-patrimonial.html">Gestión patrimonial</a><a href="asesor-financiero-galicia.html">Asesor financiero en Galicia</a><a href="para-empresas.html">Para empresas</a><a href="blog.html">Blog</a></div>
@@ -866,4 +872,4 @@
 </script>
 </body>
 </html>
-          
+                                                                                                

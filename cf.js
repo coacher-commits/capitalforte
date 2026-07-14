@@ -1,10 +1,11 @@
 /* ============================================================
-   Capital Forte — shared behaviour
-   1. Market ribbon: crypto live via CoinGecko (free, no key),
-      indices illustrative. The status label is HONEST: it says
-      "Datos ilustrativos" until live data actually arrives.
+   Norte Capital — shared behaviour
+   1. Market ribbon: índices ilustrativos. El label es HONESTO:
+      dice "Datos ilustrativos".
    2. Mobile menu (burger) — works on every page.
    3. Reveal-on-scroll.
+   4. Barra CTA fija en móvil.
+   5. Suscripción a Insights+ (Brevo).
    ============================================================ */
 
 /* ---- 1. Market ribbon ---- */
@@ -12,26 +13,18 @@
   var ribbon = document.getElementById('ribbon');
   if (!ribbon) return;
 
-  // [symbol, fallback price, dir, coinGeckoId|null]
+  // [symbol, price, dir]
   var items = [
-    ['IBEX 35', '11.842', 'up', null],
-    ['EURO STOXX 50', '5.318', 'up', null],
-    ['BTC', '58.940 €', 'up', 'bitcoin'],
-    ['ETH', '3.120 €', 'down', 'ethereum'],
-    ['ORO', '2.214 €', 'up', null],
-    ['S&P 500', '5.604', 'up', null],
-    ['SOL', '142 €', 'up', 'solana'],
-    ['EUR/USD', '1,084', 'down', null],
-    ['NÁSDAQ', '18.420', 'up', null]
+    ['IBEX 35', '11.842', 'up'],
+    ['EURO STOXX 50', '5.318', 'up'],
+    ['ORO', '2.214 €', 'up'],
+    ['S&P 500', '5.604', 'up'],
+    ['EUR/USD', '1,084', 'down'],
+    ['NÁSDAQ', '18.420', 'up']
   ];
 
   var color = function (d) { return d === 'up' ? 'var(--forest-bright)' : '#d8a07e'; };
   var arrow = function (d) { return d === 'up' ? '▲' : '▼'; };
-  var fmtEur = function (n) {
-    return n >= 1000
-      ? Math.round(n).toLocaleString('es-ES') + ' €'
-      : n.toLocaleString('es-ES', { maximumFractionDigits: 2 }) + ' €';
-  };
   var cell = function (it) {
     return '<span style="display:inline-flex;align-items:baseline;gap:.5rem;margin:0 1.5rem;white-space:nowrap;flex-shrink:0">' +
       '<span class="mono-label" style="font-size:.72rem;color:var(--cream)">' + it[0] + '</span>' +
@@ -46,27 +39,6 @@
   var status = document.getElementById('ribbonStatus');
   if (status) status.textContent = 'Datos ilustrativos';
   render();
-
-  var ids = items.filter(function (i) { return i[3]; }).map(function (i) { return i[3]; }).join(',');
-  fetch('https://api.coingecko.com/api/v3/simple/price?ids=' + ids + '&vs_currencies=eur&include_24hr_change=true')
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('http ' + r.status)); })
-    .then(function (j) {
-      var updated = false;
-      items.forEach(function (it) {
-        var id = it[3];
-        if (id && j[id] && typeof j[id].eur === 'number') {
-          it[1] = fmtEur(j[id].eur);
-          var chg = j[id].eur_24h_change;
-          if (typeof chg === 'number') it[2] = chg >= 0 ? 'up' : 'down';
-          updated = true;
-        }
-      });
-      if (updated) {
-        render();
-        if (status) status.textContent = 'Cripto en directo · resto ilustrativo';
-      }
-    })
-    .catch(function () { /* fallback queda como ilustrativo, y el label lo dice */ });
 })();
 
 /* ---- 2. Mobile menu ---- */
