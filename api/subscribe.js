@@ -2,7 +2,7 @@
 //
 // Variables de entorno necesarias en Vercel (Project → Settings → Environment Variables):
 //   BREVO_API_KEY          → tu API key de Brevo (Settings → SMTP & API → API Keys)
-//   BREVO_INSIGHTS_LIST_ID → id numérico de la lista "Insights+" en Brevo
+//   BREVO_INSIGHTS_LIST_ID → id numérico de la lista "Insights+" en Brevo (por defecto 3)
 //
 // Opcionales (tienen valor por defecto):
 //   BREVO_DOI_TEMPLATE_ID  → id de la plantilla de confirmación (por defecto 2)
@@ -11,7 +11,7 @@
 const BREVO_DOI_ENDPOINT = 'https://api.brevo.com/v3/contacts/doubleOptinConfirmation';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ ok: false, error: 'method_not_allowed' });
@@ -28,10 +28,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ ok: false, error: 'server_misconfigured' });
   }
 
-  // El body puede llegar ya parseado (Vercel) o como string
   let body = req.body;
   if (typeof body === 'string') {
-    try { body = JSON.parse(body); } catch { body = {}; }
+    try { body = JSON.parse(body); } catch (e) { body = {}; }
   }
   const email = (body && body.email ? String(body.email) : '').trim().toLowerCase();
 
@@ -55,14 +54,12 @@ export default async function handler(req, res) {
       }),
     });
 
-    // Brevo devuelve 201/204 sin cuerpo cuando el correo de confirmación se envía bien
     if (brevoRes.status === 201 || brevoRes.status === 204) {
       return res.status(200).json({ ok: true });
     }
 
     const detail = await brevoRes.text();
 
-    // Contacto que ya existe y ya está en la lista: lo tratamos como éxito silencioso
     if (brevoRes.status === 400 && /already|exist/i.test(detail)) {
       return res.status(200).json({ ok: true, already: true });
     }
@@ -71,4 +68,6 @@ export default async function handler(req, res) {
     return res.status(502).json({ ok: false, error: 'provider_error' });
   } catch (err) {
     console.error('Error llamando a Brevo:', err);
-    return res.status(502).json({ ok: false, error: 'prov
+    return res.status(502).json({ ok: false, error: 'provider_unreachable' });
+  }
+};
