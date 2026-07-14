@@ -128,3 +128,51 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+/* Suscripción a Insights+ (doble opt-in vía /api/subscribe → Brevo) */
+(function () {
+  var form = document.getElementById('insights-form');
+  if (!form) return;
+  var input = form.querySelector('input[type="email"]');
+  var button = form.querySelector('button[type="submit"]');
+  var ok = form.querySelector('.ok');
+  var err = form.querySelector('.err');
+  var busy = false;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (busy) return;
+    if (ok) ok.hidden = true;
+    if (err) err.hidden = true;
+
+    var email = (input && input.value ? input.value : '').trim();
+    if (!input || !input.checkValidity() || !email) {
+      if (input) input.reportValidity();
+      return;
+    }
+
+    busy = true;
+    var label = button ? button.textContent : '';
+    if (button) { button.disabled = true; button.textContent = 'Enviando…'; }
+
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ email: email })
+    })
+      .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+      .then(function (data) {
+        if (data && data.ok) {
+          form.reset();
+          if (ok) ok.hidden = false;
+        } else if (err) {
+          err.hidden = false;
+        }
+      })
+      .catch(function () { if (err) err.hidden = false; })
+      .finally(function () {
+        busy = false;
+        if (button) { button.disabled = false; button.textContent = label; }
+      });
+  });
+})();

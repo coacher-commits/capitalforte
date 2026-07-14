@@ -52,7 +52,6 @@
     { "@type": "City", "name": "Lugo" },
     { "@type": "Country", "name": "España" }
   ],
-  "address": { "@type": "PostalAddress", "streetAddress": "Calle Real 46", "addressLocality": "A Coruña", "addressRegion": "Galicia", "addressCountry": "ES" },
   "founder": { "@type": "Person", "name": "Álvaro González", "jobTitle": "Asesor financiero", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/", "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certificación EFPA", "identifier": "ES20250475" } },
   "telephone": "+34648004588",
   "email": "hola@nortecapital.es",
@@ -780,10 +779,11 @@
     <div class="ins-box" id="insights">
       <h3>Insights+, cada semana</h3>
       <p>Un correo a la semana con análisis honesto de mercados —tradicionales y cripto— en lenguaje normal. Sin spam y sin venderte nada.</p>
-      <form onsubmit="event.preventDefault(); this.reset(); this.querySelector('.ok').hidden=false;">
-        <input type="email" required placeholder="tu@email.com" aria-label="Tu correo electrónico" />
+      <form id="insights-form" novalidate>
+        <input type="email" name="email" required placeholder="tu@email.com" aria-label="Tu correo electrónico" />
         <button class="btn btn-light btn-md" type="submit">Suscribirme</button>
-        <span class="ok mono-label" hidden style="flex-basis:100%;color:var(--cream);margin-top:.4rem">¡Gracias! Te has suscrito.</span>
+        <span class="ok mono-label" hidden style="flex-basis:100%;color:var(--cream);margin-top:.4rem">Casi listo: revisa tu correo y confirma la suscripción.</span>
+        <span class="err mono-label" hidden style="flex-basis:100%;color:#ffd7d0;margin-top:.4rem">No se ha podido completar. Inténtalo de nuevo en un momento.</span>
       </form>
       <p class="legal">Tus datos solo se usan para enviarte el boletín · Baja cuando quieras</p>
     </div>
@@ -866,3 +866,4 @@
 </script>
 </body>
 </html>
+          
