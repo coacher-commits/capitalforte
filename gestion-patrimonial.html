@@ -16,12 +16,7 @@
 <meta property="og:url" content="https://nortecapital.es/gestion-patrimonial" />
 <meta property="og:image" content="https://nortecapital.es/assets/og-default.png" />
 <meta property="og:locale" content="es_ES" />
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#0e5b43" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230e5b43'/%3E%3Cpath d='M32 6 L27 27 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M32 6 L37 27 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M55 32 L37 27 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M55 32 L37 37 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M32 55 L37 37 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M32 55 L27 37 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M9 32 L27 37 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M9 32 L27 27 L32 32 Z' fill='%23e6b95c'/%3E%3C/svg%3E" />
 <link rel="stylesheet" href="cf.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -240,9 +235,10 @@
   .panel-wrap { position: relative; }
   .panel-deco { position: absolute; z-index: 2; filter: drop-shadow(0 16px 16px rgba(8,30,22,.3)); pointer-events: none; }
   .pd-eur { width: 96px; height: 96px; top: -34px; right: -16px; }
+  .pd-btc { width: 70px; height: 70px; bottom: -22px; left: -18px; }
   .pd-s1 { width: 18px; height: 18px; top: -46px; right: 92px; color: #e6b95c; opacity: .9; }
   .pd-s2 { width: 12px; height: 12px; bottom: 30px; left: -34px; color: #f5f1e8; opacity: .8; }
-  @media (max-width: 979px) { .pd-eur { width: 72px; height: 72px; top: -26px; right: -8px; } .pd-s2 { display: none; } }
+  @media (max-width: 979px) { .pd-eur { width: 72px; height: 72px; top: -26px; right: -8px; } .pd-btc { display: none; } .pd-s2 { display: none; } }
   .xsell .ico3d { width: 56px; height: 56px; }
   .ins-box { position: relative; }
   .ins-plane { position: absolute; width: 84px; height: 84px; top: -44px; right: 10px; transform: rotate(-6deg); pointer-events: none; filter: drop-shadow(0 10px 10px rgba(8,30,22,.35)); }
@@ -303,10 +299,10 @@
     },
     {
       "@type": "Question",
-      "name": "¿Tenéis en cuenta la fiscalidad de cada movimiento?",
+      "name": "¿Incluye criptoactivos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Antes de proponer cualquier cambio calculamos su impacto fiscal, para que no te lleves sorpresas con Hacienda. La fiscalidad es parte del plan, no una nota al pie."
+        "text": "Si encajan en tu plan, sí. Los tratamos como una parte más de la cartera, con el mismo criterio de riesgo y de fiscalidad que el resto de tus posiciones."
       }
     },
     {
@@ -314,7 +310,7 @@
       "name": "¿Tocáis mi dinero en algún momento?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Tu dinero se queda en tus cuentas y plataformas de siempre. Nosotros te decimos qué haríamos y por qué; las órdenes las das tú. Si mañana decides dejar el servicio, no hay nada que traspasar."
+        "text": "No. Tu dinero se queda en tus cuentas y plataformas de siempre. Yo te digo qué haría y por qué; las órdenes las das tú. Si mañana decides dejar el servicio, no hay nada que traspasar."
       }
     },
     {
@@ -343,7 +339,7 @@
   </nav>
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html#filosofia">Filosofía</a>
-    <a href="index.html#proceso">Cómo trabajamos</a>
+    <a href="index.html#proceso">Cómo trabajo</a>
     <a href="index.html#tarifas">Tarifas</a>
     <a href="gestion-patrimonial.html">Patrimonios</a>
     <a href="para-empresas.html">Para empresas</a>
@@ -370,7 +366,7 @@
       <div class="hero-trust">
         <div class="ht"><span class="k">Certificación</span><span class="v">Asesor EFPA</span></div>
         <div class="ht"><span class="k">Registro</span><span class="v">Agente CNMV</span></div>
-        <div class="ht"><span class="k">Cobertura</span><span class="v">Galicia y España</span></div>
+        <div class="ht"><span class="k">Cobertura</span><span class="v">TradFi + Cripto</span></div>
       </div>
     </div>
 
@@ -405,7 +401,7 @@
     <div class="sh">
       <span class="eb"><span class="dot"></span>El modelo</span>
       <h2>Sin porcentajes. Sin <span class="it">conflicto.</span></h2>
-      <p>La mayoría del asesoramiento en España se cobra como porcentaje del patrimonio o por comisión de producto. Nosotros no, y esto es lo que cambia.</p>
+      <p>La mayoría del asesoramiento en España se cobra como porcentaje del patrimonio o por comisión de producto. Yo no, y esto es lo que cambia.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -413,12 +409,12 @@
         <p>Un 1&nbsp;% anual parece poco hasta que lo multiplicas: sobre 300.000&nbsp;€ son 3.000&nbsp;€ cada año, vaya bien o mal la cartera. Aquí pagas lo mismo este año y el que viene.</p>
       </div>
       <div class="step reveal">
-        <h3>Cobramos solo de ti</h3>
-        <p>Ni retrocesiones, ni comisiones por colocarte productos, ni incentivos de terceros. Si te proponemos un fondo es porque encaja en tu plan, no porque deje comisión.</p>
+        <h3>Cobro solo de ti</h3>
+        <p>Ni retrocesiones, ni comisiones por colocarte productos, ni incentivos de terceros. Si te propongo un fondo es porque encaja en tu plan, no porque deje comisión.</p>
       </div>
       <div class="step reveal">
         <h3>Tu dinero no se mueve de tus cuentas</h3>
-        <p>No custodiamos nada. Te decimos qué haríamos y por qué; las órdenes las das tú desde tus propias cuentas y plataformas.</p>
+        <p>No custodio nada. Te digo qué haría y por qué; las órdenes las das tú desde tus propias cuentas y plataformas.</p>
       </div>
     </div>
   </div>
@@ -428,7 +424,7 @@
 <section class="surface-cream rule-t" id="proceso">
   <div class="wrap">
     <div class="sh">
-      <span class="eb"><span class="dot"></span>Cómo trabajamos</span>
+      <span class="eb"><span class="dot"></span>Cómo trabajo</span>
       <h2>Primero entender. <span class="it">Luego proponer.</span></h2>
       <p>Nada de carteras modelo el primer día. Tu situación completa, sobre la mesa, antes de mover un euro.</p>
     </div>
@@ -475,7 +471,7 @@
         <span class="badge">El más elegido</span>
         <h3>Avanzado</h3>
         <div class="price"><span class="big tnum">179&nbsp;€</span><span class="unit">/ mes</span></div>
-        <p>Para carteras más completas, con planificación y optimización fiscal.</p>
+        <p>Para carteras más completas, con planificación y optimización fiscal. Incluye criptoactivos si encajan en tu plan.</p>
         <p class="meta">4 revisiones al año · soporte prioritario · sin permanencia.</p>
         <a class="btn btn-light btn-md b" href="https://wa.me/34648004588?text=Hola%2C%20me%20interesa%20gesti%C3%B3n%20patrimonial%20%28plan%20Avanzado%29" target="_blank" rel="noopener">Hablemos
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -519,12 +515,12 @@
         <p>Porque por debajo de esa cifra la suscripción no suele compensar: la tarifa pesaría demasiado sobre el patrimonio, y preferimos decírtelo antes que cobrarte. Si estás empezando, mira el <a href="index.html#tarifas">Plan de Inicio</a>: pago único, sin cuotas.</p>
       </details>
       <details>
-        <summary>¿Tenéis en cuenta la fiscalidad de cada movimiento?</summary>
-        <p>Sí. Antes de proponer cualquier cambio calculamos su impacto fiscal, para que no te lleves sorpresas con Hacienda. La fiscalidad es parte del plan, no una nota al pie.</p>
+        <summary>¿Incluye criptoactivos?</summary>
+        <p>Si encajan en tu plan, sí. Los tratamos como una parte más de la cartera, con el mismo criterio de riesgo y de fiscalidad que el resto de tus posiciones.</p>
       </details>
       <details>
         <summary>¿Tocáis mi dinero en algún momento?</summary>
-        <p>No. Tu dinero se queda en tus cuentas y plataformas de siempre. Nosotros te decimos qué haríamos y por qué; las órdenes las das tú. Si mañana decides dejar el servicio, no hay nada que traspasar.</p>
+        <p>No. Tu dinero se queda en tus cuentas y plataformas de siempre. Yo te digo qué haría y por qué; las órdenes las das tú. Si mañana decides dejar el servicio, no hay nada que traspasar.</p>
       </details>
       <details>
         <summary>¿Hay permanencia?</summary>
@@ -540,9 +536,9 @@
   <div class="wrap contact-grid">
     <div>
       <h2>Hablemos de tu <span class="it">patrimonio.</span></h2>
-      <p class="cp">Cuéntanos por WhatsApp qué tienes y qué te preocupa, en dos líneas. Te respondemos en menos de 24 horas laborables con los siguientes pasos.</p>
+      <p class="cp">Cuéntame por WhatsApp qué tienes y qué te preocupa, en dos líneas. Te respondo en menos de 24 horas laborables con los siguientes pasos.</p>
       <div class="ctas">
-        <a class="btn btn-light btn-lg" href="https://wa.me/34648004588?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20gesti%C3%B3n%20patrimonial" target="_blank" rel="noopener">Escríbenos por WhatsApp
+        <a class="btn btn-light btn-lg" href="https://wa.me/34648004588?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20gesti%C3%B3n%20patrimonial" target="_blank" rel="noopener">Escríbeme por WhatsApp
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <span class="mail">o escribe a <a href="mailto:hola@nortecapital.es?subject=Gestión patrimonial">hola@nortecapital.es</a></span>
       </div>
@@ -550,11 +546,11 @@
     <div class="ins-box">
       <h3>Qué pasa cuando escribes</h3>
       <ol class="how-ol">
-        <li>Te respondemos con dos o tres preguntas para entender tu caso.</li>
+        <li>Te respondo con dos o tres preguntas para entender tu caso.</li>
         <li>Si tiene sentido, agendamos el diagnóstico patrimonial.</li>
         <li>Recibes una propuesta por escrito. Tú decides si seguimos.</li>
       </ol>
-      <p class="legal">Sin compromiso: si creemos que no te compensa contratar, también te lo diremos.</p>
+      <p class="legal">Sin compromiso: si creo que no te compensa contratar, también te lo diré.</p>
     </div>
   </div>
 </section>
@@ -566,7 +562,7 @@
     <div class="foot-top">
       <div>
         <a class="wordmark" href="index.html" style="color:var(--ink);margin-bottom:1rem"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(14,91,67,.4)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#0e5b43"/><path d="M32 3 L38 26 L32 32 Z" fill="#c0871a"/><path d="M58 32 L38 26 L32 32 Z" fill="#0e5b43"/><path d="M58 32 L38 38 L32 32 Z" fill="#c0871a"/><path d="M32 58 L38 38 L32 32 Z" fill="#0e5b43"/><path d="M32 58 L26 38 L32 32 Z" fill="#c0871a"/><path d="M6 32 L26 38 L32 32 Z" fill="#0e5b43"/><path d="M6 32 L26 26 L32 32 Z" fill="#c0871a"/></svg><span class="name">Norte&nbsp;Capital</span></a>
-        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento patrimonial independiente en España, con tarifa fija. Criterio propio, sin comisiones por producto.</p>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en España. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h4>Navegación</h4><a href="index.html#filosofia">Filosofía</a><a href="index.html#cartera">Servicios</a><a href="asesor-financiero-galicia.html">Asesor financiero en Galicia</a><a href="para-empresas.html">Para empresas</a><a href="blog.html">Blog</a></div>
@@ -582,7 +578,7 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/34648004588?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20gesti%C3%B3n%20patrimonial" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<a class="wa-float" href="https://wa.me/34648004588?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20gesti%C3%B3n%20patrimonial" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
 </a>
 <script src="cf.js" defer></script>

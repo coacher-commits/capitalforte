@@ -16,12 +16,7 @@
 <meta property="og:url" content="https://nortecapital.es/gestion-patrimonial-gl" />
 <meta property="og:image" content="https://nortecapital.es/assets/og-default.png" />
 <meta property="og:locale" content="gl_ES" />
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#0e5b43" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230e5b43'/%3E%3Cpath d='M32 6 L27 27 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M32 6 L37 27 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M55 32 L37 27 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M55 32 L37 37 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M32 55 L37 37 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M32 55 L27 37 L32 32 Z' fill='%23e6b95c'/%3E%3Cpath d='M9 32 L27 37 L32 32 Z' fill='%23f5f1e8'/%3E%3Cpath d='M9 32 L27 27 L32 32 Z' fill='%23e6b95c'/%3E%3C/svg%3E" />
 <link rel="stylesheet" href="cf.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -267,51 +262,15 @@
   "@type": "Service",
   "name": "Xestión patrimonial",
   "serviceType": "Asesoramento patrimonial continuo con tarifa fixa",
-  "provider": {
-    "@id": "https://nortecapital.es/#organization"
-  },
-  "areaServed": [
-    {
-      "@type": "AdministrativeArea",
-      "name": "Galicia"
-    },
-    {
-      "@type": "Country",
-      "name": "España"
-    }
-  ],
+  "provider": { "@id": "https://nortecapital.es/#organization" },
+  "areaServed": [ { "@type": "AdministrativeArea", "name": "Galicia" }, { "@type": "Country", "name": "España" } ],
   "url": "https://nortecapital.es/gestion-patrimonial-gl",
   "offers": [
-    {
-      "@type": "Offer",
-      "name": "Esencial",
-      "price": "99",
-      "priceCurrency": "EUR"
-    },
-    {
-      "@type": "Offer",
-      "name": "Avanzado",
-      "price": "179",
-      "priceCurrency": "EUR"
-    },
-    {
-      "@type": "Offer",
-      "name": "Integral",
-      "price": "249",
-      "priceCurrency": "EUR"
-    },
-    {
-      "@type": "Offer",
-      "name": "Diagnóstico patrimonial",
-      "price": "150",
-      "priceCurrency": "EUR"
-    },
-    {
-      "@type": "Offer",
-      "name": "Plan patrimonial puntual",
-      "price": "450",
-      "priceCurrency": "EUR"
-    }
+    { "@type": "Offer", "name": "Esencial", "price": "99", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Avanzado", "price": "179", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Integral", "price": "249", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Diagnóstico patrimonial", "price": "150", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Plan patrimonial puntual", "price": "450", "priceCurrency": "EUR" }
   ]
 }
 </script>
@@ -320,18 +279,8 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://nortecapital.es/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Xestión patrimonial",
-      "item": "https://nortecapital.es/gestion-patrimonial-gl"
-    }
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://nortecapital.es/" },
+    { "@type": "ListItem", "position": 2, "name": "Xestión patrimonial", "item": "https://nortecapital.es/gestion-patrimonial-gl" }
   ]
 }
 </script>
@@ -346,6 +295,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Porque por debaixo desa cifra a subscrición non adoita compensar: a tarifa pesaría demasiado sobre o patrimonio, e preferimos dicircho antes que cobrarche. Se estás empezando, mira o Plan de Inicio: pagamento único, sen cotas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inclúe criptoactivos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se encaixan no teu plan, si. Tratámolos como unha parte máis da carteira, co mesmo criterio de risco e de fiscalidade que o resto das túas posicións."
       }
     },
     {
@@ -382,7 +339,7 @@
   </nav>
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html#filosofia">Filosofía</a>
-    <a href="index.html#proceso">Cómo trabajamos</a>
+    <a href="index.html#proceso">Cómo trabajo</a>
     <a href="index.html#tarifas">Tarifas</a>
     <a href="gestion-patrimonial.html">Patrimonios</a>
     <a href="para-empresas.html">Para empresas</a>
@@ -409,7 +366,7 @@
       <div class="hero-trust">
         <div class="ht"><span class="k">Certificación</span><span class="v">Asesor EFPA</span></div>
         <div class="ht"><span class="k">Rexistro</span><span class="v">Axente CNMV</span></div>
-        <div class="ht"><span class="k">Cobertura</span><span class="v">Galicia e España</span></div>
+        <div class="ht"><span class="k">Cobertura</span><span class="v">TradFi + Cripto</span></div>
       </div>
     </div>
 
@@ -514,7 +471,7 @@
         <span class="badge">O máis elixido</span>
         <h3>Avanzado</h3>
         <div class="price"><span class="big tnum">179&nbsp;€</span><span class="unit">/ mes</span></div>
-        <p>Para carteiras máis completas, con planificación e optimización fiscal.</p>
+        <p>Para carteiras máis completas, con planificación e optimización fiscal. Inclúe criptoactivos se encaixan no teu plan.</p>
         <p class="meta">4 revisións ao ano · soporte prioritario · sen permanencia.</p>
         <a class="btn btn-light btn-md b" href="https://wa.me/34648004588?text=Ola%2C%20inter%C3%A9same%20a%20xesti%C3%B3n%20patrimonial%20%28plan%20Avanzado%29" target="_blank" rel="noopener">Falemos
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -557,7 +514,10 @@
         <summary>Por que desde 70.000 €?</summary>
         <p>Porque por debaixo desa cifra a subscrición non adoita compensar: a tarifa pesaría demasiado sobre o patrimonio, e preferimos dicircho antes que cobrarche. Se estás empezando, mira o <a href="index.html#tarifas">Plan de Inicio</a>: pagamento único, sen cotas.</p>
       </details>
-      
+      <details>
+        <summary>Inclúe criptoactivos?</summary>
+        <p>Se encaixan no teu plan, si. Tratámolos como unha parte máis da carteira, co mesmo criterio de risco e de fiscalidade que o resto das túas posicións.</p>
+      </details>
       <details>
         <summary>Tocades o meu diñeiro nalgún momento?</summary>
         <p>Non. O teu diñeiro queda nas túas contas e plataformas de sempre. Nós dicímosche que fariamos e por que; as ordes dálas ti. Se mañá decides deixar o servizo, non hai nada que traspasar.</p>
@@ -590,7 +550,7 @@
         <li>Se ten sentido, axendamos o diagnóstico patrimonial.</li>
         <li>Recibes unha proposta por escrito. Ti decides se seguimos.</li>
       </ol>
-      <p class="legal">Sen compromiso: se cremos que non che compensa contratar, tamén cho diremos.</p>
+      <p class="legal">Sen compromiso: se cremos que non che compensa contratar, tamén cho direi.</p>
     </div>
   </div>
 </section>
@@ -602,7 +562,7 @@
     <div class="foot-top">
       <div>
         <a class="wordmark" href="index.html" style="color:var(--ink);margin-bottom:1rem"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(14,91,67,.4)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#0e5b43"/><path d="M32 3 L38 26 L32 32 Z" fill="#c0871a"/><path d="M58 32 L38 26 L32 32 Z" fill="#0e5b43"/><path d="M58 32 L38 38 L32 32 Z" fill="#c0871a"/><path d="M32 58 L38 38 L32 32 Z" fill="#0e5b43"/><path d="M32 58 L26 38 L32 32 Z" fill="#c0871a"/><path d="M6 32 L26 38 L32 32 Z" fill="#0e5b43"/><path d="M6 32 L26 26 L32 32 Z" fill="#c0871a"/></svg><span class="name">Norte&nbsp;Capital</span></a>
-        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en España. Inversión bien explicada, sin comisiones ocultas.</p>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero personalizado en España. Mercados tradicionales y criptoactivos, en una sola cartera.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h4>Navegación</h4><a href="index.html#filosofia">Filosofía</a><a href="index.html#cartera">Servicios</a><a href="asesor-financiero-galicia.html">Asesor financiero en Galicia</a><a href="para-empresas.html">Para empresas</a><a href="blog.html">Blog</a></div>
