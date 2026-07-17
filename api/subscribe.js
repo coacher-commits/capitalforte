@@ -2,7 +2,7 @@
 //
 // Variables de entorno necesarias en Vercel (Project → Settings → Environment Variables):
 //   BREVO_API_KEY          → tu API key de Brevo (Settings → SMTP & API → API Keys)
-//   BREVO_INSIGHTS_LIST_ID → id numérico de la lista "Insights+" en Brevo (por defecto 3)
+//   BREVO_INSIGHTS_LIST_ID → id numérico de la lista "Insights+" en Brevo
 //
 // Opcionales (tienen valor por defecto):
 //   BREVO_DOI_TEMPLATE_ID  → id de la plantilla de confirmación (por defecto 2)
@@ -28,9 +28,10 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ ok: false, error: 'server_misconfigured' });
   }
 
+  // El body puede llegar ya parseado (Vercel) o como string
   let body = req.body;
   if (typeof body === 'string') {
-    try { body = JSON.parse(body); } catch (e) { body = {}; }
+    try { body = JSON.parse(body); } catch { body = {}; }
   }
   const email = (body && body.email ? String(body.email) : '').trim().toLowerCase();
 
@@ -54,20 +55,30 @@ module.exports = async function handler(req, res) {
       }),
     });
 
+    // Brevo devuelve 201/204 sin cuerpo cuando el correo de confirmación se envía bien
     if (brevoRes.status === 201 || brevoRes.status === 204) {
       return res.status(200).json({ ok: true });
     }
 
     const detail = await brevoRes.text();
+    let parsed = {};
+    try { parsed = JSON.parse(detail); } catch {}
 
-    if (brevoRes.status === 400 && /already|exist/i.test(detail)) {
+    // Contacto REALMENTE duplicado (ya suscrito): éxito silencioso.
+    // OJO: no vale /exist/ a secas porque casa con "does not exist" (plantilla/lista mal).
+    const isDuplicate =
+      parsed.code === 'duplicate_parameter' ||
+      /already\s+exist/i.test(detail);
+    if (brevoRes.status === 400 && isDuplicate) {
       return res.status(200).json({ ok: true, already: true });
     }
 
     console.error('Brevo DOI error', brevoRes.status, detail);
-    return res.status(502).json({ ok: false, error: 'provider_error' });
+    return res
+      .status(502)
+      .json({ ok: false, error: 'provider_error', providerStatus: brevoRes.status, detail });
   } catch (err) {
     console.error('Error llamando a Brevo:', err);
     return res.status(502).json({ ok: false, error: 'provider_unreachable' });
   }
-};
+}
