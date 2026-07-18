@@ -1,11 +1,10 @@
 /* ============================================================
-   Norte Capital — shared behaviour
-   1. Market ribbon: índices ilustrativos. El label es HONESTO:
-      dice "Datos ilustrativos".
+   Capital Forte — shared behaviour
+   1. Market ribbon: crypto live via CoinGecko (free, no key),
+      indices illustrative. The status label is HONEST: it says
+      "Datos ilustrativos" until live data actually arrives.
    2. Mobile menu (burger) — works on every page.
    3. Reveal-on-scroll.
-   4. Barra CTA fija en móvil.
-   5. Suscripción a Insights+ (Brevo).
    ============================================================ */
 
 /* ---- 1. Market ribbon ---- */
