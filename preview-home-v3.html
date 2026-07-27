@@ -515,9 +515,12 @@ header.site{ transition:background .35s, box-shadow .35s }
 header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-shadow:0 16px 40px -24px #000 }
 
 /* ---------- Reveals (JS · funcionan en TODOS los móviles) ---------- */
-.rv{ opacity:0; transform:translateY(42px) scale(.985); transition:opacity .85s var(--out), transform .85s var(--out);
+.js-motion .rv{ opacity:0; transform:translateY(42px) scale(.985);
+  transition:opacity .85s var(--out), transform .85s var(--out);
   transition-delay:calc(var(--i,0) * 90ms); }
-.rv.in{ opacity:1; transform:none }
+.js-motion .rv.in{ opacity:1; transform:none }
+/* sin JS o si algo falla: todo visible por defecto */
+.rv{ opacity:1; transform:none }
 
 /* ---------- Encabezados ---------- */
 .sh{ max-width:48rem }
@@ -1118,6 +1121,7 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
 /* Norte Capital · motion v3 — reveals con IntersectionObserver (todos los móviles) */
 (function(){
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce) document.documentElement.classList.add('js-motion');
 
   /* Reveals: funcionan en iOS/Android/desktop por igual */
   var sel = '.sh,.stat,.step,.card,.sc,.fc,.fm,.faq details,.xsell,.ins-box,.sec-advisor,.alloc3,.steps,.fee-blockhead,.donut-wrap,.legend2';
@@ -1133,13 +1137,18 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
       en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } });
     }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(e){ io.observe(e); });
-    // red de seguridad: nada puede quedarse invisible
-    addEventListener('load', function(){ setTimeout(function(){
-      els.forEach(function(e){
-        var r=e.getBoundingClientRect();
-        if(r.top < innerHeight && r.bottom > 0) e.classList.add('in');
-      });
-    }, 900); });
+    // RED DE SEGURIDAD (no depende de IntersectionObserver)
+    var pend = els.slice();
+    window.__ncReveal = function(){
+      for (var i=pend.length-1; i>=0; i--){
+        var r = pend[i].getBoundingClientRect();
+        if (r.top < innerHeight*0.94 && r.bottom > -200){ pend[i].classList.add('in'); pend.splice(i,1); }
+      }
+    };
+    addEventListener('scroll', window.__ncReveal, {passive:true});
+    addEventListener('resize', window.__ncReveal, {passive:true});
+    addEventListener('load', function(){ window.__ncReveal(); setTimeout(window.__ncReveal, 800); });
+    setTimeout(window.__ncReveal, 300);
   }
   if (reduce) return;
 
