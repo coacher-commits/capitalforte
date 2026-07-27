@@ -1271,7 +1271,8 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
     bi.style.setProperty('--w','100%'); bs.style.setProperty('--w', Math.max(6,(saved/total*100))+'%');
     dl.innerHTML='Diferencia a tu favor: <b>'+eur(total-saved)+'</b>';
 
-    /* número grande con animación */
+    /* número grande: valor correcto siempre, animación como extra */
+    fig.textContent=eur(total);
     cancelAnimationFrame(raf); var from=cur, t0=performance.now();
     (function step(t){
       var p=Math.min(1,(t-t0)/450), e=1-Math.pow(1-p,3);
