@@ -54,8 +54,9 @@
   },
   "blogPost": [
     { "@type": "BlogPosting", "headline": "Aforrar para a xubilación en Galicia: por onde empezar", "url": "https://nortecapital.es/ahorrar-para-la-jubilacion-en-galicia-gl", "datePublished": "2026-07-26", "author": { "@type": "Organization", "name": "Norte Capital" } },
-    { "@type": "BlogPosting", "headline": "Plan de investimento para principiantes: que inclúe (e que non)", "url": "https://nortecapital.es/plan-de-inversion-para-principiantes-gl", "datePublished": "2026-07-19", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
-    { "@type": "BlogPosting", "headline": "Como empezar a investir desde cero (sen saber nada de bolsa)", "url": "https://nortecapital.es/empezar-a-invertir-desde-cero-gl", "datePublished": "2026-05-28", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
+    { "@type": "BlogPosting", "headline": "Invertir no es solo para ricos: por qué nadie te lo explicó", "url": "https://nortecapital.es/invertir-no-es-solo-para-ricos", "datePublished": "2026-07-24", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
+    { "@type": "BlogPosting", "headline": "Plan de inversión para principiantes: qué incluye (y qué no)", "url": "https://nortecapital.es/plan-de-inversion-para-principiantes", "datePublished": "2026-07-19", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
+    { "@type": "BlogPosting", "headline": "Cómo empezar a invertir desde cero (sin saber nada de bolsa)", "url": "https://nortecapital.es/empezar-a-invertir-desde-cero", "datePublished": "2026-05-28", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
     { "@type": "BlogPosting", "headline": "Invertir desde cero en Galicia: empezar sin saber nada", "url": "https://nortecapital.es/invertir-desde-cero-galicia", "datePublished": "2026-06-14", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
     { "@type": "BlogPosting", "headline": "¿Comprar piso o invertir? El dilema gallego del ladrillo", "url": "https://nortecapital.es/comprar-piso-o-invertir-galicia", "datePublished": "2026-06-14", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
     { "@type": "BlogPosting", "headline": "Cómo tributan tus inversiones en Galicia: IRPF y base del ahorro", "url": "https://nortecapital.es/como-tributan-inversiones-galicia", "datePublished": "2026-06-14", "author": {"@type": "Person", "name": "Álvaro González", "sameAs": "https://www.linkedin.com/in/alvaroglezfdez/"} },
@@ -141,6 +142,9 @@
   @media (min-width: 1000px) { .post-grid { grid-template-columns: repeat(3,1fr); } }
   .post { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--paper); transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; }
   .post:hover { transform: translateY(-5px); box-shadow: var(--shadow-lift); }
+  .post .thumb img, .featured .thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s cubic-bezier(.16,1,.3,1); }
+  .post:hover .thumb img, .featured:hover .thumb img { transform:scale(1.06); }
+  .post .thumb, .featured .thumb { position:relative; overflow:hidden; }
   .post .thumb { height: 150px; display: grid; place-items: center; position: relative; overflow: hidden; }
   .post .thumb .glyph { font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: rgba(245,241,232,.92); }
   .post .thumb .tex { position: absolute; inset: 0; opacity: .13; background-image: repeating-linear-gradient(45deg, transparent 0 16px, rgba(255,255,255,.08) 16px 17px); }
@@ -256,13 +260,13 @@
     <div class="thumb"><img src="assets/blog-cover.png" alt="Insights de Norte Capital: análisis de mercados y finanzas personales en lenguaje claro" loading="lazy" /><span class="tex"></span></div>
     <div class="body">
       <div class="post-meta">
-        <span class="pill">Primeiros pasos</span>
+        <span class="pill">Primeros pasos</span>
         <time datetime="2026-05-28">28 May 2026</time>
         <span>·</span><span>8 min de lectura</span>
       </div>
-      <h2><a href="/empezar-a-invertir-desde-cero-gl">Como empezar a investir desde cero (sen saber nada de bolsa)</a></h2>
-      <p class="excerpt">Se nunca compraches unha acción na túa vida, este é o teu punto de partida. Cóntoche que precisas saber de verdade para dar o primeiro paso, que non fai falta, e como evitar os erros típicos de quen empeza.</p>
-      <a class="read-more" href="/empezar-a-invertir-desde-cero-gl">Ler artigo
+      <h2><a href="/empezar-a-invertir-desde-cero">Cómo empezar a invertir desde cero (sin saber nada de bolsa)</a></h2>
+      <p class="excerpt">Si nunca has comprado una acción en tu vida, este es tu punto de partida. Te cuento qué necesitas saber de verdad para dar el primer paso, qué no hace falta, y cómo evitar los errores típicos de quien empieza.</p>
+      <a class="read-more" href="/empezar-a-invertir-desde-cero">Ler artigo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </article>
@@ -275,8 +279,8 @@
 
   <div class="post-grid" id="postGrid">
 
-        <article class="post" data-cat="dinero">
-      <div class="thumb t-c"><span class="tex"></span><span class="glyph">01</span></div>
+    <article class="post" data-cat="dinero">
+      <div class="thumb t-c"><span class="tex"></span><img src="assets/blog/jubilacion.png" alt="Reloj de arena sobre una curva de ahorro creciente" loading="lazy" width="800" height="500" /></div>
       <div class="body">
         <div class="post-meta"><span class="pill">O teu diñeiro · Galicia</span><time datetime="2026-07-26">26 Xul 2026</time></div>
         <h4><a href="/ahorrar-para-la-jubilacion-en-galicia-gl">Aforrar para a xubilación en Galicia: por onde empezar</a></h4>
@@ -286,17 +290,27 @@
     </article>
 
     <article class="post" data-cat="basicos">
-      <div class="thumb t-a"><span class="tex"></span><span class="glyph">02</span></div>
+      <div class="thumb t-c"><span class="tex"></span><img src="assets/blog/democratizar.png" alt="Una puerta abierta y varias personas accediendo" loading="lazy" width="800" height="500" /></div>
       <div class="body">
-        <div class="post-meta"><span class="pill">Primeiros pasos</span><time datetime="2026-07-19">19 Jul 2026</time></div>
-        <h4><a href="/plan-de-inversion-para-principiantes-gl">Plan de investimento para principiantes: que inclúe (e que non)</a></h4>
-        <p class="excerpt">Os 6 elementos que si importan nun plan de investimento e as promesas de rendibilidade que debes ignorar. En linguaxe clara.</p>
-        <a class="read-more" href="/plan-de-inversion-para-principiantes-gl">Ler <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="post-meta"><span class="pill">Educación financiera</span><time datetime="2026-07-24">24 Jul 2026</time></div>
+        <h4><a href="/invertir-no-es-solo-para-ricos">Invertir no es solo para ricos: por qué nadie te lo explicó</a></h4>
+        <p class="excerpt">Invertir no es un privilegio de ricos ni hace falta comprar un piso. Por qué nadie te lo enseñó y cómo empezar con hábitos sencillos, a tu ritmo.</p>
+        <a class="read-more" href="/invertir-no-es-solo-para-ricos">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </article>
 
     <article class="post" data-cat="basicos">
-      <div class="thumb t-a"><span class="tex"></span><span class="glyph">03</span></div>
+      <div class="thumb t-a"><span class="tex"></span><img src="assets/blog/plan.png" alt="Lista de comprobación de un plan de inversión" loading="lazy" width="800" height="500" /></div>
+      <div class="body">
+        <div class="post-meta"><span class="pill">Primeros pasos</span><time datetime="2026-07-19">19 Jul 2026</time></div>
+        <h4><a href="/plan-de-inversion-para-principiantes">Plan de inversión para principiantes: qué incluye (y qué no)</a></h4>
+        <p class="excerpt">Los 6 elementos que sí importan en un plan de inversión y las promesas de rentabilidad que debes ignorar. En lenguaje claro.</p>
+        <a class="read-more" href="/plan-de-inversion-para-principiantes">Leer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <article class="post" data-cat="basicos">
+      <div class="thumb t-a"><span class="tex"></span><img src="assets/blog/empezar-cero.png" alt="Un brote creciendo: empezar desde cero" loading="lazy" width="800" height="500" /></div>
       <div class="body">
         <div class="post-meta"><span class="pill">Primeiros pasos · Galicia</span><time datetime="2026-06-14">14 Jun 2026</time></div>
         <h4><a href="/invertir-desde-cero-galicia-gl">Investir desde cero en Galicia: comezar sen saber nada</a></h4>
@@ -306,7 +320,7 @@
     </article>
 
     <article class="post" data-cat="dinero">
-      <div class="thumb t-b"><span class="tex"></span><span class="glyph">04</span></div>
+      <div class="thumb t-b"><span class="tex"></span><img src="assets/blog/piso-vs-invertir.png" alt="Una casa frente a barras de crecimiento" loading="lazy" width="800" height="500" /></div>
       <div class="body">
         <div class="post-meta"><span class="pill">O teu diñeiro · Galicia</span><time datetime="2026-06-14">14 Jun 2026</time></div>
         <h4><a href="/comprar-piso-o-invertir-galicia-gl">Mercar piso ou investir? O dilema galego do ladrillo</a></h4>
@@ -316,7 +330,7 @@
     </article>
 
     <article class="post" data-cat="dinero">
-      <div class="thumb t-c"><span class="tex"></span><span class="glyph">05</span></div>
+      <div class="thumb t-c"><span class="tex"></span><img src="assets/blog/tributacion.png" alt="Documento fiscal con símbolo de porcentaje" loading="lazy" width="800" height="500" /></div>
       <div class="body">
         <div class="post-meta"><span class="pill">Fiscalidade · Galicia</span><time datetime="2026-06-14">14 Jun 2026</time></div>
         <h4><a href="/como-tributan-inversiones-galicia-gl">Como tributan os teus investimentos en Galicia: IRPF e base do aforro</a></h4>
@@ -326,7 +340,7 @@
     </article>
 
     <article class="post" data-cat="dinero">
-      <div class="thumb t-a"><span class="tex"></span><span class="glyph">06</span></div>
+      <div class="thumb t-a"><span class="tex"></span><img src="assets/blog/ahorro-fiscal.png" alt="Escudo protegiendo un símbolo de euro" loading="lazy" width="800" height="500" /></div>
       <div class="body">
         <div class="post-meta"><span class="pill">Fiscalidade · Galicia</span><time datetime="2026-06-14">14 Jun 2026</time></div>
         <h4><a href="/ahorrar-fiscalidad-gallega-a-favor-gl">Aforrar e investir coa fiscalidade galega ao teu favor</a></h4>
@@ -336,7 +350,7 @@
     </article>
 
     <article class="post" data-cat="basicos">
-      <div class="thumb t-b"><span class="tex"></span><span class="glyph">07</span></div>
+      <div class="thumb t-b"><span class="tex"></span><img src="assets/blog/banco-vs-asesor.png" alt="Una balanza comparando dos opciones" loading="lazy" width="800" height="500" /></div>
       <div class="body">
         <div class="post-meta"><span class="pill">Asesoramento · Galicia</span><time datetime="2026-06-14">14 Jun 2026</time></div>
         <h4><a href="/banco-o-asesor-financiero-galicia-gl">Banco ou asesor financeiro? Que che convén en Galicia</a></h4>
