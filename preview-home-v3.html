@@ -407,7 +407,7 @@
   --r-card:18px; --r-btn:12px;
   --ease:cubic-bezier(.22,.68,.35,1);
   --out:cubic-bezier(.16,1,.3,1);
-  --pad-y:clamp(5rem,10vw,9rem);
+  --pad-y:clamp(3.4rem,6vw,5.6rem);
   --sh-2:0 2px 8px rgba(0,0,0,.18), 0 40px 80px -34px rgba(0,0,0,.5);
 }
 section{ padding-block:var(--pad-y); position:relative; }
@@ -416,8 +416,6 @@ h1,h2,h3{ text-wrap:balance; } p{ text-wrap:pretty; }
 :is(section,header)[id], main [id]{ scroll-margin-top:6rem; }
 :focus-visible{ outline:2.5px solid var(--lime); outline-offset:3px; border-radius:4px; }
 
-/* Skew cinético global según velocidad de scroll */
-main{ transform: skewY(var(--sk,0deg)); transition: transform .35s var(--out); transform-origin:50% 0; }
 
 /* Barra de progreso */
 .nc-progress{ position:fixed; inset:0 0 auto 0; height:3px; z-index:120;
@@ -573,14 +571,10 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
 /* ---------- Tarifas ---------- */
 .fc{ padding:clamp(1.8rem,2.8vw,2.4rem) }
 .fc .price .big{ font-size:clamp(2.5rem,4.4vw,3.4rem); letter-spacing:-.045em }
-.fc.feat{ border-color:var(--forest) }
-.fc.feat::before{ content:""; position:absolute; inset:-1px; border-radius:inherit; z-index:0; pointer-events:none;
-  background:conic-gradient(from var(--a,0deg), var(--forest), var(--lime), var(--gold), var(--forest));
-  opacity:.5; animation:nc-rot 7s linear infinite; }
-@property --a{ syntax:'<angle>'; inherits:false; initial-value:0deg }
-@keyframes nc-rot{ to{ --a:360deg } }
-.fc.feat > *{ position:relative; z-index:2 }
-.fc.feat::after{ inset:1.5px }
+.fc.feat{ border-color:var(--forest);
+  box-shadow:0 0 0 1.5px var(--forest), 0 34px 74px -32px rgba(14,91,67,.6) }
+.fc.feat:hover{ box-shadow:0 0 0 1.5px var(--lime), 0 40px 84px -30px rgba(14,91,67,.7) }
+.fc .badge{ z-index:3 }
 
 /* ---------- FAQ ---------- */
 .faq details{ border:1px solid var(--line); border-radius:14px; margin-bottom:.7rem;
@@ -614,7 +608,7 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
 
 /* ---------- MÓVIL: mismos efectos ---------- */
 @media (max-width:760px){
-  :root{ --pad-y:clamp(3.6rem,12vw,5.2rem) }
+  :root{ --pad-y:clamp(2.8rem,9vw,4rem) }
   .hero-grid{ padding-block:3rem 3.4rem }
   .hero h1{ font-size:clamp(2.9rem,12vw,4.2rem) }
   .hero .ctas .btn{ width:100%; justify-content:center }
@@ -632,6 +626,43 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
   .hero h1{ clip-path:none !important }
   main{ transform:none !important }
 }
+
+/* ---------- Simulador interactivo (A+C) ---------- */
+.nc-sim .body{ padding:1.25rem 1.35rem 1.4rem }
+.nc-ctrl{ display:grid; gap:.35rem; margin-bottom:.35rem }
+.nc-ctrl .row{ display:flex; justify-content:space-between; align-items:baseline;
+  font-family:var(--font-mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint) }
+.nc-ctrl .row b{ font-family:var(--font-display); font-size:1rem; font-weight:500; color:var(--forest); letter-spacing:-.01em }
+.nc-sim input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:22px; background:transparent; cursor:grab }
+.nc-sim input[type=range]:active{ cursor:grabbing }
+.nc-sim input[type=range]::-webkit-slider-runnable-track{ height:5px; border-radius:99px;
+  background:linear-gradient(90deg,var(--forest) var(--p,50%), var(--line) var(--p,50%)) }
+.nc-sim input[type=range]::-moz-range-track{ height:5px; border-radius:99px; background:var(--line) }
+.nc-sim input[type=range]::-moz-range-progress{ height:5px; border-radius:99px; background:var(--forest) }
+.nc-sim input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:19px; height:19px; margin-top:-7px;
+  border-radius:50%; background:var(--forest); border:3px solid var(--paper);
+  box-shadow:0 2px 8px rgba(14,91,67,.45); transition:transform .18s var(--out) }
+.nc-sim input[type=range]::-moz-range-thumb{ width:19px; height:19px; border-radius:50%; background:var(--forest); border:3px solid var(--paper) }
+.nc-sim input[type=range]:hover::-webkit-slider-thumb{ transform:scale(1.18) }
+.nc-figure{ margin:.9rem 0 .2rem }
+.nc-figure .num{ font-family:var(--font-display); font-size:clamp(2.4rem,4.6vw,3.1rem); font-weight:500;
+  letter-spacing:-.04em; line-height:1; color:var(--ink); font-variant-numeric:tabular-nums }
+.nc-figure .cap{ font-family:var(--font-mono); font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-top:.45rem }
+.nc-chart{ width:100%; height:112px; display:block; margin:.6rem 0 .2rem; overflow:visible }
+.nc-chart .a{ fill:url(#ncGrad) } .nc-chart .l{ fill:none; stroke:var(--forest); stroke-width:2.5; stroke-linecap:round }
+.nc-chart .s{ fill:none; stroke:var(--line-strong); stroke-width:2; stroke-dasharray:5 5 }
+.nc-cmp{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem; margin-top:.9rem }
+.nc-col{ border:1px solid var(--line); border-radius:12px; padding:.7rem .8rem; background:color-mix(in srgb,var(--paper) 60%,transparent) }
+.nc-col .k{ display:block; font-family:var(--font-mono); font-size:.58rem; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint) }
+.nc-col b{ display:block; font-family:var(--font-display); font-size:1.32rem; font-weight:500; letter-spacing:-.02em; margin-top:.2rem; font-variant-numeric:tabular-nums }
+.nc-col .bar{ height:4px; border-radius:99px; background:var(--line); margin-top:.55rem; overflow:hidden }
+.nc-col .bar i{ display:block; height:100%; width:var(--w,40%); background:var(--line-strong); border-radius:99px; transition:width .5s var(--out) }
+.nc-col.win{ border-color:var(--forest-line); background:var(--forest-tint) }
+.nc-col.win b{ color:var(--forest) }
+.nc-col.win .bar i{ background:linear-gradient(90deg,var(--forest),var(--lime)) }
+.nc-delta{ margin-top:.7rem; font-size:.82rem; color:var(--ink-soft); line-height:1.5 }
+.nc-delta b{ color:var(--forest); font-weight:600 }
+@media (max-width:420px){ .nc-cmp{ grid-template-columns:1fr } }
 
 </style>
 </head>
@@ -711,38 +742,49 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
       </div>
     </div>
 
-    <!-- Illustrative growth panel -->
-    <div class="panel">
+    <!-- Simulador interactivo -->
+    <div class="panel nc-sim">
       <div class="ph">
-        <span class="t"><span class="t-long">Simulador · empezar pronto</span><span class="t-short">Simulador</span></span>
+        <span class="t"><span class="t-long">Simulador · muévelo tú</span><span class="t-short">Simulador</span></span>
         <span class="live"><span class="dot animate-blink"></span>ilustrativo</span>
       </div>
       <div class="body">
-        <div class="figure"><span class="num tnum" id="figNum">0&nbsp;€</span><span class="delta tnum">aportando 150&nbsp;€/mes</span></div>
-        <div class="cap">Valor estimado a 30 años · interés compuesto</div>
-        <svg class="chart" id="chart" viewBox="0 0 480 150" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="g3area" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#0e5b43" stop-opacity="0.18"/>
-              <stop offset="1" stop-color="#0e5b43" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <line class="grid-l" x1="0" y1="37" x2="480" y2="37"/>
-          <line class="grid-l" x1="0" y1="75" x2="480" y2="75"/>
-          <line class="grid-l" x1="0" y1="113" x2="480" y2="113"/>
-          <path class="area" d="M0,140 C120,130 210,118 300,80 C360,54 420,30 480,14 L480,150 L0,150 Z"/>
-          <path class="line2" d="M0,141 L480,96"/>
-          <path class="line" d="M0,140 C120,130 210,118 300,80 C360,54 420,30 480,14"/>
-        </svg>
-        <div class="legend">
-          <span><span class="sw" style="background:var(--forest)"></span>Empezar hoy</span>
-          <span><span class="sw" style="background:var(--line-strong)"></span>Solo ahorrar</span>
+        <div class="nc-ctrl">
+          <div class="row"><label for="ncMonthly">Aporto al mes</label><b id="ncMv">150 €</b></div>
+          <input id="ncMonthly" type="range" min="25" max="500" step="25" value="150" aria-label="Aportación mensual en euros" />
+          <div class="row" style="margin-top:.5rem"><label for="ncYears">Durante</label><b id="ncYv">30 años</b></div>
+          <input id="ncYears" type="range" min="5" max="40" step="1" value="30" aria-label="Años de inversión" />
         </div>
+
+        <div class="nc-figure">
+          <div class="num" id="ncFig">161.000 €</div>
+          <div class="cap">Valor estimado · interés compuesto 6 % anual</div>
+        </div>
+
+        <svg class="nc-chart" viewBox="0 0 480 112" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="ncGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0e5b43" stop-opacity=".22"/><stop offset="1" stop-color="#0e5b43" stop-opacity="0"/>
+          </linearGradient></defs>
+          <path class="a" id="ncArea" d=""></path>
+          <path class="s" id="ncSav" d=""></path>
+          <path class="l" id="ncLine" d=""></path>
+        </svg>
+
+        <div class="nc-cmp">
+          <div class="nc-col">
+            <span class="k">Solo ahorrar</span><b id="ncSave">54.000 €</b>
+            <div class="bar"><i id="ncBs"></i></div>
+          </div>
+          <div class="nc-col win">
+            <span class="k">Invirtiendo</span><b id="ncInv">161.000 €</b>
+            <div class="bar"><i id="ncBi"></i></div>
+          </div>
+        </div>
+        <p class="nc-delta" id="ncDelta"></p>
         <p class="disc">Ejemplo ilustrativo con un supuesto de rentabilidad del 6&nbsp;% anual, solo con fines formativos. No es una previsión ni una promesa de rentabilidad. Invertir conlleva riesgo de pérdida.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 <div class="nc-marquee" aria-hidden="true"><div>
@@ -1074,28 +1116,6 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
 </a>
 <script src="cf.js" defer></script>
 <script>
-  // Hero figure count-up + chart draw
-  (function () {
-    const fmt = (n) => Math.round(n).toLocaleString('es-ES') + ' €';
-    const numEl = document.getElementById('figNum');
-    const chart = document.getElementById('chart');
-    const target = 161000; // illustrative: 150€/mo · 30y · ~6%/y compounded
-    let started = false;
-    function run() {
-      if (started) return; started = true;
-      chart.classList.add('in');
-      const dur = 1500, t0 = performance.now();
-      (function tick(t) {
-        const p = Math.min(1, (t - t0) / dur);
-        const e = 1 - Math.pow(1 - p, 3);
-        numEl.textContent = fmt(target * e);
-        if (p < 1) requestAnimationFrame(tick);
-      })(t0);
-    }
-    const io = new IntersectionObserver((es) => { es.forEach((e) => { if (e.isIntersecting) run(); }); }, { threshold: 0.4 });
-    io.observe(document.querySelector('.panel'));
-    setTimeout(run, 1800);
-  })();
 
   // Donut segments
   (function () {
@@ -1205,10 +1225,6 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
       var y=scrollY, h=document.documentElement.scrollHeight-innerHeight;
       if(bar) bar.style.transform='scaleX('+(h>0?y/h:0)+')';
       if(hdr) hdr.classList.toggle('stuck', y>40);
-      var v=Math.max(-2.2, Math.min(2.2, (y-last)*0.055));
-      document.documentElement.style.setProperty('--sk', v.toFixed(2)+'deg');
-      clearTimeout(window.__ncSk);
-      window.__ncSk=setTimeout(function(){ document.documentElement.style.setProperty('--sk','0deg'); },120);
       last=y; ticking=false;
     });
   }, {passive:true});
@@ -1228,6 +1244,55 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
     });
   },{threshold:.6});
   document.querySelectorAll('.stat .big').forEach(function(el){ io2.observe(el); });
+})();
+
+/* Simulador interactivo: aportación + años, invertir vs solo ahorrar */
+(function(){
+  var m=document.getElementById('ncMonthly'), y=document.getElementById('ncYears');
+  if(!m||!y) return;
+  var oM=document.getElementById('ncMv'), oY=document.getElementById('ncYv'),
+      fig=document.getElementById('ncFig'), inv=document.getElementById('ncInv'),
+      sav=document.getElementById('ncSave'), bi=document.getElementById('ncBi'),
+      bs=document.getElementById('ncBs'), dl=document.getElementById('ncDelta'),
+      pa=document.getElementById('ncArea'), pl=document.getElementById('ncLine'), ps=document.getElementById('ncSav');
+  var R=0.06/12, eur=function(n){ return Math.round(n).toLocaleString('es-ES')+' €'; };
+  var cur=0, raf=null;
+
+  function fv(P,months){ return P*((Math.pow(1+R,months)-1)/R); }
+
+  function paint(){
+    var P=+m.value, Y=+y.value, N=Y*12;
+    m.style.setProperty('--p', ((P-m.min)/(m.max-m.min)*100)+'%');
+    y.style.setProperty('--p', ((Y-y.min)/(y.max-y.min)*100)+'%');
+    oM.textContent=P+' €'; oY.textContent=Y+(Y===1?' año':' años');
+
+    var total=fv(P,N), saved=P*N, max=total*1.06;
+    inv.textContent=eur(total); sav.textContent=eur(saved);
+    bi.style.setProperty('--w','100%'); bs.style.setProperty('--w', Math.max(6,(saved/total*100))+'%');
+    dl.innerHTML='Diferencia a tu favor: <b>'+eur(total-saved)+'</b>';
+
+    /* número grande con animación */
+    cancelAnimationFrame(raf); var from=cur, t0=performance.now();
+    (function step(t){
+      var p=Math.min(1,(t-t0)/450), e=1-Math.pow(1-p,3);
+      cur=from+(total-from)*e; fig.textContent=eur(cur);
+      if(p<1) raf=requestAnimationFrame(step);
+    })(t0);
+
+    /* curvas */
+    var W=480,H=112,pts=[],sp=[];
+    for(var i=0;i<=Y;i++){
+      var x=(i/Y)*W;
+      pts.push([x, H-(fv(P,i*12)/max)*H]);
+      sp.push([x, H-((P*i*12)/max)*H]);
+    }
+    var d=pts.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1); }).join(' ');
+    var s=sp.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1); }).join(' ');
+    pl.setAttribute('d',d); ps.setAttribute('d',s);
+    pa.setAttribute('d', d+' L'+W+','+H+' L0,'+H+' Z');
+  }
+  m.addEventListener('input',paint); y.addEventListener('input',paint);
+  paint();
 })();
 
 </script>
