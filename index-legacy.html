@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Norte Capital — Empieza a invertir desde cero con un plan a tu medida</title>
+<title>[COPIA ANTERIOR] Norte Capital — Empieza a invertir desde cero con un plan a tu medida</title>
 <meta name="description" content="¿Nunca has invertido? Plan a tu medida, ayuda para elegir bróker y acompañamiento hasta tu primera inversión. Pago único de 250 €, sin cuotas obligatorias. Online, en Galicia y toda España." />
 <meta name="author" content="Álvaro González" />
-<link rel="canonical" href="https://nortecapital.es/" />
-<link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/" />
-<link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/index-gl" />
-<link rel="alternate" hreflang="x-default" href="https://nortecapital.es/" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="robots" content="noindex, nofollow" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -399,279 +395,8 @@
   .ins-plane { position: absolute; width: 84px; height: 84px; top: -44px; right: 10px; transform: rotate(-6deg); pointer-events: none; filter: drop-shadow(0 10px 10px rgba(8,30,22,.35)); }
   @media (prefers-reduced-motion: reduce) { .floaty { animation: none; } }
 </style>
-<style id="nc-v3">
-/* ============================================================
-   Norte Capital · v3 "AGRESIVA" — oscura, cinética, fluida
-   Reveals con IntersectionObserver => funcionan también en iPhone.
-   ============================================================ */
-@view-transition { navigation: auto; }
-
-:root{
-  --gold:#e6b95c; --lime:#37c98d;
-  --r-card:18px; --r-btn:12px;
-  --ease:cubic-bezier(.22,.68,.35,1);
-  --out:cubic-bezier(.16,1,.3,1);
-  --pad-y:clamp(3.4rem,6vw,5.6rem);
-  --sh-2:0 2px 8px rgba(0,0,0,.18), 0 40px 80px -34px rgba(0,0,0,.5);
-}
-section{ padding-block:var(--pad-y); position:relative; }
-.hero{ padding-block:0; }
-h1,h2,h3{ text-wrap:balance; } p{ text-wrap:pretty; }
-:is(section,header)[id], main [id]{ scroll-margin-top:6rem; }
-:focus-visible{ outline:2.5px solid var(--lime); outline-offset:3px; border-radius:4px; }
-
-
-/* Barra de progreso */
-.nc-progress{ position:fixed; inset:0 0 auto 0; height:3px; z-index:120;
-  background:linear-gradient(90deg,var(--lime),var(--gold)); transform:scaleX(0); transform-origin:0 50%; }
-
-/* Cursor luminoso (solo desktop con ratón) */
-.nc-cursor{ position:fixed; z-index:115; width:26rem; height:26rem; border-radius:50%; pointer-events:none;
-  translate:-50% -50%; opacity:0; transition:opacity .4s;
-  background:radial-gradient(circle, rgba(55,201,141,.14), transparent 62%); mix-blend-mode:screen; }
-@media (hover:hover) and (pointer:fine){ .nc-cursor.on{ opacity:1; } }
-
-/* ---------- HERO oscuro + aurora ---------- */
-.hero{ background:#0a0d0b; color:var(--cream); overflow:hidden; isolation:isolate; }
-.hero .glow{ display:none; }
-.hero::before{
-  content:""; position:absolute; inset:-35% -25%; z-index:0; pointer-events:none;
-  background:
-    radial-gradient(34% 40% at 74% 16%, rgba(55,201,141,.60), transparent 64%),
-    radial-gradient(30% 36% at 20% 80%, rgba(230,185,92,.34), transparent 66%),
-    radial-gradient(48% 52% at 46% 44%, rgba(14,91,67,.85), transparent 70%);
-  filter:blur(54px); animation:nc-aurora 20s var(--ease) infinite alternate;
-}
-@keyframes nc-aurora{
-  0%{ transform:translate3d(-4%,-3%,0) scale(1) rotate(0deg) }
-  50%{ transform:translate3d(5%,4%,0) scale(1.12) rotate(4deg) }
-  100%{ transform:translate3d(-3%,5%,0) scale(1.05) rotate(-3deg) }
-}
-/* rejilla técnica + grano */
-.hero::after{
-  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
-  background-image:
-    linear-gradient(rgba(245,241,232,.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,241,232,.045) 1px, transparent 1px);
-  background-size:74px 74px; mask-image:radial-gradient(72% 62% at 50% 40%, #000 25%, transparent 78%);
-}
-.hero .wrap{ position:relative; z-index:2; }
-.hero-grid{ padding-block:clamp(4rem,9vw,8rem); gap:clamp(2.5rem,5vw,4.5rem); align-items:center; }
-
-.hero-eyebrow{ padding:.5rem 1.05rem; border-radius:99px; border-color:rgba(245,241,232,.24);
-  background:rgba(245,241,232,.07); backdrop-filter:blur(6px); }
-.hero h1{
-  font-size:clamp(3.2rem,9vw,7rem); line-height:.9; letter-spacing:-.045em; margin-top:1.5rem;
-  clip-path:inset(0 0 108% 0); animation:nc-wipe 1.15s var(--out) .1s both;
-}
-@keyframes nc-wipe{ to{ clip-path:inset(0 0 -12% 0) } }
-.hero h1 .it{
-  background:linear-gradient(100deg,var(--cream) 18%,var(--gold) 44%,var(--lime) 62%,var(--cream) 82%);
-  background-size:280% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
-  animation:nc-shine 6s linear infinite;
-}
-@keyframes nc-shine{ to{ background-position:-280% 0 } }
-.hero .sub, .hero .ctas, .hero-trust, .panel{ animation:nc-up .9s var(--out) both; }
-.hero .sub{ animation-delay:.5s; font-size:clamp(1.06rem,1.5vw,1.28rem); line-height:1.65; max-width:34rem; margin-top:1.7rem; }
-.hero .ctas{ animation-delay:.62s; margin-top:2.5rem; gap:.85rem; }
-.hero-trust{ animation-delay:.74s; margin-top:3.2rem; padding-top:1.7rem; border-top:1px solid rgba(245,241,232,.16); gap:1.2rem 2.6rem; }
-.panel{ animation-delay:.4s; }
-@keyframes nc-up{ from{ opacity:0; transform:translateY(30px) } to{ opacity:1; transform:none } }
-.hero-trust .ht{ transition:transform .3s var(--out) } .hero-trust .ht:hover{ transform:translateY(-3px) }
-.hero-trust .ht .k{ font-size:.55rem; letter-spacing:.18em; color:rgba(245,241,232,.5) }
-
-/* ---------- Marquesina cinética bajo el hero ---------- */
-.nc-marquee{ background:#0a0d0b; border-block:1px solid rgba(245,241,232,.12); overflow:hidden; padding-block:1.05rem; }
-.nc-marquee div{ display:flex; gap:3.5rem; width:max-content; animation:nc-slide 34s linear infinite; }
-.nc-marquee span{ font-family:var(--font-mono); font-size:.76rem; letter-spacing:.24em; text-transform:uppercase; color:rgba(245,241,232,.55); white-space:nowrap; }
-.nc-marquee b{ color:var(--gold); font-weight:400 }
-@keyframes nc-slide{ to{ transform:translateX(-50%) } }
-
-/* ---------- Panel simulador ---------- */
-.panel-wrap{ perspective:1400px; }
-.panel{ border-radius:var(--r-card); overflow:hidden; position:relative; transform-style:preserve-3d;
-  border:1px solid rgba(245,241,232,.14); box-shadow:0 10px 24px rgba(0,0,0,.3), 0 50px 100px -40px rgba(0,0,0,.7);
-  transition:transform .5s var(--out), box-shadow .5s var(--ease); }
-.panel::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0;
-  background:radial-gradient(460px circle at var(--mx,70%) var(--my,0%), rgba(255,255,255,.2), transparent 55%);
-  transition:opacity .45s; }
-.panel:hover::after{ opacity:1 }
-
-/* ---------- Botones ---------- */
-.btn{ border-radius:var(--r-btn); position:relative; overflow:hidden;
-  transition:transform .28s var(--out), box-shadow .3s, background-color .25s, color .25s; }
-.btn::before{ content:""; position:absolute; inset:0; opacity:0; transition:opacity .3s;
-  background:radial-gradient(160px circle at var(--bx,50%) var(--by,50%), rgba(255,255,255,.3), transparent 60%); }
-.btn:hover::before{ opacity:1 } .btn:hover{ transform:translateY(-3px) scale(1.02) }
-.btn:active{ transform:translateY(-1px) scale(.99) }
-.btn-light:hover{ box-shadow:0 16px 36px -12px rgba(0,0,0,.6) }
-.btn svg{ transition:transform .3s var(--out) } .btn:hover svg{ transform:translateX(5px) }
-
-/* ---------- Nav ---------- */
-.nav{ height:4.9rem }
-.nav-links a{ position:relative; padding-block:.35rem }
-.nav-links a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:1.5px;
-  background:linear-gradient(90deg,var(--lime),var(--gold)); transition:right .35s var(--out) }
-.nav-links a:hover::after{ right:0 }
-header.site{ transition:background .35s, box-shadow .35s }
-header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-shadow:0 16px 40px -24px #000 }
-
-/* ---------- Reveals (JS · funcionan en TODOS los móviles) ---------- */
-.js-motion .rv{ opacity:0; transform:translateY(42px) scale(.985);
-  transition:opacity .85s var(--out), transform .85s var(--out);
-  transition-delay:calc(var(--i,0) * 90ms); }
-.js-motion .rv.in{ opacity:1; transform:none }
-/* sin JS o si algo falla: todo visible por defecto */
-.rv{ opacity:1; transform:none }
-
-/* ---------- Encabezados ---------- */
-.sh{ max-width:48rem }
-.sh .eb{ display:inline-flex; align-items:center; gap:.5rem; font-size:.62rem; letter-spacing:.2em }
-.sh h2{ font-size:clamp(2.3rem,5.4vw,4rem); line-height:1; letter-spacing:-.04em; margin-top:1rem }
-.sh p{ font-size:clamp(1rem,1.3vw,1.16rem); line-height:1.66; margin-top:1.1rem }
-
-/* ---------- Banda de datos ---------- */
-.stat{ padding-block:clamp(2.8rem,4.4vw,4rem); position:relative }
-.stat .big{ font-size:clamp(3.2rem,7vw,5rem); letter-spacing:-.045em; line-height:.95;
-  background:linear-gradient(160deg,var(--forest-deep),var(--forest) 45%,var(--lime));
-  -webkit-background-clip:text; background-clip:text; color:transparent; }
-.stat .lab{ font-size:.98rem; line-height:1.55; margin-top:1rem }
-.stat::after{ content:""; position:absolute; left:50%; bottom:1.8rem; width:0; height:2px; translate:-50% 0;
-  background:linear-gradient(90deg,var(--forest),var(--gold)); transition:width .55s var(--out) }
-.stat:hover::after{ width:52px }
-
-/* ---------- Tarjetas con borde degradado + spotlight ---------- */
-.step,.card,.sc,.fc,.fm,.xsell{ border-radius:var(--r-card); position:relative; overflow:hidden;
-  transition:transform .45s var(--out), box-shadow .45s, border-color .45s }
-.step::after,.card::after,.sc::after,.fc::after,.fm::after{ content:""; position:absolute; inset:0; border-radius:inherit;
-  pointer-events:none; opacity:0; transition:opacity .45s;
-  background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%), color-mix(in srgb,var(--lime) 24%,transparent), transparent 62%) }
-.sc::after{ background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%), rgba(245,241,232,.16), transparent 62%) }
-.step:hover::after,.card:hover::after,.sc:hover::after,.fc:hover::after,.fm:hover::after{ opacity:1 }
-.card:hover,.step:hover,.fm:hover,.fc:hover{ transform:translateY(-8px); box-shadow:var(--sh-2); border-color:var(--forest-line) }
-.sc:hover{ transform:translateY(-8px); border-color:rgba(245,241,232,.34) }
-.ico3d{ transition:transform .5s var(--out) }
-.card:hover .ico3d,.step:hover .ico3d,.sc:hover .ico3d{ transform:translateY(-5px) rotate(-6deg) scale(1.1) }
-.step h3,.card h3,.sc h3{ font-size:1.28rem; letter-spacing:-.02em; margin-top:.55rem }
-.step .n{ font-family:var(--font-mono); font-size:.6rem; letter-spacing:.22em; color:var(--forest); opacity:.85 }
-
-/* línea que une los pasos */
-.steps{ position:relative }
-@media (min-width:820px){
-  .steps::before{ content:""; position:absolute; left:8%; right:8%; top:2.7rem; height:2px; z-index:0;
-    background:linear-gradient(90deg,transparent,var(--forest-line) 12%,var(--forest-line) 88%,transparent);
-    transform:scaleX(0); transform-origin:0 50%; transition:transform 1.1s var(--out) }
-  .steps.in::before{ transform:scaleX(1) }
-}
-.step{ position:relative; z-index:1 }
-
-/* ---------- Cartera ---------- */
-.donut{ filter:drop-shadow(0 22px 42px rgba(14,91,67,.26)); transition:transform .7s var(--out) }
-.donut-wrap:hover .donut{ transform:rotate(-8deg) scale(1.04) }
-.legend2 .l2{ padding-block:.9rem; border-bottom:1px solid var(--line); transition:padding-left .3s var(--out), color .3s }
-.legend2 .l2:hover{ padding-left:.55rem; color:var(--forest) }
-.legend2 .sw{ transition:transform .3s var(--out) } .legend2 .l2:hover .sw{ transform:scale(1.6) }
-
-/* ---------- Tarifas ---------- */
-.fc{ padding:clamp(1.8rem,2.8vw,2.4rem) }
-.fc .price .big{ font-size:clamp(2.5rem,4.4vw,3.4rem); letter-spacing:-.045em }
-.fc.feat{ border-color:var(--forest);
-  box-shadow:0 0 0 1.5px var(--forest), 0 34px 74px -32px rgba(14,91,67,.6) }
-.fc.feat:hover{ box-shadow:0 0 0 1.5px var(--lime), 0 40px 84px -30px rgba(14,91,67,.7) }
-.fc .badge{ z-index:3 }
-
-/* ---------- FAQ ---------- */
-.faq details{ border:1px solid var(--line); border-radius:14px; margin-bottom:.7rem;
-  background:color-mix(in srgb,var(--paper) 72%,transparent);
-  transition:border-color .3s, background-color .3s, transform .3s var(--out) }
-.faq details:hover{ border-color:var(--line-strong); transform:translateX(4px) }
-.faq details[open]{ border-color:var(--forest-line); background:var(--forest-tint) }
-.faq summary{ cursor:pointer; padding:1.15rem 3rem 1.15rem 1.25rem; position:relative; font-weight:600; letter-spacing:-.01em; list-style:none }
-.faq summary::-webkit-details-marker{ display:none }
-.faq summary::after{ content:""; position:absolute; right:1.25rem; top:50%; width:9px; height:9px;
-  border-right:2px solid var(--forest); border-bottom:2px solid var(--forest); translate:0 -60%; rotate:45deg; transition:rotate .35s var(--out) }
-.faq details[open] summary::after{ rotate:-135deg }
-.faq details p{ padding:0 1.25rem 1.25rem; line-height:1.66; color:var(--ink-soft); animation:nc-fade .45s var(--out) both }
-@keyframes nc-fade{ from{opacity:0; transform:translateY(-8px)} to{opacity:1; transform:none} }
-
-/* ---------- CTA / newsletter ---------- */
-.cta-band{ overflow:hidden }
-.cta-band .glow{ animation:nc-aurora 26s var(--ease) infinite alternate }
-.cta-band h2{ font-size:clamp(2.4rem,5.4vw,4rem); letter-spacing:-.04em }
-.ins-box{ border-radius:var(--r-card); padding:clamp(1.8rem,2.8vw,2.4rem); background:rgba(245,241,232,.09);
-  border:1px solid rgba(245,241,232,.2); backdrop-filter:blur(10px); transition:transform .45s var(--out), border-color .45s }
-.ins-box:hover{ transform:translateY(-5px); border-color:rgba(245,241,232,.38) }
-.ins-box input{ border-radius:var(--r-btn); padding:.95rem 1rem }
-
-/* ---------- WhatsApp pulso ---------- */
-.wa-float{ transition:transform .4s var(--out) }
-.wa-float::after{ content:""; position:absolute; inset:0; border-radius:50%; z-index:-1;
-  box-shadow:0 0 0 0 rgba(37,211,102,.55); animation:nc-pulse 2.8s ease-out infinite }
-.wa-float:hover{ transform:scale(1.1) rotate(6deg) }
-@keyframes nc-pulse{ to{ box-shadow:0 0 0 24px rgba(37,211,102,0) } }
-
-/* ---------- MÓVIL: mismos efectos ---------- */
-@media (max-width:760px){
-  :root{ --pad-y:clamp(2.8rem,9vw,4rem) }
-  .hero-grid{ padding-block:3rem 3.4rem }
-  .hero h1{ font-size:clamp(2.9rem,12vw,4.2rem) }
-  .hero .ctas .btn{ width:100%; justify-content:center }
-  .btn,.nav-links a,.foot-col a{ min-height:44px; display:inline-flex; align-items:center }
-  /* el "hover" se activa al tocar */
-  .card:active,.step:active,.fc:active,.fm:active,.sc:active{ transform:translateY(-6px) }
-  .card:active::after,.step:active::after,.fc:active::after,.sc:active::after{ opacity:1 }
-  .nc-cursor{ display:none }
-  .stat .big{ font-size:clamp(3rem,13vw,4rem) }
-}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important }
-  .rv{ opacity:1 !important; transform:none !important }
-  .hero h1{ clip-path:none !important }
-  main{ transform:none !important }
-}
-
-/* ---------- Simulador interactivo (A+C) ---------- */
-.nc-sim .body{ padding:1.25rem 1.35rem 1.4rem }
-.nc-ctrl{ display:grid; gap:.35rem; margin-bottom:.35rem }
-.nc-ctrl .row{ display:flex; justify-content:space-between; align-items:baseline;
-  font-family:var(--font-mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint) }
-.nc-ctrl .row b{ font-family:var(--font-display); font-size:1rem; font-weight:500; color:var(--forest); letter-spacing:-.01em }
-.nc-sim input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:22px; background:transparent; cursor:grab }
-.nc-sim input[type=range]:active{ cursor:grabbing }
-.nc-sim input[type=range]::-webkit-slider-runnable-track{ height:5px; border-radius:99px;
-  background:linear-gradient(90deg,var(--forest) var(--p,50%), var(--line) var(--p,50%)) }
-.nc-sim input[type=range]::-moz-range-track{ height:5px; border-radius:99px; background:var(--line) }
-.nc-sim input[type=range]::-moz-range-progress{ height:5px; border-radius:99px; background:var(--forest) }
-.nc-sim input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:19px; height:19px; margin-top:-7px;
-  border-radius:50%; background:var(--forest); border:3px solid var(--paper);
-  box-shadow:0 2px 8px rgba(14,91,67,.45); transition:transform .18s var(--out) }
-.nc-sim input[type=range]::-moz-range-thumb{ width:19px; height:19px; border-radius:50%; background:var(--forest); border:3px solid var(--paper) }
-.nc-sim input[type=range]:hover::-webkit-slider-thumb{ transform:scale(1.18) }
-.nc-figure{ margin:.9rem 0 .2rem }
-.nc-figure .num{ font-family:var(--font-display); font-size:clamp(2.4rem,4.6vw,3.1rem); font-weight:500;
-  letter-spacing:-.04em; line-height:1; color:var(--ink); font-variant-numeric:tabular-nums }
-.nc-figure .cap{ font-family:var(--font-mono); font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-top:.45rem }
-.nc-chart{ width:100%; height:112px; display:block; margin:.6rem 0 .2rem; overflow:visible }
-.nc-chart .a{ fill:url(#ncGrad) } .nc-chart .l{ fill:none; stroke:var(--forest); stroke-width:2.5; stroke-linecap:round }
-.nc-chart .s{ fill:none; stroke:var(--line-strong); stroke-width:2; stroke-dasharray:5 5 }
-.nc-cmp{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem; margin-top:.9rem }
-.nc-col{ border:1px solid var(--line); border-radius:12px; padding:.7rem .8rem; background:color-mix(in srgb,var(--paper) 60%,transparent) }
-.nc-col .k{ display:block; font-family:var(--font-mono); font-size:.58rem; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint) }
-.nc-col b{ display:block; font-family:var(--font-display); font-size:1.32rem; font-weight:500; letter-spacing:-.02em; margin-top:.2rem; font-variant-numeric:tabular-nums }
-.nc-col .bar{ height:4px; border-radius:99px; background:var(--line); margin-top:.55rem; overflow:hidden }
-.nc-col .bar i{ display:block; height:100%; width:var(--w,40%); background:var(--line-strong); border-radius:99px; transition:width .5s var(--out) }
-.nc-col.win{ border-color:var(--forest-line); background:var(--forest-tint) }
-.nc-col.win b{ color:var(--forest) }
-.nc-col.win .bar i{ background:linear-gradient(90deg,var(--forest),var(--lime)) }
-.nc-delta{ margin-top:.7rem; font-size:.82rem; color:var(--ink-soft); line-height:1.5 }
-.nc-delta b{ color:var(--forest); font-weight:600 }
-@media (max-width:420px){ .nc-cmp{ grid-template-columns:1fr } }
-
-</style>
 </head>
 <body class="surface-cream">
-<div class="nc-progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Saltar al contenido</a>
 
 <!-- 3D icon sprite — hand-built pseudo-3D SVG objects, Robinhood-style -->
@@ -742,48 +467,43 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
       <div class="hero-trust">
         <div class="ht"><span class="k">Certificación</span><span class="v">Asesor EFPA</span></div>
         <div class="ht"><span class="k">Registro</span><span class="v">Agente CNMV</span></div>
-        <div class="ht"><span class="k">Cobertura</span><span class="v">España</span></div>
+        <div class="ht"><span class="k">Cobertura</span><span class="v">Galicia y España</span></div>
       </div>
     </div>
 
-    <!-- Simulador interactivo -->
-    <div class="panel nc-sim">
+    <!-- Illustrative growth panel -->
+    <div class="panel">
       <div class="ph">
-        <span class="t"><span class="t-long">Simulador · muévelo tú</span><span class="t-short">Simulador</span></span>
+        <span class="t"><span class="t-long">Simulador · empezar pronto</span><span class="t-short">Simulador</span></span>
         <span class="live"><span class="dot animate-blink"></span>ilustrativo</span>
       </div>
       <div class="body">
-        <div class="nc-ctrl">
-          <div class="row"><label for="ncMonthly">Aporto al mes</label><b id="ncMv">150 €</b></div>
-          <input id="ncMonthly" type="range" min="25" max="500" step="25" value="150" aria-label="Aportación mensual en euros" />
-          <div class="row" style="margin-top:.5rem"><label for="ncYears">Durante</label><b id="ncYv">30 años</b></div>
-          <input id="ncYears" type="range" min="5" max="40" step="1" value="30" aria-label="Años de inversión" />
-        </div>
-        <div class="nc-figure">
-          <div class="num" id="ncFig">161.000 €</div>
-          <div class="cap">Valor estimado · interés compuesto 6 % anual</div>
-        </div>
-        <svg class="nc-chart" viewBox="0 0 480 112" preserveAspectRatio="none" aria-hidden="true">
-          <defs><linearGradient id="ncGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#0e5b43" stop-opacity=".22"/><stop offset="1" stop-color="#0e5b43" stop-opacity="0"/>
-          </linearGradient></defs>
-          <path class="a" id="ncArea" d=""></path><path class="s" id="ncSav" d=""></path><path class="l" id="ncLine" d=""></path>
+        <div class="figure"><span class="num tnum" id="figNum">0&nbsp;€</span><span class="delta tnum">aportando 150&nbsp;€/mes</span></div>
+        <div class="cap">Valor estimado a 30 años · interés compuesto</div>
+        <svg class="chart" id="chart" viewBox="0 0 480 150" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="g3area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0e5b43" stop-opacity="0.18"/>
+              <stop offset="1" stop-color="#0e5b43" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line class="grid-l" x1="0" y1="37" x2="480" y2="37"/>
+          <line class="grid-l" x1="0" y1="75" x2="480" y2="75"/>
+          <line class="grid-l" x1="0" y1="113" x2="480" y2="113"/>
+          <path class="area" d="M0,140 C120,130 210,118 300,80 C360,54 420,30 480,14 L480,150 L0,150 Z"/>
+          <path class="line2" d="M0,141 L480,96"/>
+          <path class="line" d="M0,140 C120,130 210,118 300,80 C360,54 420,30 480,14"/>
         </svg>
-        <div class="nc-cmp">
-          <div class="nc-col"><span class="k">Solo ahorrar</span><b id="ncSave">54.000 €</b><div class="bar"><i id="ncBs"></i></div></div>
-          <div class="nc-col win"><span class="k">Invirtiendo</span><b id="ncInv">161.000 €</b><div class="bar"><i id="ncBi"></i></div></div>
+        <div class="legend">
+          <span><span class="sw" style="background:var(--forest)"></span>Empezar hoy</span>
+          <span><span class="sw" style="background:var(--line-strong)"></span>Solo ahorrar</span>
         </div>
-        <p class="nc-delta" id="ncDelta"></p>
         <p class="disc">Ejemplo ilustrativo con un supuesto de rentabilidad del 6&nbsp;% anual, solo con fines formativos. No es una previsión ni una promesa de rentabilidad. Invertir conlleva riesgo de pérdida.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-
-<div class="nc-marquee" aria-hidden="true"><div>
-  <span>Tarifa fija</span><span><b>·</b></span><span>Sin comisiones ocultas</span><span><b>·</b></span><span>Agente CNMV</span><span><b>·</b></span><span>Certificación EFPA</span><span><b>·</b></span><span>Tu dinero no sale de tus cuentas</span><span><b>·</b></span>
-  <span>Tarifa fija</span><span><b>·</b></span><span>Sin comisiones ocultas</span><span><b>·</b></span><span>Agente CNMV</span><span><b>·</b></span><span>Certificación EFPA</span><span><b>·</b></span><span>Tu dinero no sale de tus cuentas</span><span><b>·</b></span>
-</div></div>
 <!-- SOBRE MÍ · presentación -->
 <section class="surface-ink rule-t grain" id="sobre-mi" style="position:relative">
   <div class="wrap" style="position:relative">
@@ -1109,6 +829,28 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
 </a>
 <script src="cf.js" defer></script>
 <script>
+  // Hero figure count-up + chart draw
+  (function () {
+    const fmt = (n) => Math.round(n).toLocaleString('es-ES') + ' €';
+    const numEl = document.getElementById('figNum');
+    const chart = document.getElementById('chart');
+    const target = 161000; // illustrative: 150€/mo · 30y · ~6%/y compounded
+    let started = false;
+    function run() {
+      if (started) return; started = true;
+      chart.classList.add('in');
+      const dur = 1500, t0 = performance.now();
+      (function tick(t) {
+        const p = Math.min(1, (t - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        numEl.textContent = fmt(target * e);
+        if (p < 1) requestAnimationFrame(tick);
+      })(t0);
+    }
+    const io = new IntersectionObserver((es) => { es.forEach((e) => { if (e.isIntersecting) run(); }); }, { threshold: 0.4 });
+    io.observe(document.querySelector('.panel'));
+    setTimeout(run, 1800);
+  })();
 
   // Donut segments
   (function () {
@@ -1129,166 +871,7 @@ header.site.stuck{ background:color-mix(in srgb, #0a0d0b 92%, transparent); box-
   })();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
-<script>
-/* Norte Capital · motion v3 — reveals con IntersectionObserver (todos los móviles) */
-(function(){
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduce) document.documentElement.classList.add('js-motion');
-
-  /* Reveals: funcionan en iOS/Android/desktop por igual */
-  var sel = '.sh,.stat,.step,.card,.sc,.fc,.fm,.faq details,.xsell,.ins-box,.sec-advisor,.alloc3,.steps,.fee-blockhead,.donut-wrap,.legend2';
-  var els = [].slice.call(document.querySelectorAll(sel));
-  if (reduce){ els.forEach(function(e){ e.classList.add('in'); }); }
-  else {
-    els.forEach(function(e){ if(!e.classList.contains('steps')) e.classList.add('rv'); });
-    // escalonado entre hermanos
-    document.querySelectorAll('.steps,.cards3,.sec3,.fee3,.fee-mini,.stats,.legend2').forEach(function(p){
-      [].slice.call(p.children).forEach(function(c,i){ c.style.setProperty('--i', i); });
-    });
-    var io = new IntersectionObserver(function(en){
-      en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } });
-    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
-    els.forEach(function(e){ io.observe(e); });
-    // RED DE SEGURIDAD (no depende de IntersectionObserver)
-    var pend = els.slice();
-    window.__ncReveal = function(){
-      for (var i=pend.length-1; i>=0; i--){
-        var r = pend[i].getBoundingClientRect();
-        if (r.top < innerHeight*0.94 && r.bottom > -200){ pend[i].classList.add('in'); pend.splice(i,1); }
-      }
-    };
-    addEventListener('scroll', window.__ncReveal, {passive:true});
-    addEventListener('resize', window.__ncReveal, {passive:true});
-    addEventListener('load', function(){ window.__ncReveal(); setTimeout(window.__ncReveal, 800); });
-    setTimeout(window.__ncReveal, 300);
-  }
-  if (reduce) return;
-
-  var mqFine = matchMedia('(hover:hover) and (pointer:fine)').matches;
-
-  /* Spotlight en tarjetas/botones (también al tocar en móvil) */
-  function track(s, vx, vy){
-    document.querySelectorAll(s).forEach(function(el){
-      el.addEventListener('pointermove', function(e){
-        var r = el.getBoundingClientRect();
-        el.style.setProperty(vx, ((e.clientX-r.left)/r.width*100)+'%');
-        el.style.setProperty(vy, ((e.clientY-r.top)/r.height*100)+'%');
-      }, {passive:true});
-    });
-  }
-  track('.card,.step,.sc,.fc,.fm,.panel','--mx','--my');
-  track('.btn','--bx','--by');
-
-  /* Tilt 3D del panel (desktop) */
-  var panel = document.querySelector('.hero .panel');
-  if (panel && mqFine && innerWidth >= 980){
-    var wrap = panel.parentElement; wrap.classList.add('panel-wrap');
-    wrap.addEventListener('pointermove', function(e){
-      var r = wrap.getBoundingClientRect();
-      var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
-      panel.style.transform='rotateY('+(px*8)+'deg) rotateX('+(-py*8)+'deg)';
-    }, {passive:true});
-    wrap.addEventListener('pointerleave', function(){ panel.style.transform=''; });
-  }
-
-  /* Botones magnéticos (desktop) */
-  if (mqFine) document.querySelectorAll('.btn-lg,.nav-cta').forEach(function(b){
-    b.addEventListener('pointermove', function(e){
-      var r=b.getBoundingClientRect();
-      b.style.translate=((e.clientX-r.left-r.width/2)*.14)+'px '+((e.clientY-r.top-r.height/2)*.18)+'px';
-    }, {passive:true});
-    b.addEventListener('pointerleave', function(){ b.style.translate=''; });
-  });
-
-  /* Cursor luminoso (desktop) */
-  if (mqFine){
-    var cur=document.createElement('div'); cur.className='nc-cursor'; document.body.appendChild(cur);
-    addEventListener('pointermove', function(e){
-      cur.classList.add('on'); cur.style.left=e.clientX+'px'; cur.style.top=e.clientY+'px';
-    }, {passive:true});
-  }
-
-  /* Progreso + skew cinético + header pegado (un solo listener) */
-  var bar=document.querySelector('.nc-progress'), hdr=document.querySelector('header.site');
-  var last=scrollY, ticking=false;
-  addEventListener('scroll', function(){
-    if(ticking) return; ticking=true;
-    requestAnimationFrame(function(){
-      var y=scrollY, h=document.documentElement.scrollHeight-innerHeight;
-      if(bar) bar.style.transform='scaleX('+(h>0?y/h:0)+')';
-      if(hdr) hdr.classList.toggle('stuck', y>40);
-      last=y; ticking=false;
-    });
-  }, {passive:true});
-
-  /* Contadores de la banda de datos */
-  var seen=new WeakSet();
-  var io2=new IntersectionObserver(function(en){
-    en.forEach(function(x){
-      if(!x.isIntersecting||seen.has(x.target)) return; seen.add(x.target);
-      var el=x.target, m=el.textContent.trim().match(/^([\d.]+)(.*)$/); if(!m) return;
-      var target=parseFloat(m[1].replace(/\./g,'')), suf=m[2]||'', t0=performance.now();
-      (function step(t){
-        var p=Math.min(1,(t-t0)/1200), e=1-Math.pow(1-p,3);
-        el.textContent=Math.round(target*e).toLocaleString('es-ES')+suf;
-        if(p<1) requestAnimationFrame(step);
-      })(t0);
-    });
-  },{threshold:.6});
-  document.querySelectorAll('.stat .big').forEach(function(el){ io2.observe(el); });
-})();
-
-/* Simulador interactivo: aportación + años, invertir vs solo ahorrar */
-(function(){
-  var m=document.getElementById('ncMonthly'), y=document.getElementById('ncYears');
-  if(!m||!y) return;
-  var oM=document.getElementById('ncMv'), oY=document.getElementById('ncYv'),
-      fig=document.getElementById('ncFig'), inv=document.getElementById('ncInv'),
-      sav=document.getElementById('ncSave'), bi=document.getElementById('ncBi'),
-      bs=document.getElementById('ncBs'), dl=document.getElementById('ncDelta'),
-      pa=document.getElementById('ncArea'), pl=document.getElementById('ncLine'), ps=document.getElementById('ncSav');
-  var R=0.06/12, eur=function(n){ return Math.round(n).toLocaleString('es-ES')+' €'; };
-  var cur=0, raf=null;
-
-  function fv(P,months){ return P*((Math.pow(1+R,months)-1)/R); }
-
-  function paint(){
-    var P=+m.value, Y=+y.value, N=Y*12;
-    m.style.setProperty('--p', ((P-m.min)/(m.max-m.min)*100)+'%');
-    y.style.setProperty('--p', ((Y-y.min)/(y.max-y.min)*100)+'%');
-    oM.textContent=P+' €'; oY.textContent=Y+(Y===1?' año':' años');
-
-    var total=fv(P,N), saved=P*N, max=total*1.06;
-    inv.textContent=eur(total); sav.textContent=eur(saved);
-    bi.style.setProperty('--w','100%'); bs.style.setProperty('--w', Math.max(6,(saved/total*100))+'%');
-    dl.innerHTML='Diferencia a tu favor: <b>'+eur(total-saved)+'</b>';
-
-    /* número grande: valor correcto siempre, animación como extra */
-    fig.textContent=eur(total);
-    cancelAnimationFrame(raf); var from=cur, t0=performance.now();
-    (function step(t){
-      var p=Math.min(1,(t-t0)/450), e=1-Math.pow(1-p,3);
-      cur=from+(total-from)*e; fig.textContent=eur(cur);
-      if(p<1) raf=requestAnimationFrame(step);
-    })(t0);
-
-    /* curvas */
-    var W=480,H=112,pts=[],sp=[];
-    for(var i=0;i<=Y;i++){
-      var x=(i/Y)*W;
-      pts.push([x, H-(fv(P,i*12)/max)*H]);
-      sp.push([x, H-((P*i*12)/max)*H]);
-    }
-    var d=pts.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1); }).join(' ');
-    var s=sp.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1); }).join(' ');
-    pl.setAttribute('d',d); ps.setAttribute('d',s);
-    pa.setAttribute('d', d+' L'+W+','+H+' L0,'+H+' Z');
-  }
-  m.addEventListener('input',paint); y.addEventListener('input',paint);
-  paint();
-})();
-
-</script>
+<div style="position:fixed;left:12px;bottom:12px;z-index:9999;background:#16160f;color:#f5f1e8;font-family:ui-monospace,monospace;font-size:11px;padding:.5rem .8rem;border-radius:99px;opacity:.9">Versión anterior (copia de seguridad)</div>
 </body>
 </html>
           
