@@ -160,12 +160,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nortecapital.es/ahorrar-para-la-jubilacion-en-galicia</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nortecapital.es/plan-de-inversion-para-principiantes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -174,6 +168,12 @@
     <loc>https://nortecapital.es/blog-gl</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/ahorrar-para-la-jubilacion-en-galicia</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/ahorrar-para-la-jubilacion-en-galicia-gl</loc>
@@ -192,5 +192,23 @@
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/como-invertir-200-euros-al-mes</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-invertir-200-euros-al-mes"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-invertir-200-euros-al-mes-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-invertir-200-euros-al-mes"/>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/como-invertir-200-euros-al-mes-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-invertir-200-euros-al-mes"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-invertir-200-euros-al-mes-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-invertir-200-euros-al-mes"/>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
