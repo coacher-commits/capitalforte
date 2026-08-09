@@ -211,4 +211,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://nortecapital.es/asesor-financiero-registrado-cnmv</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/asesor-financiero-registrado-cnmv-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/cuanto-cuesta-asesor-financiero</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
