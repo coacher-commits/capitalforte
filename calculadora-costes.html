@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculadora: cuánto te cuestan de verdad tus inversiones · Norte Capital</title>
+<meta name="description" content="Calcula qué parte de tus aportaciones se va en comisiones y compárala con una tarifa fija. Solo costes: sin promesas de rentabilidad." />
+<link rel="canonical" href="https://nortecapital.es/calculadora-costes" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/calculadora-costes" />
+<link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/calculadora-costes-gl" />
+<link rel="alternate" hreflang="x-default" href="https://nortecapital.es/calculadora-costes" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Norte Capital" />
+<meta property="og:title" content="¿Cuánto te cuestan de verdad tus inversiones?" />
+<meta property="og:description" content="Mete tu capital y el coste anual de tus fondos. Te enseño qué parte de lo que aportas se va en comisiones y a partir de qué punto compensa una tarifa fija." />
+<meta property="og:url" content="https://nortecapital.es/calculadora-costes" />
+<meta property="og:image" content="https://nortecapital.es/assets/og-default.png" />
+<meta property="og:locale" content="es_ES" />
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="cf.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Base compartida con el resto del sitio ---------- */
+  :root { --font-display: 'Spectral', Georgia, 'Times New Roman', serif; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+  .skip { position: absolute; left: -999px; top: 0; z-index: 100; background: var(--cream); color: var(--ink); padding: .6rem 1rem; border-radius: 4px; }
+  .skip:focus { left: .5rem; top: .5rem; }
+
+  header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--forest) 90%, transparent);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(245,241,232,.14); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 4.25rem; }
+  .wordmark { display: flex; align-items: center; gap: .65rem; color: var(--cream); }
+  .mark { width: 25px; height: 25px; flex-shrink: 0; }
+  .wordmark .name { font-family: var(--font-display); font-weight: 500; font-size: 1.28rem; letter-spacing: -0.02em; }
+  .nav-links { display: none; align-items: center; gap: 2rem; margin-left: 2.5rem; }
+  .nav-links a { font-size: .92rem; color: var(--cream-dim); transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--cream); }
+  .nav-cta { display: none; }
+  .burger { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: none; border: none; cursor: pointer; color: var(--cream); }
+  @media (min-width: 1000px) { .nav-links { display: flex; } .nav-cta { display: inline-flex; } .burger { display: none; } }
+
+  /* ---------- Cabecera de página ---------- */
+  .phead { position: relative; background: var(--forest); color: var(--cream); overflow: hidden; }
+  .phead .glow { position: absolute; width: 56rem; height: 56rem; right: -22rem; top: -34rem; border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--forest-bright) 55%, transparent), transparent 62%); pointer-events: none; }
+  .phead .inner { position: relative; padding: 3.2rem 0 3.6rem; max-width: 44rem; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: .6rem; padding: .4rem .8rem; border: 1px solid rgba(245,241,232,.28); border-radius: 99px; }
+  .hero-eyebrow .mono-label { font-size: .62rem; color: var(--cream); }
+  .phead h1 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.026em; line-height: 1.0;
+    font-size: clamp(2.4rem, 6.4vw, 4.2rem); margin-top: 1.3rem; text-wrap: balance; }
+  .phead h1 .it { font-style: italic; }
+  .phead .sub { font-size: 1.12rem; line-height: 1.6; color: var(--cream-dim); max-width: 36rem; margin-top: 1.3rem; text-wrap: pretty; }
+  @media (min-width: 980px) { .phead .inner { padding: 4.4rem 0 4.8rem; } }
+
+  /* ---------- Calculadora ---------- */
+  .calc-sec { padding: 0 0 3.5rem; }
+  .calc { position: relative; margin-top: -2.2rem; background: var(--paper); border-radius: 12px;
+    box-shadow: var(--shadow-lift); overflow: hidden; }
+  .calc .ph { display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+    padding: .85rem 1.2rem; border-bottom: 1px solid var(--line); }
+  .calc .ph .t { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .calc .ph .live { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-mono); font-size: .62rem; color: var(--forest); flex-shrink: 0; }
+  .calc-grid { display: grid; grid-template-columns: 1fr; }
+  .calc-in { padding: 1.6rem 1.3rem 1.8rem; }
+  .calc-out { padding: 1.6rem 1.3rem 1.9rem; background: var(--cream); border-top: 1px solid var(--line); }
+  @media (min-width: 940px) {
+    .calc-grid { grid-template-columns: 1fr 1.12fr; }
+    .calc-in { padding: 2.1rem 2rem 2.3rem; }
+    .calc-out { padding: 2.1rem 2rem 2.3rem; border-top: none; border-left: 1px solid var(--line); }
+  }
+
+  .field { margin-bottom: 1.5rem; }
+  .field:last-child { margin-bottom: 0; }
+  .field > .lab { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .field .lab label { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .field .val { display: inline-flex; align-items: baseline; gap: .15rem; font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.015em; }
+  .field .val .u { font-family: var(--font-mono); font-size: .8rem; color: var(--ink-faint); }
+  .field .hint { margin-top: .35rem; font-size: .82rem; line-height: 1.45; color: var(--ink-soft); }
+
+  input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 1.6rem; margin-top: .5rem; background: transparent; cursor: pointer; }
+  input[type="range"]::-webkit-slider-runnable-track { height: 3px; border-radius: 2px; background: var(--line-strong); }
+  input[type="range"]::-moz-range-track { height: 3px; border-radius: 2px; background: var(--line-strong); }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 1.05rem; height: 1.05rem; margin-top: -.48rem;
+    border-radius: 50%; background: var(--forest); border: 2px solid var(--paper); box-shadow: 0 1px 4px rgba(22,22,15,.25); transition: transform .18s; }
+  input[type="range"]::-moz-range-thumb { width: 1.05rem; height: 1.05rem; border-radius: 50%; background: var(--forest); border: 2px solid var(--paper); box-shadow: 0 1px 4px rgba(22,22,15,.25); }
+  input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); }
+  input[type="range"]:focus-visible { outline: none; }
+  input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--forest); outline-offset: 2px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .7rem; }
+  .chip { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .06em; text-transform: uppercase;
+    border: 1px solid var(--line-strong); background: transparent; color: var(--ink-soft); border-radius: 99px;
+    padding: .35rem .7rem; cursor: pointer; transition: all .2s; }
+  .chip:hover { border-color: var(--ink); color: var(--ink); }
+  .chip[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); color: var(--cream); }
+
+  .seg { display: flex; gap: 1px; margin-top: .6rem; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button { flex: 1; background: var(--paper); border: none; cursor: pointer; padding: .6rem .2rem;
+    font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft); transition: all .2s; }
+  .seg button:hover { background: var(--sand); }
+  .seg button[aria-pressed="true"] { background: var(--forest); color: var(--cream); }
+
+  select.plan { margin-top: .5rem; width: 100%; height: 2.8rem; padding: 0 .8rem; border-radius: var(--radius-btn);
+    border: 1px solid var(--line-strong); background: var(--paper); color: var(--ink); font-family: var(--font-sans); font-size: .95rem; }
+
+  /* ---------- Resultado ---------- */
+  .res-head { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .res-big { margin-top: .5rem; display: flex; align-items: baseline; gap: .2rem .55rem; flex-wrap: wrap; }
+  .res-big .num { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.025em; line-height: 1;
+    font-size: clamp(2.6rem, 8vw, 3.7rem); color: var(--forest); }
+  .res-big .num.neg { color: var(--signal); }
+  .res-big .cap { flex-basis: 100%; font-size: .92rem; line-height: 1.5; color: var(--ink-soft); margin-top: .55rem; max-width: 26rem; }
+
+  .chart2 { width: 100%; height: auto; display: block; margin-top: 1.4rem; }
+  .chart2 .grid-l { stroke: var(--line); stroke-width: 1; }
+  .chart2 .wedge { fill: color-mix(in srgb, var(--signal) 22%, transparent); }
+  .chart2 .lineA { fill: none; stroke: var(--signal); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .chart2 .lineB { fill: none; stroke: var(--forest); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .chart2 .ax { font-family: var(--font-mono); font-size: 11px; fill: var(--ink-faint); }
+  .chart2 .clip-anim { transition: transform 1.1s cubic-bezier(.22,1,.36,1); }
+
+  .legend3 { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin-top: .9rem; }
+  .legend3 span { display: inline-flex; align-items: center; gap: .45rem; font-size: .8rem; color: var(--ink-soft); }
+  .legend3 .sw { width: 1.1rem; height: .18rem; border-radius: 2px; flex-shrink: 0; }
+
+  .rows { display: flex; flex-direction: column; gap: .7rem; margin-top: 1.5rem; }
+  .rw { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    border: 1px solid var(--line); border-radius: 8px; padding: .85rem 1rem; background: var(--paper); }
+  .rw.own { border-color: var(--forest-line); background: var(--forest-tint); }
+  .rw .who { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+  .rw.own .who { color: var(--forest); }
+  .rw .why { flex-basis: 100%; font-size: .82rem; line-height: 1.45; color: var(--ink-soft); margin-top: .15rem; }
+  .rw .amt { font-family: var(--font-display); font-size: 1.28rem; font-weight: 500; white-space: nowrap; }
+
+  /* Nota de honestidad — el elemento firma de la página */
+  .verdict { margin-top: 1.5rem; border-left: 3px solid var(--forest); background: var(--forest-tint); border-radius: 0 8px 8px 0; padding: 1rem 1.15rem; }
+  .verdict.warn { border-left-color: var(--signal); background: color-mix(in srgb, var(--signal) 9%, var(--paper)); }
+  .verdict .vh { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--forest); }
+  .verdict.warn .vh { color: var(--signal); }
+  .verdict p { margin-top: .4rem; font-size: .95rem; line-height: 1.55; color: var(--ink-2); }
+
+  .res-actions { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .6rem; }
+  /* Selector de modo: coste puro / escenario compuesto */
+  .modes { display: flex; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 1.1rem; }
+  .modes button { flex: 1; background: var(--paper); border: none; cursor: pointer; padding: .55rem .5rem;
+    font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); transition: background .2s, color .2s; }
+  .modes button:hover { background: var(--sand); }
+  .modes button[aria-pressed="true"] { background: var(--forest); color: var(--cream); }
+
+  /* Aviso del supuesto ilustrativo (solo en modo compuesto) */
+  .assump { display: none; margin-top: .9rem; border: 1px solid color-mix(in srgb, var(--signal) 45%, var(--line));
+    background: color-mix(in srgb, var(--signal) 7%, var(--paper)); border-radius: 8px; padding: .8rem .95rem; }
+  .assump.on { display: block; }
+  .assump .ah { display: block; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; color: var(--signal); }
+  .assump p { margin-top: .35rem; font-size: .82rem; line-height: 1.5; color: var(--ink-2); }
+
+  /* Titular alternativo: porcentaje de las aportaciones */
+  .altstat { margin-top: 1.1rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  .altstat .as-num { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.5rem, 3.4vw, 2.1rem); letter-spacing: -0.02em; color: var(--signal); line-height: 1; }
+  .altstat .as-txt { margin-top: .4rem; font-size: .92rem; line-height: 1.5; color: var(--ink-2); max-width: 30rem; }
+
+  /* Salida del aviso "no te compensa" */
+  .verdict .vcta { display: inline-flex; align-items: center; gap: .4rem; margin-top: .85rem;
+    font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--forest); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+  .verdict.warn .vcta { color: var(--signal); }
+  .verdict .vcta[hidden] { display: none; }
+
+  .disc2 { margin-top: 1.2rem; font-size: .74rem; line-height: 1.5; color: var(--ink-faint); }
+
+  /* ---------- Explicación ---------- */
+  .sh { text-align: center; max-width: 42rem; margin: 0 auto; padding: 3.5rem 0 2.5rem; }
+  .sh .eb { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--forest); }
+  .surface-forest .sh .eb { color: var(--forest-bright); }
+  .sh h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.04; font-size: clamp(2rem,4.6vw,3rem); margin-top: 1rem; text-wrap: balance; }
+  .sh h2 .it { font-style: italic; }
+  .sh p { margin-top: 1rem; font-size: 1.06rem; line-height: 1.6; color: var(--ink-soft); text-wrap: pretty; }
+  .surface-forest .sh p { color: var(--cream-dim); }
+
+  .cards3 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; padding-bottom: 4rem; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .card .n { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .14em; color: var(--forest); }
+  .card h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; margin-top: .8rem; letter-spacing: -0.01em; }
+  .card p { margin-top: .55rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
+  @media (min-width: 820px) { .cards3 { grid-template-columns: repeat(3,1fr); } }
+
+  /* ---------- FAQ / contacto / footer (idénticos al resto del sitio) ---------- */
+  .faq { max-width: 46rem; margin: 0 auto; padding-bottom: 4rem; }
+
+  .cta-band { position: relative; overflow: hidden; padding: 4.5rem 0 5rem; }
+  .cta-band .glow { position: absolute; width: 50rem; height: 50rem; left: 50%; top: -30rem; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb,var(--forest-bright) 50%,transparent), transparent 60%); pointer-events: none; }
+  .contact-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: 3rem; }
+  .contact-grid h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.02; font-size: clamp(2.2rem,5vw,3.4rem); text-wrap: balance; }
+  .contact-grid h2 .it { font-style: italic; }
+  .contact-grid .cp { margin-top: 1.2rem; max-width: 30rem; color: var(--cream-dim); font-size: 1.06rem; line-height: 1.6; }
+  .contact-grid .ctas { margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+  .contact-grid .mail { font-family: var(--font-mono); font-size: .82rem; color: var(--cream-dim); }
+  .contact-grid .mail a { color: var(--cream); border-bottom: 1px solid rgba(245,241,232,.4); }
+  .ins-box { position: relative; background: rgba(245,241,232,.06); border: 1px solid rgba(245,241,232,.2); border-radius: 12px; padding: 1.8rem 1.6rem; align-self: center; }
+  .ins-box h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .ins-box p { margin-top: .6rem; color: var(--cream-dim); font-size: .98rem; line-height: 1.6; }
+  .ins-box form { margin-top: 1.2rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+  .ins-box input { flex: 1 1 12rem; height: 3rem; border-radius: var(--radius-btn); border: 1px solid rgba(245,241,232,.3); background: rgba(245,241,232,.06); color: var(--cream); padding: 0 1rem; font-family: var(--font-sans); font-size: .98rem; }
+  .ins-box input::placeholder { color: rgba(245,241,232,.55); }
+  .ins-box input:focus { outline: none; border-color: var(--cream); }
+  .ins-box .legal { margin-top: .8rem; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; color: rgba(245,241,232,.55); }
+  @media (min-width: 900px) { .contact-grid { grid-template-columns: 1.1fr .9fr; gap: 4rem; } }
+
+  footer.site { padding: 3rem 0 2.5rem; }
+  .foot-top { display: grid; grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+  .foot-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .foot-col h4 { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: .8rem; }
+  .foot-col a { display: block; padding: .3rem 0; font-size: .95rem; color: var(--ink-soft); }
+  .foot-col a:hover { color: var(--ink); }
+  .foot-bot { padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; }
+  .foot-bot .mono-label { color: var(--ink-faint); font-size: .6rem; }
+  .disclaimer { margin-top: 1.5rem; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; max-width: 60rem; }
+  @media (min-width: 760px) { .foot-top { grid-template-columns: 1.4fr 2fr; } .foot-cols { grid-template-columns: repeat(3,1fr); } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de costes de inversión · Norte Capital",
+  "url": "https://nortecapital.es/calculadora-costes",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "es-ES",
+  "description": "Calcula el coste acumulado de las comisiones de tus fondos y compáralo con una tarifa fija de asesoramiento. Compara únicamente costes; no proyecta rentabilidades.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "publisher": { "@type": "Organization", "name": "Norte Capital", "url": "https://nortecapital.es" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿De dónde sale el coste anual de mis fondos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Del TER (gastos corrientes) de cada fondo, que aparece en su DFI o KID y en la ficha del producto. Si tienes varios fondos, usa la media ponderada por el dinero que tienes en cada uno. Si no lo encuentras, tu entidad está obligada a enviarte un informe anual de costes y gastos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La calculadora incluye alguna rentabilidad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El resultado principal no asume ninguna rentabilidad: el capital solo sube con las aportaciones y baja con los costes. Existe una pestaña secundaria con un supuesto ilustrativo del 5 % anual, aplicado por igual a los dos casos y etiquetado como tal, que sirve para ver el efecto acumulado de las comisiones sobre el capital. No es una previsión ni una promesa de rentabilidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué se suma un 0,20 % a la columna de Norte Capital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque seguirías teniendo fondos, y esos fondos tienen su propio coste. Un fondo indexado amplio suele moverse en torno al 0,20 % anual. Comparar una tarifa fija contra el TER de tu banco sin contar ese coste sería hacer trampa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si me sale que no me compensa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entonces la calculadora ha hecho su trabajo. Por debajo de cierto patrimonio, pagar una tarifa fija de asesoramiento continuo cuesta más que el porcentaje que ya pagas. En ese caso lo razonable suele ser un plan puntual, no una suscripción."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site">
+  <nav class="nav wrap">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(245,241,232,.45)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#f5f1e8"/><path d="M32 3 L38 26 L32 32 Z" fill="#e6b95c"/><path d="M58 32 L38 26 L32 32 Z" fill="#f5f1e8"/><path d="M58 32 L38 38 L32 32 Z" fill="#e6b95c"/><path d="M32 58 L38 38 L32 32 Z" fill="#f5f1e8"/><path d="M32 58 L26 38 L32 32 Z" fill="#e6b95c"/><path d="M6 32 L26 38 L32 32 Z" fill="#f5f1e8"/><path d="M6 32 L26 26 L32 32 Z" fill="#e6b95c"/></svg><span class="name">Norte&nbsp;Capital</span></a>
+    <div class="nav-links">
+      <a href="/#filosofia">Filosofía</a><a href="/#cartera">Servicios</a><a href="/gestion-patrimonial">Patrimonios</a><a href="/calculadora-costes" aria-current="page">Calculadora</a><a href="/para-empresas">Para empresas</a><a href="/blog">Blog</a>
+    </div>
+    <a class="btn btn-light btn-sm nav-cta" href="https://wa.me/34648004588?text=Hola%2C%20he%20usado%20la%20calculadora%20de%20costes%20y%20quiero%20comentar%20mi%20caso" target="_blank" rel="noopener">Comentar mi caso
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/#filosofia">Filosofía</a>
+    <a href="/#proceso">Cómo trabajo</a>
+    <a href="/#tarifas">Tarifas</a>
+    <a href="/gestion-patrimonial">Patrimonios</a>
+    <a href="/calculadora-costes">Calculadora de costes</a>
+    <a href="/blog">Blog</a>
+    <a href="https://wa.me/34648004588?text=Hola%2C%20he%20usado%20la%20calculadora%20de%20costes%20y%20quiero%20comentar%20mi%20caso" target="_blank" rel="noopener"><strong>Comentar mi caso →</strong></a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- CABECERA -->
+<section class="phead">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="inner">
+      <span class="hero-eyebrow"><span class="dot animate-blink"></span><span class="mono-label">Calculadora · Solo costes</span></span>
+      <h1>Lo que pagas por invertir, <span class="it">en euros.</span></h1>
+      <p class="sub">Las comisiones se expresan en porcentajes pequeños y se cobran por dentro, así que casi nadie sabe cuánto paga. Mete tus cifras y lo ves en euros, año a año. Aquí no se calcula ninguna rentabilidad: solo el coste.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="calc-sec">
+  <div class="wrap">
+    <div class="calc">
+      <div class="ph">
+        <span class="t">Comparador de costes</span>
+        <span class="live"><span class="dot animate-blink"></span>en vivo</span>
+      </div>
+      <div class="calc-grid">
+
+        <!-- ENTRADAS -->
+        <div class="calc-in">
+          <div class="field">
+            <div class="lab">
+              <label for="capital">Lo que tienes invertido</label>
+              <span class="val tnum" id="capitalOut">150.000<span class="u">&nbsp;€</span></span>
+            </div>
+            <input type="range" id="capital" min="5000" max="1000000" step="5000" value="150000" aria-describedby="capitalHint" />
+            <p class="hint" id="capitalHint">Suma de fondos, planes de pensiones y carteras gestionadas. No cuentes la vivienda.</p>
+          </div>
+
+          <div class="field">
+            <div class="lab">
+              <label for="aporta">Lo que añades cada mes</label>
+              <span class="val tnum" id="aportaOut">300<span class="u">&nbsp;€</span></span>
+            </div>
+            <input type="range" id="aporta" min="0" max="3000" step="50" value="300" />
+          </div>
+
+          <div class="field">
+            <div class="lab">
+              <label for="ter">Coste anual de lo que tienes ahora</label>
+              <span class="val tnum" id="terOut">1,75<span class="u">&nbsp;%</span></span>
+            </div>
+            <input type="range" id="ter" min="0.05" max="2.50" step="0.05" value="1.75" aria-describedby="terHint" />
+            <div class="chips" role="group" aria-label="Costes de referencia">
+              <button type="button" class="chip" data-ter="1.75">Fondo de banca</button>
+              <button type="button" class="chip" data-ter="1.20">Fondo perfilado</button>
+              <button type="button" class="chip" data-ter="0.70">Roboadvisor</button>
+              <button type="button" class="chip" data-ter="0.25">Indexado</button>
+            </div>
+            <p class="hint" id="terHint">Es el TER o «gastos corrientes» del folleto. Si no lo sabes, empieza por la referencia que más se parezca a lo tuyo. El valor de partida (1,75 %) es orientativo de un fondo de renta variable de gestión activa comercializado por banca en España; ajústalo al tuyo.</p>
+          </div>
+
+          <div class="field">
+            <div class="lab"><label for="anos">Durante cuántos años</label></div>
+            <div class="seg" role="group" aria-label="Horizonte en años" id="anosSeg">
+              <button type="button" data-anos="5">5</button>
+              <button type="button" data-anos="10">10</button>
+              <button type="button" data-anos="15">15</button>
+              <button type="button" data-anos="20">20</button>
+              <button type="button" data-anos="30" aria-pressed="true">30</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="lab"><label for="plan">Servicio de Norte Capital</label></div>
+            <select class="plan" id="plan">
+              <option value="auto" selected>El que encaja con mi patrimonio</option>
+              <option value="inicio">Plan de Inicio + revisión anual</option>
+              <option value="esencial">Esencial · 99 €/mes</option>
+              <option value="avanzado">Avanzado · 179 €/mes</option>
+              <option value="integral">Integral · 249 €/mes</option>
+            </select>
+            <p class="hint" id="planHint">Se ajusta solo según el capital que indiques.</p>
+          </div>
+        </div>
+
+        <!-- RESULTADO -->
+        <div class="calc-out" id="resultado" aria-live="polite">
+          <div class="modes" role="group" aria-label="Qué se muestra" id="modes">
+            <button type="button" data-modo="coste" aria-pressed="true">Coste puro</button>
+            <button type="button" data-modo="compuesto" aria-pressed="false">Con rentabilidad ilustrativa</button>
+          </div>
+          <p class="res-head" id="resHead">Diferencia de coste en 30 años</p>
+          <div class="res-big">
+            <span class="num tnum" id="resNum">0 €</span>
+            <span class="cap" id="resCap"></span>
+          </div>
+
+          <div class="assump" id="assump">
+            <span class="ah">Supuesto ilustrativo</span>
+            <p>Este escenario aplica una rentabilidad hipotética del <strong>5 % anual</strong> a los dos casos, solo para mostrar el efecto acumulado de las comisiones sobre el capital. <strong>No es una previsión ni una promesa de rentabilidad.</strong> Las rentabilidades pasadas no garantizan rentabilidades futuras y el resultado real puede ser distinto, incluida la pérdida de capital.</p>
+          </div>
+
+          <div class="altstat" id="altstat">
+            <div class="as-num tnum" id="altNum">0 %</div>
+            <p class="as-txt" id="altTxt"></p>
+          </div>
+
+          <svg class="chart2" id="chart" viewBox="0 0 640 250" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="chartTitle">
+            <title id="chartTitle">Coste acumulado año a año en los dos escenarios</title>
+            <g id="gGrid"></g>
+            <polygon class="wedge" id="wedge" points="" />
+            <polyline class="lineA" id="lineA" points="" />
+            <polyline class="lineB" id="lineB" points="" />
+            <g id="gAxis"></g>
+          </svg>
+          <div class="legend3">
+            <span><i class="sw" style="background:var(--signal)"></i> Lo que pagas ahora</span>
+            <span><i class="sw" style="background:var(--forest)"></i> Con Norte Capital</span>
+          </div>
+
+          <div class="rows">
+            <div class="rw">
+              <div>
+                <span class="who" id="rowAWho">Ahora · 1,75 % anual</span>
+                <p class="why">Se cobra dentro del producto y sube cada año a la vez que tu patrimonio.</p>
+              </div>
+              <span class="amt tnum" id="rowA">0 €</span>
+            </div>
+            <div class="rw own">
+              <div>
+                <span class="who" id="rowBWho">Norte Capital · tarifa fija</span>
+                <p class="why" id="rowBWhy">Tarifa fija más el coste de los fondos indexados (0,20 % anual).</p>
+              </div>
+              <span class="amt tnum" id="rowB">0 €</span>
+            </div>
+          </div>
+
+          <div class="verdict" id="verdict">
+            <span class="vh" id="verdictH">Qué haría yo</span>
+            <p id="verdictP"></p>
+            <a class="vcta" id="verdictCta" href="/#tarifas" hidden>Ver el Plan de Inicio · 250 € pago único →</a>
+          </div>
+
+          <div class="res-actions">
+            <a class="btn btn-primary btn-md" id="waBtn" href="https://wa.me/34648004588" target="_blank" rel="noopener"><span id="waTxt">Comentar mi caso por WhatsApp</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-secondary btn-md" href="#insights">Recibir el desglose por email</a>
+          </div>
+
+          <p class="disc2">Ejemplo ilustrativo. El capital solo varía con tus aportaciones y con los costes: no se asume ninguna rentabilidad. Los costes reales dependen de tus productos concretos y pueden cambiar. Esto no es una recomendación personalizada de inversión.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO LEERLO -->
+<section class="surface-paper rule-t">
+  <div class="wrap">
+    <div class="sh">
+      <span class="eb"><span class="dot"></span>Cómo leer el resultado</span>
+      <h2>Un porcentaje pequeño, <span class="it">mucho tiempo.</span></h2>
+      <p>Tres cosas que conviene tener claras antes de sacar conclusiones del número de arriba.</p>
+    </div>
+    <div class="cards3">
+      <div class="card reveal">
+        <span class="n">EL PORCENTAJE CRECE CONTIGO</span>
+        <h3>Pagas más cada año sin cambiar nada</h3>
+        <p>Un 1,5 % sobre 100.000 € son 1.500 €. Sobre 400.000 €, son 6.000 €. El servicio que recibes suele ser el mismo; la factura, no.</p>
+      </div>
+      <div class="card reveal">
+        <span class="n">LA COMPARACIÓN ES JUSTA</span>
+        <h3>La columna verde también incluye fondos</h3>
+        <p>Con asesoramiento seguirías teniendo productos, y los productos cuestan. Por eso al lado de la tarifa fija se suma un 0,20 % anual de fondos indexados. Sin eso, la comparación estaría inflada.</p>
+      </div>
+      <div class="card reveal">
+        <span class="n">NO HAY RENTABILIDAD EN JUEGO</span>
+        <h3>Aquí solo se calcula lo que pagas</h3>
+        <p>No verás proyecciones de cuánto ganarías. Nadie puede saberlo. El coste, en cambio, se conoce de antemano, y es la única parte de tu inversión que controlas del todo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="surface-cream rule-t">
+  <div class="wrap">
+    <div class="sh">
+      <span class="eb"><span class="dot"></span>Dudas frecuentes</span>
+      <h2>Sobre los <span class="it">números.</span></h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿De dónde saco el coste anual de mis fondos?</summary>
+        <p>Del TER o «gastos corrientes», que aparece en el DFI/KID de cada fondo y en su ficha. Si tienes varios, usa la media ponderada por el dinero que tienes en cada uno. Además, tu entidad está obligada a enviarte cada año un informe de costes y gastos con el importe en euros: ahí lo tienes ya calculado.</p>
+      </details>
+      <details>
+        <summary>¿Por qué el resultado no incluye rentabilidades?</summary>
+        <p>El resultado principal no las incluye: el capital solo sube con tus aportaciones y baja con los costes. Es una foto conservadora y comprobable. En la pestaña «Con rentabilidad ilustrativa» sí verás un supuesto del 5 % anual aplicado por igual a los dos escenarios, para que veas el efecto acumulado de las comisiones sobre el capital. Ese supuesto es hipotético y va etiquetado: no es una previsión ni una promesa.</p>
+      </details>
+      <details>
+        <summary>¿Por qué sumáis un 0,20 % a vuestra columna?</summary>
+        <p>Porque seguirías invirtiendo en fondos y esos fondos tienen su propio coste interno. Un indexado amplio ronda ese 0,20 % anual. Comparar una tarifa fija contra el TER de tu banco sin contar los fondos sería hacer trampa a mi favor.</p>
+      </details>
+      <details>
+        <summary>¿Y si el cálculo dice que no me compensa?</summary>
+        <p>Te lo dice y ya está. Por debajo de cierto patrimonio, una suscripción de asesoramiento continuo cuesta más de lo que ahorras en comisiones. En ese caso lo que suele tener sentido es un plan puntual, no una cuota mensual. Prefiero decírtelo aquí que cobrártelo.</p>
+      </details>
+      <details>
+        <summary>¿Esto es asesoramiento?</summary>
+        <p>No. Es una herramienta de cálculo con supuestos generales. El asesoramiento empieza cuando miramos tus productos concretos, tu fiscalidad y tus objetivos, y eso requiere hablar.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO + INSIGHTS -->
+<section class="surface-forest cta-band" id="contacto">
+  <div class="glow"></div>
+  <div class="wrap contact-grid">
+    <div>
+      <h2>¿Te ha salido un número <span class="it">incómodo?</span></h2>
+      <p class="cp">Mándame lo que te ha dado y qué productos tienes. Te digo si el cálculo se parece a tu caso real y qué haría yo. Si creo que no te compensa contratar nada, también te lo digo.</p>
+      <div class="ctas">
+        <a class="btn btn-light btn-lg" href="https://wa.me/34648004588?text=Hola%2C%20he%20usado%20la%20calculadora%20de%20costes%20y%20quiero%20comentar%20mi%20caso" target="_blank" rel="noopener">Escríbeme por WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="mail">o escribe a <a href="mailto:hola@nortecapital.es?subject=Calculadora de costes">hola@nortecapital.es</a></span>
+      </div>
+    </div>
+    <div class="ins-box" id="insights">
+      <h3>El desglose, por email</h3>
+      <p>Déjame tu correo y entras en Insights+: un email a la semana sobre costes, fiscalidad y mercados, en lenguaje normal. Sin spam y sin venderte nada.</p>
+      <form id="insights-form" novalidate>
+        <input type="email" name="email" required placeholder="tu@email.com" aria-label="Tu correo electrónico" />
+        <button class="btn btn-light btn-md" type="submit">Suscribirme</button>
+        <span class="ok mono-label" hidden style="flex-basis:100%;color:var(--cream);margin-top:.4rem">Casi listo: revisa tu correo y confirma la suscripción.</span>
+        <span class="err mono-label" hidden style="flex-basis:100%;color:#ffd7d0;margin-top:.4rem">No se ha podido completar. Inténtalo de nuevo en un momento.</span>
+      </form>
+      <p class="legal">Tus datos solo se usan para enviarte el boletín · Baja cuando quieras</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site surface-paper rule-t">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="wordmark" href="/" style="color:var(--ink);margin-bottom:1rem"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(14,91,67,.4)" stroke-width="1.5"/><path d="M32 3 L26 26 L32 32 Z" fill="#0e5b43"/><path d="M32 3 L38 26 L32 32 Z" fill="#c0871a"/><path d="M58 32 L38 26 L32 32 Z" fill="#0e5b43"/><path d="M58 32 L38 38 L32 32 Z" fill="#c0871a"/><path d="M32 58 L38 38 L32 32 Z" fill="#0e5b43"/><path d="M32 58 L26 38 L32 32 Z" fill="#c0871a"/><path d="M6 32 L26 38 L32 32 Z" fill="#0e5b43"/><path d="M6 32 L26 26 L32 32 Z" fill="#c0871a"/></svg><span class="name">Norte&nbsp;Capital</span></a>
+        <p style="color:var(--ink-soft);font-size:.95rem;max-width:22rem;line-height:1.55">Asesoramiento financiero cercano en Galicia y toda España, online. Tarifa fija, sin comisiones por producto.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h4>Navegación</h4><a href="/#filosofia">Filosofía</a><a href="/#cartera">Servicios</a><a href="/gestion-patrimonial">Gestión patrimonial</a><a href="/asesor-financiero-galicia">Asesor financiero en Galicia</a><a href="/para-empresas">Para empresas</a><a href="/blog">Blog</a></div>
+        <div class="foot-col"><h4>Legal</h4><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/folleto-de-tarifas">Folleto de tarifas</a></div>
+        <div class="foot-col"><h4>Contacto</h4><a href="https://wa.me/34648004588?text=Hola%2C%20he%20usado%20la%20calculadora%20de%20costes" target="_blank" rel="noopener">WhatsApp directo</a><a href="mailto:hola@nortecapital.es">hola@nortecapital.es</a></div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="mono-label">© 2026 Norte Capital · España</span>
+      <span class="mono-label">Calculadora de costes</span>
+    </div>
+    <p class="disclaimer">Norte Capital presta el servicio de asesoramiento como agente vinculado, en nombre y por cuenta de una entidad inscrita en la CNMV. Esta calculadora es una herramienta formativa e informativa: compara costes con supuestos generales, no proyecta rentabilidades y no constituye una recomendación personalizada de inversión. Invertir conlleva riesgos, incluida la posible pérdida del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras.</p>
+  </div>
+</footer>
+
+<div class="cta-dock" id="ctaDock" aria-hidden="true">
+  <div class="cd-txt"><strong>¿Te cuadra el número?</strong><span class="tnum">Lo vemos en 5 minutos</span></div>
+  <a class="btn btn-light btn-md" href="https://wa.me/34648004588?text=Hola%2C%20he%20usado%20la%20calculadora%20de%20costes%20y%20quiero%20comentar%20mi%20caso" target="_blank" rel="noopener">Escríbeme</a>
+</div>
+<a class="wa-float" href="https://wa.me/34648004588?text=Hola%2C%20he%20usado%20la%20calculadora%20de%20costes" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+</a>
+
+<script src="cf.js" defer></script>
+<script>
+/* ============================================================
+   Calculadora de costes — Norte Capital
+   Compara SOLO costes. No proyecta rentabilidad.
+   Ajusta los precios en CFG si cambian las tarifas.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var CFG = {
+    terCartera: 0.0020,          // coste medio de una cartera indexada
+    rIlustrativa: 0.05,          // SOLO para la pestaña secundaria. Supuesto etiquetado, no es una previsión.
+    planes: {
+      inicio:   { nombre: 'Plan de Inicio + revisión anual', primerAno: 250, anual: 260, etiqueta: 'Plan de Inicio · pago único + revisión' },
+      esencial: { nombre: 'Esencial',  mes: 99,  etiqueta: 'Norte Capital · Esencial, 99 €/mes' },
+      avanzado: { nombre: 'Avanzado',  mes: 179, etiqueta: 'Norte Capital · Avanzado, 179 €/mes' },
+      integral: { nombre: 'Integral',  mes: 249, etiqueta: 'Norte Capital · Integral, 249 €/mes' }
+    },
+    tramos: [
+      { hasta: 70000,  plan: 'inicio' },
+      { hasta: 200000, plan: 'esencial' },
+      { hasta: 500000, plan: 'avanzado' },
+      { hasta: Infinity, plan: 'integral' }
+    ]
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var eur = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0 });
+  var pct = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var fEur = function (n) { return eur.format(Math.round(n)) + ' €'; };
+
+  var el = {
+    capital: $('capital'), capitalOut: $('capitalOut'),
+    aporta: $('aporta'), aportaOut: $('aportaOut'),
+    ter: $('ter'), terOut: $('terOut'),
+    plan: $('plan'), planHint: $('planHint'),
+    anosSeg: $('anosSeg'),
+    resHead: $('resHead'), resNum: $('resNum'), resCap: $('resCap'),
+    rowA: $('rowA'), rowB: $('rowB'), rowAWho: $('rowAWho'), rowBWho: $('rowBWho'), rowBWhy: $('rowBWhy'),
+    verdict: $('verdict'), verdictH: $('verdictH'), verdictP: $('verdictP'),
+    waBtn: $('waBtn'), waTxt: $('waTxt'),
+    modes: $('modes'), assump: $('assump'), altstat: $('altstat'), altNum: $('altNum'), altTxt: $('altTxt'),
+    verdictCta: $('verdictCta'),
+    chart: $('chart'), gGrid: $('gGrid'), gAxis: $('gAxis'),
+    wedge: $('wedge'), lineA: $('lineA'), lineB: $('lineB')
+  };
+
+  var estado = { anos: 30, modo: 'coste' };
+
+  function planPorCapital(c) {
+    for (var i = 0; i < CFG.tramos.length; i++) if (c < CFG.tramos[i].hasta) return CFG.tramos[i].plan;
+    return 'integral';
+  }
+
+  function tarifaAnual(planId, ano) {
+    var p = CFG.planes[planId];
+    if (p.mes) return p.mes * 12;
+    return ano === 1 ? p.primerAno : p.anual;   // Plan de Inicio: alta + revisiones
+  }
+
+  /* Simulación año a año. Sin rentabilidad: el capital solo sube por
+     aportaciones y baja por los costes pagados. */
+  function simular(cap0, aportaMes, ter, planId, anos) {
+    var capA = cap0, capB = cap0, acA = 0, acB = 0;
+    var serieA = [0], serieB = [0];
+    for (var y = 1; y <= anos; y++) {
+      capA += aportaMes * 12;
+      capB += aportaMes * 12;
+      var cA = capA * ter;
+      var cB = capB * CFG.terCartera + tarifaAnual(planId, y);
+      capA = Math.max(0, capA - cA);
+      capB = Math.max(0, capB - cB);
+      acA += cA; acB += cB;
+      serieA.push(acA); serieB.push(acB);
+    }
+    return { totalA: acA, totalB: acB, serieA: serieA, serieB: serieB };
+  }
+
+  /* Escenario compuesto: MISMA rentabilidad hipotética en los dos casos.
+     Solo cambia el coste. Se usa exclusivamente en la pestaña secundaria y
+     va siempre acompañado de su etiqueta de supuesto ilustrativo. */
+  function simularCompuesto(cap0, aportaMes, ter, planId, anos) {
+    var r = CFG.rIlustrativa;
+    var capA = cap0, capB = cap0;
+    var serieA = [cap0], serieB = [cap0];
+    for (var y = 1; y <= anos; y++) {
+      capA += aportaMes * 12; capB += aportaMes * 12;
+      capA *= (1 + r);        capB *= (1 + r);
+      capA = Math.max(0, capA - capA * ter);
+      capB = Math.max(0, capB - (capB * CFG.terCartera + tarifaAnual(planId, y)));
+      serieA.push(capA); serieB.push(capB);
+    }
+    return { finalA: capA, finalB: capB, serieA: serieA, serieB: serieB };
+  }
+
+  /* Patrimonio a partir del cual la tarifa fija cuesta menos que el %.
+     Recorre los tramos: la cuota que aplica depende del propio capital,
+     así que el corte tiene que resolverse dentro del tramo correcto.
+     Si se calcula con la cuota del tramo actual sale un número que no
+     se cumple en la práctica. */
+  function puntoDeCorte(ter) {
+    var dif = ter - CFG.terCartera;
+    if (dif <= 0) return null;
+    var desde = 0;
+    for (var i = 0; i < CFG.tramos.length; i++) {
+      var t = CFG.tramos[i];
+      var corte = tarifaAnual(t.plan, 2) / dif;
+      if (corte >= desde && corte < t.hasta) return corte;
+      desde = t.hasta;
+    }
+    return null;   // ni en el tramo más alto compensa con ese coste
+  }
+
+  function pintarGrafico(sA, sB) {
+    var W = 640, H = 250, mL = 56, mR = 12, mT = 14, mB = 26;
+    var n = sA.length - 1;
+    var max = Math.max(sA[n], sB[n], 1);
+    var x = function (i) { return mL + (i / n) * (W - mL - mR); };
+    var y = function (v) { return H - mB - (v / max) * (H - mT - mB); };
+
+    var grid = '', axis = '';
+    for (var g = 0; g <= 3; g++) {
+      var v = (max / 3) * g, yy = y(v);
+      grid += '<line class="grid-l" x1="' + mL + '" y1="' + yy + '" x2="' + (W - mR) + '" y2="' + yy + '"/>';
+      axis += '<text class="ax" x="' + (mL - 8) + '" y="' + (yy + 4) + '" text-anchor="end">' + eur.format(Math.round(v / 1000)) + 'k</text>';
+    }
+    var ticks = [0, Math.round(n / 2), n];
+    ticks.forEach(function (i, k) {
+      var anchor = k === 0 ? 'start' : (k === ticks.length - 1 ? 'end' : 'middle');
+      axis += '<text class="ax" x="' + x(i) + '" y="' + (H - 6) + '" text-anchor="' + anchor + '">' + (i === 0 ? 'hoy' : i + ' años') + '</text>';
+    });
+
+    var ptsA = sA.map(function (v, i) { return x(i) + ',' + y(v); }).join(' ');
+    var ptsB = sB.map(function (v, i) { return x(i) + ',' + y(v); }).join(' ');
+    var rev = sB.map(function (v, i) { return x(i) + ',' + y(v); }).reverse().join(' ');
+
+    el.gGrid.innerHTML = grid;
+    el.gAxis.innerHTML = axis;
+    el.lineA.setAttribute('points', ptsA);
+    el.lineB.setAttribute('points', ptsB);
+    el.wedge.setAttribute('points', ptsA + ' ' + rev);
+  }
+
+  function recalcular() {
+    var cap = +el.capital.value;
+    var aporta = +el.aporta.value;
+    var ter = +el.ter.value / 100;
+    var anos = estado.anos;
+
+    var planId = el.plan.value === 'auto' ? planPorCapital(cap) : el.plan.value;
+    var plan = CFG.planes[planId];
+
+    el.capitalOut.innerHTML = eur.format(cap) + '<span class="u">&nbsp;€</span>';
+    el.aportaOut.innerHTML = eur.format(aporta) + '<span class="u">&nbsp;€</span>';
+    el.terOut.innerHTML = pct.format(+el.ter.value) + '<span class="u">&nbsp;%</span>';
+    el.planHint.textContent = el.plan.value === 'auto'
+      ? 'Con ese capital te correspondería: ' + plan.nombre + '.'
+      : 'Has elegido el plan manualmente.';
+
+    var r = simular(cap, aporta, ter, planId, anos);
+    var dif = r.totalA - r.totalB;
+    var compuesto = estado.modo === 'compuesto';
+
+    /* --- Titular principal --- */
+    if (compuesto) {
+      var rc = simularCompuesto(cap, aporta, ter, planId, anos);
+      var difCap = rc.finalB - rc.finalA;
+      el.resHead.textContent = 'Diferencia de capital en ' + anos + ' años · supuesto ilustrativo';
+      el.resNum.textContent = (difCap >= 0 ? '' : '−') + fEur(Math.abs(difCap));
+      el.resNum.classList.toggle('neg', difCap < 0);
+      el.resCap.textContent = difCap >= 0
+        ? 'Es la diferencia en el capital final entre pagar tu coste actual y pagar una tarifa fija, aplicando la MISMA rentabilidad hipotética a los dos casos. Lo único que cambia es el coste.'
+        : 'Con estas cifras, el capital final sería menor con la tarifa fija. Lo único que cambia entre los dos casos es el coste.';
+      pintarGrafico(rc.serieA, rc.serieB);
+    } else {
+      el.resHead.textContent = 'Diferencia de coste en ' + anos + ' años';
+      el.resNum.textContent = (dif >= 0 ? '' : '+') + fEur(Math.abs(dif));
+      el.resNum.classList.toggle('neg', dif < 0);
+      el.resCap.textContent = dif >= 0
+        ? 'Es lo que dejarías de pagar en comisiones durante ese periodo. No es una ganancia: es un coste que no llegas a asumir.'
+        : 'Es lo que pagarías de más con la tarifa fija. Con tus cifras actuales, no te compensa.';
+      pintarGrafico(r.serieA, r.serieB);
+    }
+    el.assump.classList.toggle('on', compuesto);
+
+    /* --- Titular alternativo: qué parte de lo que aportas se va en comisiones --- */
+    var aportado = cap + aporta * 12 * anos;
+    var porc = aportado > 0 ? (r.totalA / aportado) * 100 : 0;
+    el.altNum.textContent = pct.format(porc) + ' %';
+    el.altTxt.textContent = 'De los ' + fEur(aportado) + ' que habrás puesto tú (capital inicial más aportaciones), ' +
+      fEur(r.totalA) + ' se van en comisiones con tu coste actual. Con tarifa fija serían ' + fEur(r.totalB) + '.';
+
+    el.rowAWho.textContent = 'Ahora · ' + pct.format(+el.ter.value) + ' % anual';
+    el.rowBWho.textContent = plan.etiqueta;
+    el.rowBWhy.textContent = plan.mes
+      ? 'Tarifa fija más el coste de los fondos indexados (0,20 % anual).'
+      : 'Pago único el primer año, revisión anual después, más el 0,20 % de los fondos.';
+    el.rowA.textContent = fEur(r.totalA);
+    el.rowB.textContent = fEur(r.totalB);
+
+    /* Veredicto honesto */
+    var corte = puntoDeCorte(ter);
+    if (dif < 0) {
+      /* No compensa el plan asignado. Antes de dar por cerrado el caso,
+         comprobamos si el Plan de Inicio (pago único + revisión) sí encaja:
+         es el producto pensado justo para este perfil. */
+      var rInicio = simular(cap, aporta, ter, 'inicio', anos);
+      var difInicio = rInicio.totalA - rInicio.totalB;
+
+      el.verdict.classList.add('warn');
+      el.verdictH.textContent = 'La cuota mensual no te encaja';
+      el.verdictCta.hidden = false;
+
+      if (difInicio > 0 && planId !== 'inicio') {
+        el.verdictP.textContent = 'Con tu patrimonio y tus costes actuales, pagar una cuota mensual te saldría ' +
+          fEur(Math.abs(dif)) + ' más caro en ' + anos + ' años, así que no te la voy a vender. Lo que sí encaja es el Plan de Inicio: ' +
+          'montamos el plan una vez, lo dejas funcionando y lo llevas tú. Por esa vía la diferencia sería de ' + fEur(difInicio) + ' a tu favor.';
+        el.verdictCta.textContent = 'Ver el Plan de Inicio · 250 € pago único →';
+        el.waTxt.textContent = 'Preguntar por el Plan de Inicio';
+      } else {
+        el.verdictP.textContent = (corte
+          ? 'Tus productos ya son lo bastante baratos: por el lado de las comisiones no hay mucho que rascar hasta unos ' + fEur(corte) + ' invertidos. '
+          : 'Tus productos ya son baratos, así que por el lado de las comisiones no hay nada que rascar. ') +
+          'Aquí el asesoramiento aporta criterio, fiscalidad y orden, no ahorro de costes. Si te interesa por eso, el Plan de Inicio es un trabajo puntual sin cuota.';
+        el.verdictCta.textContent = 'Ver el Plan de Inicio · 250 € pago único →';
+        el.waTxt.textContent = 'Preguntar por el Plan de Inicio';
+      }
+    } else {
+      el.verdict.classList.remove('warn');
+      el.verdictH.textContent = 'Qué haría yo';
+      el.verdictP.textContent = 'La diferencia sale sobre todo de que tu coste sube con tu patrimonio y la tarifa fija no. Antes de mover nada conviene mirar la fiscalidad del traspaso: en fondos españoles suele ser neutra, pero no siempre.';
+      el.verdictCta.hidden = true;
+      el.waTxt.textContent = 'Comentar mi caso por WhatsApp';
+    }
+
+    var msg = 'Hola, he usado la calculadora: ' + eur.format(cap) + ' € invertidos al ' +
+      pct.format(+el.ter.value) + ' % anual. Me sale una diferencia de ' + fEur(Math.abs(dif)) +
+      ' en ' + anos + ' años. ¿Lo comentamos?';
+    el.waBtn.href = 'https://wa.me/34648004588?text=' + encodeURIComponent(msg);
+  }
+
+  /* ---- Eventos ---- */
+  ['capital', 'aporta', 'ter'].forEach(function (k) {
+    el[k].addEventListener('input', recalcular);
+  });
+  el.plan.addEventListener('change', recalcular);
+
+  document.querySelectorAll('.chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      document.querySelectorAll('.chip').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+      c.setAttribute('aria-pressed', 'true');
+      el.ter.value = c.dataset.ter;
+      recalcular();
+    });
+  });
+  el.ter.addEventListener('input', function () {
+    document.querySelectorAll('.chip').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+  });
+
+  el.modes.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    el.modes.querySelectorAll('button').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+    b.setAttribute('aria-pressed', 'true');
+    estado.modo = b.dataset.modo;
+    evento('calculadora_modo', { modo: estado.modo });
+    recalcular();
+  });
+
+  el.anosSeg.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    el.anosSeg.querySelectorAll('button').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+    b.setAttribute('aria-pressed', 'true');
+    estado.anos = +b.dataset.anos;
+    recalcular();
+  });
+
+  /* ---- Medición (Vercel Analytics) ---- */
+  var medido = false;
+  function evento(nombre, datos) {
+    if (window.va) window.va('event', { name: nombre, data: datos || {} });
+  }
+  el.capital.addEventListener('change', function () {
+    if (medido) return;
+    medido = true;
+    evento('calculadora_usada', { capital: el.capital.value, ter: el.ter.value });
+  });
+  el.waBtn.addEventListener('click', function () { evento('calculadora_whatsapp'); });
+
+  recalcular();
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
