@@ -121,6 +121,21 @@
   .foot-bot { padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; }
   .foot-bot .mono-label { color: var(--ink-faint); font-size: .6rem; }
   .disclaimer { margin-top: 1.5rem; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; max-width: 60rem; }
+
+  /* Bloque de conversión inline (~55 % del artículo) */
+  .icta { margin: 2.6rem 0; border: 1px solid var(--forest-line); border-left: 3px solid var(--forest);
+    border-radius: var(--radius-card); background: var(--forest-tint); padding: 1.5rem 1.6rem; }
+  .icta .k { display: block; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--forest); }
+  .icta h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.32rem; line-height: 1.25;
+    letter-spacing: -0.015em; margin-top: .55rem; color: var(--ink); }
+  .icta p { margin-top: .6rem; font-size: 1rem; line-height: 1.6; color: var(--ink-2); }
+  .icta .go { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem;
+    background: var(--forest); color: var(--cream); border-radius: 8px; padding: .7rem 1.15rem;
+    font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    transition: transform .18s, box-shadow .25s; }
+  .icta .go:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -12px rgba(14,91,67,.55); }
+  .icta .fine { margin-top: .7rem; font-size: .78rem; color: var(--ink-faint); }
 </style>
 </head>
 <body class="surface-cream">
@@ -236,6 +251,15 @@
       <p>El dinero que inviertes tiene que ser dinero que no vayas a necesitar en varios años. Si sabes que dentro de dieciocho meses lo quieres para la entrada de un piso, no es dinero para invertir. Es dinero para tener aparcado.</p>
 
       <p>Si las tres están, la cantidad importa mucho menos de lo que crees. Si alguna falla, ninguna cantidad es la correcta.</p>
+
+
+      <aside class="icta">
+        <span class="k">Ponle números a tu caso</span>
+        <h3>¿Cuánto se están llevando tus comisiones?</h3>
+        <p>Todo lo de arriba se resume en una cifra: qué parte de lo que aportas acaba en comisiones. La calculadora te la da con tus propios números, y si te sale que no te compensa contratar nada, también te lo dice.</p>
+        <a class="go" href="/calculadora-costes">Calcular mis costes →</a>
+        <p class="fine">Gratis, sin registro y sin dejar tu correo.</p>
+      </aside>
 
       <h2 id="objetivo">Cuánto necesitas según lo que quieras conseguir</h2>
       <p>No es lo mismo perderle el miedo al asunto que construir un patrimonio. Estas son las tres situaciones que me encuentro:</p>

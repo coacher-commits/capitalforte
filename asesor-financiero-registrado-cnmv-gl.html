@@ -121,6 +121,21 @@
   .foot-bot { padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; }
   .foot-bot .mono-label { color: var(--ink-faint); font-size: .6rem; }
   .disclaimer { margin-top: 1.5rem; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; max-width: 60rem; }
+
+  /* Bloque de conversión inline (~55 % del artículo) */
+  .icta { margin: 2.6rem 0; border: 1px solid var(--forest-line); border-left: 3px solid var(--forest);
+    border-radius: var(--radius-card); background: var(--forest-tint); padding: 1.5rem 1.6rem; }
+  .icta .k { display: block; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--forest); }
+  .icta h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.32rem; line-height: 1.25;
+    letter-spacing: -0.015em; margin-top: .55rem; color: var(--ink); }
+  .icta p { margin-top: .6rem; font-size: 1rem; line-height: 1.6; color: var(--ink-2); }
+  .icta .go { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem;
+    background: var(--forest); color: var(--cream); border-radius: 8px; padding: .7rem 1.15rem;
+    font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    transition: transform .18s, box-shadow .25s; }
+  .icta .go:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -12px rgba(14,91,67,.55); }
+  .icta .fine { margin-top: .7rem; font-size: .78rem; color: var(--ink-faint); }
 </style>
 </head>
 <body class="surface-cream">
@@ -215,6 +230,15 @@
       <p>A CNMV publica un apartado con entidades non autorizadas para prestar servizos de investimento —os coñecidos como chiringuitos financeiros— e con nomes sobre os que hai procedementos abertos. Trinta segundos.</p>
       <h3>5. Se dubidas, chama</h3>
       <p>O teléfono de atención ao investidor da CNMV é o <strong>900 535 015</strong> e é gratuíto. Preguntar non custa nada.</p>
+
+
+      <aside class="icta">
+        <span class="k">Tes a alguén concreto en mente?</span>
+        <h3>Dígoche se está rexistrado e que mirar</h3>
+        <p>Se chegaches aquí porque alguén che ofreceu algo e non che cadra, mándame o nome da entidade ou da persoa. Compróboo contigo nos rexistros oficiais e dígoche que preguntas facer antes de asinar nada. Sen compromiso e sen venderche nada.</p>
+        <a class="go" href="https://wa.me/34648004588?text=Ola%2C%20quero%20comprobar%20se%20un%20asesor%20est%C3%A1%20rexistrado%20na%20CNMV.%20Tr%C3%A1tase%20de%3A" target="_blank" rel="noopener">Consultalo por WhatsApp →</a>
+        <p class="fine">Respondo eu, non un formulario.</p>
+      </aside>
 
       <h2 id="chiringuitos">Que son os chiringuitos financeiros e como se detectan?</h2>
       <p>Chámanse así popularmente as entidades que prestan servizos de investimento sen estar autorizadas. A CNMV publica os seus nomes cando os detecta. Os sinais que se repiten:</p>

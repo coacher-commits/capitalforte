@@ -122,6 +122,21 @@
   .foot-bot { padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; align-items: center; }
   .foot-bot .mono-label { color: var(--ink-faint); font-size: .6rem; }
   .disclaimer { margin-top: 1.5rem; font-size: .78rem; color: var(--ink-faint); line-height: 1.6; max-width: 60rem; }
+
+  /* Bloque de conversión inline (~55 % del artículo) */
+  .icta { margin: 2.6rem 0; border: 1px solid var(--forest-line); border-left: 3px solid var(--forest);
+    border-radius: var(--radius-card); background: var(--forest-tint); padding: 1.5rem 1.6rem; }
+  .icta .k { display: block; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--forest); }
+  .icta h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.32rem; line-height: 1.25;
+    letter-spacing: -0.015em; margin-top: .55rem; color: var(--ink); }
+  .icta p { margin-top: .6rem; font-size: 1rem; line-height: 1.6; color: var(--ink-2); }
+  .icta .go { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem;
+    background: var(--forest); color: var(--cream); border-radius: 8px; padding: .7rem 1.15rem;
+    font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    transition: transform .18s, box-shadow .25s; }
+  .icta .go:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -12px rgba(14,91,67,.55); }
+  .icta .fine { margin-top: .7rem; font-size: .78rem; color: var(--ink-faint); }
 </style>
 </head>
 <body class="surface-cream">
@@ -220,6 +235,15 @@
       </div>
       <p>Con 200 euros al mes aportados, la diferencia entre el 0,30 % y el 2,50 % sobre esa cartera equivale a más de un mes entero de tus aportaciones, cada año. Y el coste lo pagas llueva o truene.</p>
       <p>Trabajé años en DEGIRO viendo carteras reales de particulares, y el patrón se repetía: gente que dedicaba horas a elegir el fondo «que mejor lo había hecho» y ni un minuto a mirar lo que le costaba tenerlo.</p>
+
+
+      <aside class="icta">
+        <span class="k">Antes de elegir producto</span>
+        <h3>Mira lo que te costaría de verdad</h3>
+        <p>Elegir entre un fondo y otro importa menos que saber qué comisión pagas. En la calculadora metes lo que tienes y el coste anual de tus productos, y ves qué parte de tus aportaciones se va en comisiones. Solo costes: no proyecta rentabilidades.</p>
+        <a class="go" href="/calculadora-costes">Abrir la calculadora →</a>
+        <p class="fine">Gratis, sin registro y sin dejar tu correo.</p>
+      </aside>
 
       <h2 id="fondo-o-etf">¿Fondo indexado o ETF si aporto cada mes?</h2>
       <p>Es la duda más frecuente en cuanto alguien empieza a leer sobre el tema, y con 200 euros mensuales tiene una respuesta bastante clara. Dos diferencias prácticas:</p>
