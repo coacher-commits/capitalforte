@@ -290,24 +290,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo"/>
-    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo-gl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo"/>
-  </url>
-  <url>
-    <loc>https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo-gl</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo"/>
-    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo-gl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/preguntas-a-un-asesor-financiero-antes-de-contratarlo"/>
-  </url>
-  <url>
     <loc>https://nortecapital.es/agente-vinculado-eaf-banco</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -316,6 +298,18 @@
   <url>
     <loc>https://nortecapital.es/agente-vinculado-eaf-banco-gl</loc>
     <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/plan-de-pensiones-o-fondo-indexado</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/plan-de-pensiones-o-fondo-indexado-gl</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
