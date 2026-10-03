@@ -385,4 +385,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://nortecapital.es/fondo-de-rentabilidad-objetivo</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/fondo-de-rentabilidad-objetivo"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/fondo-de-rentabilidad-objetivo-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/fondo-de-rentabilidad-objetivo"/>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/fondo-de-rentabilidad-objetivo-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/fondo-de-rentabilidad-objetivo"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/fondo-de-rentabilidad-objetivo-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/fondo-de-rentabilidad-objetivo"/>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
