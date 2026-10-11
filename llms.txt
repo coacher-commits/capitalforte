@@ -23,6 +23,7 @@
 - [Cómo tributan tus inversiones en Galicia](https://nortecapital.es/como-tributan-inversiones-galicia): IRPF y base del ahorro.
 - [Ahorrar e invertir con la fiscalidad gallega a tu favor](https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor): tramo autonómico, sucesiones y donaciones.
 - [¿Banco o asesor financiero? Qué te conviene en Galicia](https://nortecapital.es/banco-o-asesor-financiero-galicia): incentivos, comisiones y transparencia.
+- [Cómo saber si tu asesor financiero cobra comisiones](https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones): tipo de servicio, informe anual de costes y clase del fondo.
 
 Cada artículo tiene versión en gallego añadiendo `-gl` a la URL (por ejemplo, https://nortecapital.es/invertir-desde-cero-galicia-gl).
 

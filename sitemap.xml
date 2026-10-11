@@ -403,4 +403,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
