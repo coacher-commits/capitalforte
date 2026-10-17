@@ -216,7 +216,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -225,7 +225,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/asesor-financiero-registrado-cnmv-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/asesor-financiero-registrado-cnmv"/>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -237,13 +237,13 @@
   </url>
   <url>
     <loc>https://nortecapital.es/cuanto-dinero-necesito-para-empezar-a-invertir</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/cuanto-dinero-necesito-para-empezar-a-invertir-gl</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -408,7 +408,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -417,7 +417,25 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/como-saber-si-mi-asesor-financiero-cobra-comisiones"/>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/cartera-gestionada-o-roboadvisor</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/cartera-gestionada-o-roboadvisor"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/cartera-gestionada-o-roboadvisor-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/cartera-gestionada-o-roboadvisor"/>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/cartera-gestionada-o-roboadvisor-gl</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/cartera-gestionada-o-roboadvisor"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/cartera-gestionada-o-roboadvisor-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/cartera-gestionada-o-roboadvisor"/>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
