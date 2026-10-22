@@ -12,5 +12,27 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/asesor-financiero-registrado-cnmv",
+      "destination": "/preguntas-a-un-asesor-financiero-antes-de-contratarlo",
+      "permanent": true
+    },
+    {
+      "source": "/asesor-financiero-registrado-cnmv.html",
+      "destination": "/preguntas-a-un-asesor-financiero-antes-de-contratarlo",
+      "permanent": true
+    },
+    {
+      "source": "/asesor-financiero-registrado-cnmv-gl",
+      "destination": "/preguntas-a-un-asesor-financiero-antes-de-contratarlo-gl",
+      "permanent": true
+    },
+    {
+      "source": "/asesor-financiero-registrado-cnmv-gl.html",
+      "destination": "/preguntas-a-un-asesor-financiero-antes-de-contratarlo-gl",
+      "permanent": true
+    }
   ]
 }
