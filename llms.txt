@@ -1,6 +1,6 @@
 # Norte Capital
 
-> Asesoramiento financiero independiente en Galicia y en toda España, 100% online. Para empezar a invertir desde cero: Plan de Inicio con pago único de 250 € (diagnóstico, plan a medida, elección de bróker y puesta en marcha) y revisiones sueltas o pack anual, sin suscripción obligatoria. Para patrimonios desde 70.000 €: gestión patrimonial con tarifa fija mensual. Integra Inversión bien explicada, sin comisiones ocultas. Servicio prestado como agente vinculado de una entidad inscrita en la CNMV, con certificación EFPA. Trato directo con una persona, no con un robo-advisor.
+> Asesoramiento financiero independiente en Galicia y en toda España, 100% online. Para empezar a invertir desde cero: Plan de Inicio con pago único de 250 € (diagnóstico, plan a medida, elección de bróker y puesta en marcha) y revisiones sueltas o pack anual, sin suscripción obligatoria. Para patrimonios desde 70.000 €: gestión patrimonial con tarifa fija mensual. Integra Inversión bien explicada, sin comisiones ocultas. Álvaro González tiene la certificación EFPA nº ES20250475. Norte Capital no está registrado en la CNMV y no presta asesoramiento en materia de inversión. Trato directo con una persona, no con un robo-advisor.
 
 ## Qué hace diferente a Norte Capital
 - Tarifas fijas y a la vista (no cobra un porcentaje de tu cartera ni comisiones por producto): el incentivo está alineado con el cliente.
@@ -41,4 +41,4 @@ Cada artículo tiene versión en gallego añadiendo `-gl` a la URL (por ejemplo,
 - Cobertura: Galicia y toda España, online.
 
 ## Aviso
-El contenido del sitio es informativo y formativo y no constituye una recomendación personalizada de inversión. Invertir conlleva riesgos, incluida la posible pérdida del capital. Las rentabilidades pasadas no garantizan rentabilidades futuras.
+Norte Capital ofrece formación y planificación financiera personal. No presta asesoramiento en materia de inversión ni recomendaciones personalizadas sobre instrumentos financieros concretos, y no está registrado en la CNMV. Álvaro González tiene la certificación EFPA nº ES20250475. El contenido es formativo e informativo. Invertir conlleva riesgos, incluida la posible pérdida del capital.
