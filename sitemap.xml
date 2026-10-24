@@ -2,24 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nortecapital.es/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/index-gl</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/asesor-financiero-galicia</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/gestion-patrimonial</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nortecapital.es/gestion-patrimonial"/>
@@ -27,7 +28,7 @@
   </url>
   <url>
     <loc>https://nortecapital.es/gestion-patrimonial-gl</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nortecapital.es/gestion-patrimonial"/>
@@ -35,7 +36,7 @@
   </url>
   <url>
     <loc>https://nortecapital.es/para-empresas</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -47,7 +48,7 @@
   </url>
   <url>
     <loc>https://nortecapital.es/empezar-a-invertir-desde-cero</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -65,7 +66,7 @@
   </url>
   <url>
     <loc>https://nortecapital.es/folleto-de-tarifas</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -74,7 +75,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/invertir-desde-cero-galicia-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -83,7 +84,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/invertir-desde-cero-galicia-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/invertir-desde-cero-galicia"/>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
