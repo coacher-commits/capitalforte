@@ -91,7 +91,7 @@
   /* Aside / TOC */
   .aside { align-self: start; position: sticky; top: 6rem; }
   .toc { border: 1px solid var(--line); border-radius: var(--radius-card); padding: 1.3rem 1.4rem; background: var(--paper); }
-  .toc h4 { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .toc h4, .toc .toc-h { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
   .toc a { display: block; margin-top: .7rem; font-size: .92rem; color: var(--ink-soft); line-height: 1.4; }
   .toc a:hover { color: var(--forest); }
 
@@ -228,7 +228,7 @@
 
     <aside class="aside">
       <nav class="toc" aria-label="Neste artigo">
-        <h4>Neste artigo</h4>
+        <p class="toc-h">Neste artigo</p>
         <a href="#habito">Primeiro o hábito</a>
         <a href="#canto">Canto aforrar ao mes?</a>
         <a href="#opcions">Plan de pensións vs. fondo</a>
