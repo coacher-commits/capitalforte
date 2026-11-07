@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://nortecapital.es/blog</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -249,14 +249,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://nortecapital.es/invertir-50-euros-al-mes</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nortecapital.es/invertir-50-euros-al-mes"/>
+    <xhtml:link rel="alternate" hreflang="gl" href="https://nortecapital.es/invertir-50-euros-al-mes-gl"/>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/invertir-50-euros-al-mes-gl</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nortecapital.es/invertir-50-euros-al-mes"/>
+    <xhtml:link rel="alternate" hreflang="gl" href="https://nortecapital.es/invertir-50-euros-al-mes-gl"/>
+  </url>
+  <url>
     <loc>https://nortecapital.es/invertir-100-euros-al-mes</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://nortecapital.es/invertir-100-euros-al-mes-gl</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
