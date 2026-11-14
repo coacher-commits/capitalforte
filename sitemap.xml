@@ -129,7 +129,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -138,7 +138,7 @@
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
     <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor-gl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor"/>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -437,5 +437,23 @@
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/que-hacer-con-una-herencia-galicia</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/que-hacer-con-una-herencia-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/que-hacer-con-una-herencia-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/que-hacer-con-una-herencia-galicia"/>
+  </url>
+  <url>
+    <loc>https://nortecapital.es/que-hacer-con-una-herencia-galicia-gl</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://nortecapital.es/que-hacer-con-una-herencia-galicia"/>
+    <xhtml:link rel="alternate" hreflang="gl-ES" href="https://nortecapital.es/que-hacer-con-una-herencia-galicia-gl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nortecapital.es/que-hacer-con-una-herencia-galicia"/>
   </url>
 </urlset>

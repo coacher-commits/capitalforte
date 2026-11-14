@@ -69,6 +69,7 @@ Quien empieza de cero no necesita ninguna suscripción: la cuota mensual solo ex
 - [Cómo tributan tus inversiones en Galicia](https://nortecapital.es/como-tributan-inversiones-galicia)
 - [Ahorrar e invertir con la fiscalidad gallega a tu favor](https://nortecapital.es/ahorrar-fiscalidad-gallega-a-favor)
 - [Ahorrar para la jubilación en Galicia](https://nortecapital.es/ahorrar-para-la-jubilacion-en-galicia)
+- [Qué hacer con una herencia en Galicia: guía paso a paso](https://nortecapital.es/que-hacer-con-una-herencia-galicia): papeleo, Sucesiones con la reducción de 1 millón por heredero, dónde aparcar el dinero y cómo repartirlo por plazos.
 - [¿Comprar piso o invertir? El dilema gallego del ladrillo](https://nortecapital.es/comprar-piso-o-invertir-galicia)
 
 Cada página tiene versión en gallego añadiendo `-gl` a la URL (por ejemplo, https://nortecapital.es/invertir-desde-cero-galicia-gl; la portada en gallego es https://nortecapital.es/index-gl).
